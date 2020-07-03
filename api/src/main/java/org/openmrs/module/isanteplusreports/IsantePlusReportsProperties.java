@@ -178,5 +178,7 @@ public class IsantePlusReportsProperties{
 	public static final String ART_DISPENSATION_FOLLOW_UP_UUID = "ef282113-32bd-49d7-870f-0ef41443e8de";
 	
 	public static final String NEXT_VISIT_BY_PERIOD_UUID = "f3bef310-0e62-4b4f-88f1-8b7983ea51cb";
+	
+	public static final String ACTIVITY_AFTER_DISC_BY_PERIOD = "7414a044-ace9-4140-88f2-5b79d869b5c9";
 
 }

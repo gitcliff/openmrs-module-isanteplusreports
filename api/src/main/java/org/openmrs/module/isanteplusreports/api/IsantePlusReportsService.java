@@ -93,6 +93,10 @@ public interface IsantePlusReportsService extends OpenmrsService {
 	DataSet clinicExams(Patient p);
 
 	void setEventScheduler();
+
+	DataSet alertReport();
+
+	DataSet alertReportPatientList(Integer id);
 	
 	
 }

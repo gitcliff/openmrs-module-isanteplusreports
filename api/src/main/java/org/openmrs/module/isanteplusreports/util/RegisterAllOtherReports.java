@@ -55,7 +55,7 @@ public class RegisterAllOtherReports extends SessionContext {
 		institutionFrequentingByUserAndDate();
 		institutionFrequenting();
 		institutionFrequentingByDate();
-		saveAlertReport();
+		//saveAlertReport();
 		patientWithOnlyRegisterForm();
 		hivPatientWithoutFirstVisit();
 		hivPatientWithActivityAfterDisc();
@@ -104,6 +104,7 @@ public class RegisterAllOtherReports extends SessionContext {
 		listPatientWithNextVisitByPeriod();
 		//MalariaIndicatorReport.registerReport();
 		ObGynIndicatorReport.registerReport();
+		listPatientWithActivityAfterDiscByPeriod();
 	}
 
 	private static void cleanTables() {
@@ -270,10 +271,10 @@ public class RegisterAllOtherReports extends SessionContext {
 				MessageUtil.translate("isanteplusreports.institution_frequenting_by_date"), IsantePlusReportsProperties.INSTITUTION_FREQUENTING_ORDER_BY_DATE);
 	}
 	
-	private static void saveAlertReport() {
+	/*private static void saveAlertReport() {
 		IsantePlusReportsUtil.registerOtherReportsWithoutParams("alert.sql","isanteplusreports.alert",
 				MessageUtil.translate("isanteplusreports.alert"), IsantePlusReportsProperties.ALERT_REPORT_DEFINITION_UUID);
-	}
+	}*/
 	
 	private static void patientWithOnlyRegisterForm() {
 		IsantePlusReportsUtil.registerReportsWithoutParams("patient_with_only_register_form.sql","isanteplusreports.patient_with_only_register_form",
@@ -514,6 +515,11 @@ public class RegisterAllOtherReports extends SessionContext {
 	private static void listPatientWithNextVisitByPeriod() {
 		IsantePlusReportsUtil.registerReportsWithStartAndEndDateParams("next_visit_by_period.sql","isanteplusreports.next_visit_by_period",
 				MessageUtil.translate("isanteplusreports.next_visit_by_period"), IsantePlusReportsProperties.NEXT_VISIT_BY_PERIOD_UUID);
+	}
+	
+	private static void listPatientWithActivityAfterDiscByPeriod() {
+		IsantePlusReportsUtil.registerReportsWithStartAndEndDateParams("patients_with_activity_after_disc_by_month.sql","isanteplusreports.activity_after_discontinuation_by_period",
+				MessageUtil.translate("isanteplusreports.activity_after_discontinuation_by_period"), IsantePlusReportsProperties.ACTIVITY_AFTER_DISC_BY_PERIOD);
 	}
 	
 	
