@@ -725,9 +725,18 @@
 		        "type": "link",
 		        "label": "isanteplusreports.activity_after_discontinuation_by_period",
 		        "url": "reportingui/runReport.page?reportDefinition=7414a044-ace9-4140-88f2-5b79d869b5c9",
-		        "order": 200,
+		        "order": 180,
 		        "requiredPrivilege": "App: reportingui.reports"
-		    }
+		    },
+		    {
+              "id": "isanteplusreports.pnls_report",
+              "extensionPointId": "org.openmrs.module.reportingui.reports.overview",
+              "type": "link",
+              "label": "isanteplusreports.pnls.label",
+              "url": "isanteplusreports/pnlsReport.page",
+              "order": 200,
+              "requiredPrivilege": "App: reportingui.reports"
+            }
 
         ],
         "requiredPrivilege": "App: reportingui.reports"
