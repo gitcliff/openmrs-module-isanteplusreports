@@ -26,7 +26,7 @@ public class RegisterAllHealthQualReportsTest extends BaseModuleContextSensitive
         return p;
     }
     
-	/**
+    /**
 	 * @see RegisterAllHealthQualReports#registerHealthEqualReportWithCurrentDateAndPeriodParamsNumDen(String,String,String,String)
 	 * @verifies save report definition and return valid instance
 	 */
