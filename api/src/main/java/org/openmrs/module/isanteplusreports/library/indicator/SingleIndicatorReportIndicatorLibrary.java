@@ -23,7 +23,7 @@ public class SingleIndicatorReportIndicatorLibrary {
 	
 	public static CohortIndicator patientsWhoDiscontinuedCotrimoxazole() {
 		return EmrReportingUtils.cohortIndicator("isanteplusreports.discontinued_cotrimoxazole",
-		    ReportUtils.map(SingleIndicatorReportCohortLibrary.patientsWhoDiscontinueCotrimoxazole(),
+		    ReportUtils.map(SingleIndicatorReportCohortLibrary.patientsWhoDiscontinuedCotrimoxazole(),
 		        IND_PARAMS));
 	}	
 
