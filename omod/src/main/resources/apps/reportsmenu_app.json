@@ -728,6 +728,16 @@
               "order": 200,
               "requiredPrivilege": "App: reportingui.reports"
             }
+			,
+			{
+                "id": "isanteplusreports.hsisReport",
+                "extensionPointId": "org.openmrs.module.reportingui.reports.overview",
+                "type": "link",
+                "label": "isanteplusreports.hsis.label.report.name",
+                "url": "reportingui/runReport.page?reportDefinition=15861dcc-f817-11eb-9a03-0242ac130003",
+                "order": 201,
+                "requiredPrivilege": "App: reportingui.reports"
+            }
 
         ],
         "requiredPrivilege": "App: reportingui.reports"
