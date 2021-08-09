@@ -6,9 +6,11 @@ import org.openmrs.GlobalProperty;
 import org.openmrs.api.context.Context;
 import org.openmrs.module.ModuleFactory;
 import org.openmrs.module.isanteplusreports.healthqual.util.RegisterAllHealthQualReports;
+import org.openmrs.module.isanteplusreports.hsisReport.HsisReportManager;
 import org.openmrs.module.isanteplusreports.pnlsReport.RegisterAllPnlsReports;
 import org.openmrs.module.isanteplusreports.util.RegisterAllOtherReports;
 import org.openmrs.module.isanteplusreports.util.RegisterPatientsArvStatusReports;
+import org.openmrs.module.reporting.report.manager.ReportManagerUtil;
 
 public class RegisterReports {
 	
@@ -23,12 +25,14 @@ public class RegisterReports {
 			
 			String version = ModuleFactory.getModuleById("isanteplusreports").getVersion();
 			String oldversion = Context.getAdministrationService().getGlobalProperty("reports.moduleVersion");
-			
+			HsisReportManager hsisReportManager = Context.getRegisteredComponent("hsisReportManager",HsisReportManager.class);	
+					
 			if (!version.equals(oldversion)) {
 				RegisterAllOtherReports.registerOtherReports();
 				RegisterAllHealthQualReports.registerAll();
 				RegisterPatientsArvStatusReports.registerAllPatientsArvStatusReports();
-				RegisterAllPnlsReports.registerAll();
+				RegisterAllPnlsReports.registerAll();			
+			    ReportManagerUtil.setupReport(hsisReportManager);
 				Context.getAdministrationService().saveGlobalProperty(new GlobalProperty("reports.moduleVersion", version));
 			}
 		}

@@ -47,7 +47,7 @@ public class IsantePlusReportsActivator extends BaseModuleActivator {
 			register.registerReports();
 			registerTask("Clean reports request iSantePlus", "Clean Reports Request for iSantePlus", RegisterReportsTask.class,
 				    60 * 60 * 24l);
-				
+		
 				returnIpAddress();
 			appFrameworkService.disableApp("reportingui.reports");
 			Context.getService(IsantePlusReportsService.class).setEventScheduler();
