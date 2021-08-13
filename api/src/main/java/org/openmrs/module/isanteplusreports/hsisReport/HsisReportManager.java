@@ -8,16 +8,17 @@ import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 
-import org.openmrs.module.reporting.report.manager.BaseReportManager;
-import org.openmrs.module.reporting.report.manager.ReportManagerUtil;
-import org.openmrs.module.reporting.report.ReportDesign;
-import org.openmrs.module.reporting.report.definition.ReportDefinition;
-import org.springframework.stereotype.Component;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.openmrs.module.reporting.evaluation.parameter.Parameter;
+import org.openmrs.module.isanteplusreports.hsisReport.library.datasets.HsisReportDatasetLibrary;
 import org.openmrs.module.reporting.common.MessageUtil;
-import org.openmrs.module.reporting.dataset.definition.SqlDataSetDefinition;
+import org.openmrs.module.reporting.dataset.definition.CohortIndicatorDataSetDefinition;
+import org.openmrs.module.reporting.evaluation.parameter.Parameter;
+import org.openmrs.module.reporting.report.ReportDesign;
+import org.openmrs.module.reporting.report.definition.ReportDefinition;
+import org.openmrs.module.reporting.report.manager.BaseReportManager;
+import org.openmrs.module.reporting.report.manager.ReportManagerUtil;
+import org.springframework.stereotype.Component;
 
 @Component("hsisReportManager")
 public class HsisReportManager extends BaseReportManager{
@@ -42,7 +43,6 @@ public class HsisReportManager extends BaseReportManager{
 		return l;
 	}
 
-
 	@Override
 	public String getDescription() {
 		return translate("label.report.name");
@@ -57,13 +57,11 @@ public class HsisReportManager extends BaseReportManager{
 		rd.setParameters(getParameters());
 		rd.setUuid(getUuid());
 		
-		SqlDataSetDefinition sqlDsd = HsisReportDatasets.getDistributionOfVistsDataset();
-		sqlDsd.addParameters(getParameters());
-		
+		CohortIndicatorDataSetDefinition cd = HsisReportDatasetLibrary.getVistsDataset();
 		Map<String, Object> parameterMappings = new HashMap<String, Object>();
 		parameterMappings.put("startDate", "${startDate}");
 		parameterMappings.put("endDate", "${endDate}");	
-		rd.addDataSetDefinition(getName(), sqlDsd, parameterMappings);		
+		rd.addDataSetDefinition(getName(), cd, parameterMappings);		
 		return rd;
     }
 
@@ -99,11 +97,9 @@ public class HsisReportManager extends BaseReportManager{
         return "1.00";
     }
 
-    
     protected String translate(String code) {
 		String messageCode = "isanteplusreports.hsis." + code;
 		String translation = MessageUtil.translate(messageCode);
 		return translation;
 	}
-    
 }
