@@ -23,8 +23,8 @@ public class HsisReportColumns {
         constructColumn(CHILD_10_14 + vistType, "10-14 Years", CohortIndicator, "age=10_14", dsd);
         constructColumn(CHILD_15_19 + vistType, "15-19 Years", CohortIndicator, "age=15_19", dsd);
         constructColumn(CHILD_20_24 + vistType, "20-24 Years", CohortIndicator, "age=20_24", dsd);
-        constructColumn(PREGNANT + vistType, "20-24 Years", CohortIndicator, "general=pregnant", dsd);
-        constructColumn(PF + vistType, "20-24 Years", CohortIndicator, "general=pf", dsd);
+        constructColumn(PREGNANT + vistType, "Pregnant", CohortIndicator, "general=pregnant", dsd);
+        constructColumn(PF + vistType, "PF clients", CohortIndicator, "general=pf", dsd);
     }
 
 }
