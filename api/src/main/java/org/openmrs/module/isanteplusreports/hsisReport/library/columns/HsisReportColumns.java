@@ -12,6 +12,8 @@ public class HsisReportColumns {
     public static final String CHILD_10_14 = "children10_14_";
     public static final String CHILD_15_19 = "children15_19_";
     public static final String CHILD_20_24 = "children20_24_";
+    public static final String PREGNANT = "pregnant_";
+    public static final String PF = "pf_";
 	
     
     public static void addAgeColumnsforVists(CohortIndicatorDataSetDefinition dsd, CohortIndicator CohortIndicator ,String vistType) {
@@ -21,6 +23,8 @@ public class HsisReportColumns {
         constructColumn(CHILD_10_14 + vistType, "10-14 Years", CohortIndicator, "age=10_14", dsd);
         constructColumn(CHILD_15_19 + vistType, "15-19 Years", CohortIndicator, "age=15_19", dsd);
         constructColumn(CHILD_20_24 + vistType, "20-24 Years", CohortIndicator, "age=20_24", dsd);
+        constructColumn(PREGNANT + vistType, "Pregnant", CohortIndicator, "general=pregnant", dsd);
+        constructColumn(PF + vistType, "PF clients", CohortIndicator, "general=pf", dsd);
     }
 
 }
