@@ -7,7 +7,7 @@ import org.openmrs.module.reporting.cohort.definition.SqlCohortDefinition;
 
 public class HsisReportCohortLibrary {
 
-  private static final String DATE_PARAMS_Mappings = "startDate=${startDate},endDate=${endDate}";
+  private static final String DATE_PARAMS_MAPPINGS = "startDate=${startDate},endDate=${endDate}";
 
   public static CohortDefinition newVistCohort() {
     SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("newVists.sql", "new Vists");
@@ -19,4 +19,13 @@ public class HsisReportCohortLibrary {
     return cohortDefinition;
   }
 
+  public static CohortDefinition pregnantWomenCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("pregnnatWomen.sql", "Pregnant Women");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition pFClientsCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("pfClients.sql", "PF Clients");
+    return cohortDefinition;
+  }
 }
