@@ -19,6 +19,9 @@ public class HsisReportColumns {
     public static final String TOTAL = "total_";
     public static final String ENGINE = "reducedMobilityEngine_";
     public static final String SENSORY = "reducedMobilitySensory_";
+    public static final String MICROSCOPIC = "microscopicTest_";
+    public static final String FAST = "fastTest_";
+    public static final String MALARIA = "testedForMalaria_";
 
 
     public static void addAgeColumnsforVists(CohortIndicatorDataSetDefinition dsd, CohortIndicator cohortIndicator ,String vistType) {
@@ -35,6 +38,13 @@ public class HsisReportColumns {
         constructColumn(TOTAL + vistType, "Total", cohortIndicator, "", dsd);
         constructColumn(ENGINE + vistType, "People with reduced mobility (engine)", cohortIndicator, "general=reducedMobilityEngine", dsd);
         constructColumn(SENSORY + vistType, "People with reduced mobility (sensory)", cohortIndicator, "general=reducedMobilitySensory", dsd);
+        
+    }
+
+    public static void addTypesOfExaminationsColumsForMalaria(CohortIndicatorDataSetDefinition dsd, CohortIndicator cohortIndicator, String status) {
+        constructColumn(MICROSCOPIC + status, "Malaria microscopic test", cohortIndicator, "positive=microscopicTest", dsd);
+        constructColumn(FAST + status, "Malaria fast test", cohortIndicator, "positive=fastTest", dsd);
+        constructColumn(MALARIA + status, "Number of people tested for Malaria", cohortIndicator, "", dsd);
     }
 
 }

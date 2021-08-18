@@ -53,4 +53,19 @@ public class HsisReportCohortLibrary {
     SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("reducedMobilitySensory.sql", "People with reduced mobility (sensory)");
     return cohortDefinition;
   }
+
+  public static CohortDefinition microscopicTestCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("microscopicTest.sql", "Malaria microscopic test");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  fastTestCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("fastTest.sql", "Malaria fast test");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  testedForMalariaCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("testedForMalaria.sql", "Number of people tested for Malaria");
+    return cohortDefinition;
+  }
 }

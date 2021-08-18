@@ -6,6 +6,10 @@ import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.Hs
 import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.otherAdultsCohort;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.reducedMobilityEngineCohort;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.reducedMobilitySensoryCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.microscopicTestCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.fastTestCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.testedForMalariaCohort;
+
 import org.openmrs.module.isanteplusreports.reporting.utils.ReportUtils;
 import org.openmrs.module.reporting.indicator.dimension.CohortDefinitionDimension;
 
@@ -23,4 +27,16 @@ public class HsisDimensionLibrary {
         dim.addCohortDefinition("reducedMobilitySensory", ReportUtils.map(reducedMobilitySensoryCohort()));
       return dim;		
     };
+
+    public static CohortDefinitionDimension positiveDimension(){
+      CohortDefinitionDimension dim = new CohortDefinitionDimension();
+        dim.setName("positive");
+        dim.addCohortDefinition("microscopicTest", ReportUtils.map(microscopicTestCohort()));
+        dim.addCohortDefinition("fastTest", ReportUtils.map(fastTestCohort()));
+        dim.addCohortDefinition("testedForMalaria", ReportUtils.map(testedForMalariaCohort()));
+      return dim;				  		  
+
+
+    	}	  
+
 }
