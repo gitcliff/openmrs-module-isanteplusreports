@@ -21,11 +21,6 @@ public class HsisReportColumns {
     public static final String SENSORY = "reducedMobilitySensory_";
 
 
-
-
-
-	
-    
     public static void addAgeColumnsforVists(CohortIndicatorDataSetDefinition dsd, CohortIndicator cohortIndicator ,String vistType) {
         constructColumn(CHILD_0_1 + vistType, "0-1 Years", cohortIndicator, "age=0_1", dsd);
         constructColumn(CHILD_1_4 + vistType, "1-4 Years", cohortIndicator, "age=1_4", dsd);
@@ -37,14 +32,9 @@ public class HsisReportColumns {
         constructColumn(PF + vistType, "PF clients", cohortIndicator, "general=pf", dsd);
         constructColumn(CIOC + vistType, "Customers in oral care", cohortIndicator, "general=customersInOralCare", dsd);
         constructColumn(OA + vistType, "Other Adults", cohortIndicator, "general=otherAdults", dsd);
-        constructColumn(TOTAL + vistType, "Total", cohortIndicator, "general=total", dsd);
+        constructColumn(TOTAL + vistType, "Total", cohortIndicator, "", dsd);
         constructColumn(ENGINE + vistType, "People with reduced mobility (engine)", cohortIndicator, "general=reducedMobilityEngine", dsd);
         constructColumn(SENSORY + vistType, "People with reduced mobility (sensory)", cohortIndicator, "general=reducedMobilitySensory", dsd);
-
-
-
-
-
     }
 
 }

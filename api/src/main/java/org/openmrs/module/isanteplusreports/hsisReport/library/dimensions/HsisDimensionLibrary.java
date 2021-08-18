@@ -4,7 +4,6 @@ import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.Hs
 import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.pFClientsCohort;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.customersInOralCareCohort;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.otherAdultsCohort;
-import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.totalCohort;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.reducedMobilityEngineCohort;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.reducedMobilitySensoryCohort;
 
@@ -25,14 +24,8 @@ public class HsisDimensionLibrary {
         dim.addCohortDefinition("pf", ReportUtils.map(pFClientsCohort()));
         dim.addCohortDefinition("customersInOralCare", ReportUtils.map(customersInOralCareCohort()));
         dim.addCohortDefinition("otherAdults", ReportUtils.map(otherAdultsCohort()));
-        dim.addCohortDefinition("total", ReportUtils.map(totalCohort()));
         dim.addCohortDefinition("reducedMobilityEngine", ReportUtils.map(reducedMobilityEngineCohort()));
         dim.addCohortDefinition("reducedMobilitySensory", ReportUtils.map(reducedMobilitySensoryCohort()));
-
-
-
-
-
       return dim;		
     };
 }
