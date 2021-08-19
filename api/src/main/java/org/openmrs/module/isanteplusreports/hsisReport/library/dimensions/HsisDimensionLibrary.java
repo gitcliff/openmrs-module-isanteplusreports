@@ -8,7 +8,6 @@ import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.Hs
 import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.reducedMobilitySensoryCohort;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.microscopicTestCohort;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.fastTestCohort;
-import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.testedForMalariaCohort;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.microscopicTestAndPositiveCohort;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.fastTestAndPositiveCohort;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.positiveMicroscopicFastCohort;
@@ -32,39 +31,14 @@ public class HsisDimensionLibrary {
       return dim;		
     };
 
-    public static CohortDefinitionDimension positiveMicroscopicDimension(){
+    public static CohortDefinitionDimension malariaDimension(){
       CohortDefinitionDimension dim = new CohortDefinitionDimension();
-        dim.setName("positive microscopic");
+        dim.setName("malariaExams");
         dim.addCohortDefinition("microscopicTestPositive", ReportUtils.map(microscopicTestAndPositiveCohort()));
+        dim.addCohortDefinition("fastTestPositive", ReportUtils.map(fastTestAndPositiveCohort()));
+        dim.addCohortDefinition("fastTestPositiveMicroscopicFast", ReportUtils.map(positiveMicroscopicFastCohort()));
+        dim.addCohortDefinition("microscopicTest", ReportUtils.map(microscopicTestCohort()));
+        dim.addCohortDefinition("fastTest", ReportUtils.map(fastTestCohort()));
       return dim;				  		  
       }	
-
-      public static CohortDefinitionDimension positiveFastDimension(){
-        CohortDefinitionDimension dim = new CohortDefinitionDimension();
-          dim.setName("positive fast");
-          dim.addCohortDefinition("fastTestPositive", ReportUtils.map(fastTestAndPositiveCohort()));
-        return dim;				  		  
-        }	
-
-        public static CohortDefinitionDimension positiveMicroscopicFastDimension(){
-          CohortDefinitionDimension dim = new CohortDefinitionDimension();
-            dim.setName("positive fastMicroscopicFast");
-            dim.addCohortDefinition("fastTestPositiveMicroscopicFast", ReportUtils.map(positiveMicroscopicFastCohort()));
-          return dim;				  		  
-          }	  
-      
-      public static CohortDefinitionDimension microscopicTestDimension(){
-        CohortDefinitionDimension dim = new CohortDefinitionDimension();
-          dim.setName("microscopic test");
-          dim.addCohortDefinition("microscopicTest", ReportUtils.map(microscopicTestCohort()));
-        return dim;				  		  
-      }	 
-
-      public static CohortDefinitionDimension fastTestDimension(){
-        CohortDefinitionDimension dim = new CohortDefinitionDimension();
-          dim.setName("fast test");
-          dim.addCohortDefinition("fastTest", ReportUtils.map(fastTestCohort()));
-        return dim;				  		  
-      }	 
-
 }

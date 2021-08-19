@@ -6,23 +6,23 @@ import static org.openmrs.module.isanteplusreports.hsisReport.utils.HsisReportUt
 
 public class HsisReportColumns {
 
-    public static final String CHILD_0_1 = "visits.children0_1_";
-    public static final String CHILD_1_4 = "visits.children1_4_";
-    public static final String CHILD_5_9 = "visits.children5_9_";
-    public static final String CHILD_10_14 = "visits.children10_14_";
-    public static final String CHILD_15_19 = "visits.children15_19_";
-    public static final String CHILD_20_24 = "visits.children20_24_";
-    public static final String PREGNANT = "visits.pregnant_";
-    public static final String PF = "visits.pf_";
-    public static final String CIOC = "visits.customersInOralCare_";
-    public static final String OA = "visits.otherAdults_";
-    public static final String TOTAL = "visits.total_";
-    public static final String ENGINE = "visits.reducedMobilityEngine_";
-    public static final String SENSORY = "visits.reducedMobilitySensory_";
-    public static final String MICROSCOPIC = "malaria.microscopicTest_";
-    public static final String FAST = "malaria.fastTest_";
-    public static final String MALARIA = "malaria.testedForMalaria_";
-    public static final String PSMALARIA = "malaria.testedForMalariaPositive_";
+    public static final String CHILD_0_1 = "children0_1_";
+    public static final String CHILD_1_4 = "children1_4_";
+    public static final String CHILD_5_9 = "children5_9_";
+    public static final String CHILD_10_14 = "children10_14_";
+    public static final String CHILD_15_19 = "children15_19_";
+    public static final String CHILD_20_24 = "children20_24_";
+    public static final String PREGNANT = "pregnant_";
+    public static final String PF = "pf_";
+    public static final String CIOC = "customersInOralCare_";
+    public static final String OA = "otherAdults_";
+    public static final String TOTAL = "total_";
+    public static final String ENGINE = "reducedMobilityEngine_";
+    public static final String SENSORY = "reducedMobilitySensory_";
+    public static final String MICROSCOPIC = "microscopicTest_";
+    public static final String FAST = "fastTest_";
+    public static final String MALARIA = "testedForMalaria_";
+    public static final String PSMALARIA = "testedForMalariaPositive_";
 
 
 
@@ -43,11 +43,11 @@ public class HsisReportColumns {
     }
 
     public static void addTypesOfExaminationsColumsForMalaria(CohortIndicatorDataSetDefinition dsd, CohortIndicator cohortIndicator) {
-        constructColumn(MICROSCOPIC + "positive", "Malaria microscopic positive test", cohortIndicator, "positive microscopic=microscopicTestPositive", dsd);
-        constructColumn(FAST + "positive", "Malaria fast positive test", cohortIndicator, "positive fast=fastTestPositive", dsd);
-        constructColumn(MICROSCOPIC, "Malaria microscopic test", cohortIndicator, "microscopic test=microscopicTest", dsd);
-        constructColumn(FAST, "Malaria fast test", cohortIndicator, "fast test=fastTest", dsd);
-        constructColumn(PSMALARIA + "positive", "Positive number of people tested for Malaria", cohortIndicator, "positive fastMicroscopicFast=fastTestPositiveMicroscopicFast", dsd);
+        constructColumn(MICROSCOPIC + "positive", "Malaria microscopic positive test", cohortIndicator, "malariaExam=microscopicTestPositive", dsd);
+        constructColumn(FAST + "positive", "Malaria fast positive test", cohortIndicator, "malariaExam=fastTestPositive", dsd);
+        constructColumn(MICROSCOPIC, "Malaria microscopic test", cohortIndicator, "malariaExam=microscopicTest", dsd);
+        constructColumn(FAST, "Malaria fast test", cohortIndicator, "malariaExam=fastTest", dsd);
+        constructColumn(PSMALARIA + "positive", "Positive number of people tested for Malaria", cohortIndicator, "malariaExam=fastTestPositiveMicroscopicFast", dsd);
         constructColumn(MALARIA, "Number of people tested for Malaria", cohortIndicator, "", dsd);
     }
 
