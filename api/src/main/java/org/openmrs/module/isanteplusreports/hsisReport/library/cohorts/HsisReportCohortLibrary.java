@@ -20,7 +20,7 @@ public class HsisReportCohortLibrary {
   }
 
   public static CohortDefinition pregnantWomenCohort() {
-    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("pregnnatWomen.sql", "Pregnant Women");
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("pregnantWomen.sql", "Pregnant Women");
     return cohortDefinition;
   }
 
@@ -36,11 +36,6 @@ public class HsisReportCohortLibrary {
 
   public static CohortDefinition otherAdultsCohort() {
     SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("otherAdults.sql", "Other Adults");
-    return cohortDefinition;
-  }
-
-  public static CohortDefinition totalCohort() {
-    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("total.sql", "Total");
     return cohortDefinition;
   }
 

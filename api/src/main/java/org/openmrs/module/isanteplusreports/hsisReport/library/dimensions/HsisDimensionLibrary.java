@@ -33,7 +33,7 @@ public class HsisDimensionLibrary {
 
     public static CohortDefinitionDimension malariaDimension(){
       CohortDefinitionDimension dim = new CohortDefinitionDimension();
-        dim.setName("malariaExams");
+        dim.setName("malariaExam");
         dim.addCohortDefinition("microscopicTestPositive", ReportUtils.map(microscopicTestAndPositiveCohort()));
         dim.addCohortDefinition("fastTestPositive", ReportUtils.map(fastTestAndPositiveCohort()));
         dim.addCohortDefinition("fastTestPositiveMicroscopicFast", ReportUtils.map(positiveMicroscopicFastCohort()));

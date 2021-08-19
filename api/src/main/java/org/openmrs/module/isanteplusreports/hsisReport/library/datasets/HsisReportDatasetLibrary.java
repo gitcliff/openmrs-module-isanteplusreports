@@ -37,7 +37,7 @@ public class HsisReportDatasetLibrary {
     dsd.setName("malaria");
     dsd.addParameter(START_DATE);
     dsd.addParameter(END_DATE);
-    dsd.addDimension("malariaExams", ReportUtils.map(malariaDimension()));
+    dsd.addDimension("malariaExam", ReportUtils.map(malariaDimension()));
     HsisReportColumns.addTypesOfExaminationsColumsForMalaria(dsd, getMalariaIndicator());
     return dsd;
   }
