@@ -78,4 +78,64 @@ public class HsisReportCohortLibrary {
     SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("positiveMicroscopicFast.sql", "Number of people tested for Malaria");
     return cohortDefinition;
   }
+
+  public static CohortDefinition  vihCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("vih.sql", "Pregnant women with VIH");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  positiveVihCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("positveVih.sql", "Pregnant women with VIH");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  hemogramCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("hemogram.sql", "Pregnant women with Hemogram");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  rPRCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("rPR.sql", "Pregnant women with RPr");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  positiveRPRCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("positiveRPR.sql", "Positive pregnant women with RPr");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  sicklingTestCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("sicklingTest.sql", "Pregnant women with sickling test");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  positiveSicklingTestCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("positiveSicklingTest.sql", "Positive pregnant women with sickling test");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  bloodGroupCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("bloodGroup.sql", "Pregnant women with blood group");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  urinesCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("urines.sql", "Pregnant women urines");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  otherSicklingTestCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("otherSicklingTest.sql", "Other pregnant women urines");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  positiveOtherSicklingTestCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("positiveOtherSicklingTest.sql", "Positive other pregnant women urines");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  otherBloodGroupCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("otherBloodGroup.sql", "Other pregnant women blood group");
+    return cohortDefinition;
+  }
 }

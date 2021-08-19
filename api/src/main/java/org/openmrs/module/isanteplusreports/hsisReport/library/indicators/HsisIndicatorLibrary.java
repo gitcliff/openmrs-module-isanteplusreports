@@ -18,4 +18,12 @@ public class HsisIndicatorLibrary {
         return cohortIndicatorFromSqlResource("malaria.sql", "Examinations for malaria",getDateParameters()); 
      }
 
+     public static CohortIndicator getPregnantWomenMalariaIndicator(){
+      return cohortIndicatorFromSqlResource("pregnantWomenMalaria.sql", "Pregnant women under malaria",getDateParameters()); 
+   } 
+   
+   public static CohortIndicator getOtherGroupsMalariaIndicator(){
+      return cohortIndicatorFromSqlResource("pregnantOtherGroups.sql", "Other groups pregnant women under malaria",getDateParameters()); 
+   }   
+
 }

@@ -26,6 +26,16 @@ public class HsisReportColumns {
     public static final String FAST = "fastTest";
     public static final String MALARIA = "testedForMalaria";
     public static final String PSMALARIA = "testedForMalariaPositive";
+ 
+    //colums for the Pregnant Women Dataset
+    public static final String HEMOGRAM = "hemogram";
+    public static final String VIH = "vih";
+    public static final String RPR = "rpr";
+    public static final String SICKLING = "sicklingTest";
+    public static final String BLOOD = "bloodGroup";
+    public static final String URINES = "urines";
+    public static final String OTHER_SICKLING = "otherSicklingTest";
+    public static final String OTHER_BLODD = "otherBlood";
 
 
 
@@ -52,6 +62,21 @@ public class HsisReportColumns {
         constructColumn(FAST, "Malaria fast test", cohortIndicator, "malariaExam=fastTest", dsd);
         constructColumn(PSMALARIA , "Positive number of people tested for Malaria", cohortIndicator, "malariaExam=fastTestPositiveMicroscopicFast", dsd);
         constructColumn(MALARIA, "Number of people tested for Malaria", cohortIndicator, "", dsd);
+    }
+
+    public static void addColumsForPregnantWomen(CohortIndicatorDataSetDefinition dsd, CohortIndicator cohortIndicator) {
+        constructColumn(HEMOGRAM , "Pregnant women hemogram", cohortIndicator, "pregnantWomen=hemogram", dsd);
+        constructColumn(VIH , "Pregnant women vih", cohortIndicator, "pregnantWomen=vih", dsd);
+        constructColumn(VIH + "Positive" , "Pregnant women with positive vih", cohortIndicator, "pregnantWomen=vihPositive", dsd);
+        constructColumn(RPR, "Pregnant women rpr", cohortIndicator, "pregnantWomen=rPR", dsd);
+        constructColumn(RPR + "Positive", "Pregnant women with positive rpr", cohortIndicator, "pregnantWomen=rprPositive", dsd);
+        constructColumn(SICKLING, "Pregnant women sickling test", cohortIndicator, "pregnantWomen=sicklingTest", dsd);
+        constructColumn(SICKLING + "Positive", "positive pregnant women sickling test", cohortIndicator, "pregnantWomen=sicklingPositive", dsd);
+        constructColumn(BLOOD, "Pregnant women blood group", cohortIndicator, "pregnantWomen=bloodGroup", dsd);
+        constructColumn(URINES, "Pregnant women urines", cohortIndicator, "pregnantWomen=urines", dsd);
+        constructColumn(OTHER_SICKLING, "Pregnant women sickling test", cohortIndicator, "pregnantWomen=sicklingTest", dsd);
+        constructColumn(OTHER_SICKLING + "Positive", "Other groups of pregnant women sickling test", cohortIndicator, "pregnantWomen=sicklingPositiveOthers", dsd);
+        constructColumn(OTHER_BLODD, "Other groups of pregnant women blood groups", cohortIndicator, "pregnantWomen=otherBloodGroup", dsd);
     }
 
 }

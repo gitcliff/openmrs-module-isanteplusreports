@@ -11,6 +11,18 @@ import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.Hs
 import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.microscopicTestAndPositiveCohort;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.fastTestAndPositiveCohort;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.positiveMicroscopicFastCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.hemogramCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.vihCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.rPRCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.sicklingTestCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.bloodGroupCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.urinesCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.otherSicklingTestCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.otherBloodGroupCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.positiveVihCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.positiveRPRCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.positiveSicklingTestCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.positiveOtherSicklingTestCohort;
 
 
 import org.openmrs.module.isanteplusreports.reporting.utils.ReportUtils;
@@ -41,4 +53,22 @@ public class HsisDimensionLibrary {
         dim.addCohortDefinition("fastTest", ReportUtils.map(fastTestCohort()));
       return dim;				  		  
       }	
+
+      public static CohortDefinitionDimension pregnantDimension(){
+        CohortDefinitionDimension dim = new CohortDefinitionDimension();
+          dim.setName("pregnantWomen");
+          dim.addCohortDefinition("hemogram", ReportUtils.map(hemogramCohort()));
+          dim.addCohortDefinition("vih", ReportUtils.map(vihCohort()));
+          dim.addCohortDefinition("rPR", ReportUtils.map(rPRCohort()));
+          dim.addCohortDefinition("sicklingTest", ReportUtils.map(sicklingTestCohort()));
+          dim.addCohortDefinition("bloodGroup", ReportUtils.map(bloodGroupCohort()));
+          dim.addCohortDefinition("urines", ReportUtils.map(urinesCohort()));
+          dim.addCohortDefinition("otherUrines", ReportUtils.map(otherSicklingTestCohort()));
+          dim.addCohortDefinition("otherBloodGroup", ReportUtils.map(otherBloodGroupCohort()));
+          dim.addCohortDefinition("vihPositive", ReportUtils.map(positiveVihCohort()));
+          dim.addCohortDefinition("rprPositive", ReportUtils.map(positiveRPRCohort()));
+          dim.addCohortDefinition("sicklingPositive", ReportUtils.map(positiveSicklingTestCohort()));
+          dim.addCohortDefinition("sicklingPositiveOthers", ReportUtils.map(positiveOtherSicklingTestCohort()));
+        return dim;				  		  
+        }	    
 }
