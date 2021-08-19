@@ -59,12 +59,16 @@ public class HsisReportManager extends BaseReportManager{
 		
 		CohortIndicatorDataSetDefinition cdv = HsisReportDatasetLibrary.getVistsDataset();
 		CohortIndicatorDataSetDefinition cdm = HsisReportDatasetLibrary.getMalariaDataset();
+		CohortIndicatorDataSetDefinition cdp = HsisReportDatasetLibrary.getPregnantWomenDataset();
+
 
 		Map<String, Object> parameterMappings = new HashMap<String, Object>();
 		parameterMappings.put("startDate", "${startDate}");
 		parameterMappings.put("endDate", "${endDate}");	
 		rd.addDataSetDefinition("visits", cdv, parameterMappings);
-		rd.addDataSetDefinition("malaria", cdm, parameterMappings);			
+		rd.addDataSetDefinition("malaria", cdm, parameterMappings);	
+		rd.addDataSetDefinition("pregnant", cdp, parameterMappings);			
+		
 		return rd;
     }
 
@@ -86,7 +90,7 @@ public class HsisReportManager extends BaseReportManager{
 		designProperties.put("label.institutional.none", translate("label.institutional.none"));
 		designProperties.put("label.exams.type", translate("label.exams.type"));
 		designProperties.put("label.Total", translate("label.Total"));
-		designProperties.put("label.postive", translate("label.postive"));
+		designProperties.put("label.positive", translate("label.positive"));
 		designProperties.put("label.categories", translate("label.categories"));
 		designProperties.put("label.new", translate("label.new"));
 		designProperties.put("label.subsquent",translate("label.subsquent"));
