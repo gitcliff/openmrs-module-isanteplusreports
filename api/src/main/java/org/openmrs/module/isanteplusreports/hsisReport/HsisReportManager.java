@@ -63,8 +63,8 @@ public class HsisReportManager extends BaseReportManager{
 		Map<String, Object> parameterMappings = new HashMap<String, Object>();
 		parameterMappings.put("startDate", "${startDate}");
 		parameterMappings.put("endDate", "${endDate}");	
-		rd.addDataSetDefinition(getName(), cdv, parameterMappings);
-		rd.addDataSetDefinition(getName(), cdm, parameterMappings);		
+		rd.addDataSetDefinition("visits", cdv, parameterMappings);
+		rd.addDataSetDefinition("malaria", cdm, parameterMappings);		
 		
 		return rd;
     }

@@ -6,23 +6,23 @@ import static org.openmrs.module.isanteplusreports.hsisReport.utils.HsisReportUt
 
 public class HsisReportColumns {
 
-    public static final String CHILD_0_1 = "new vists_children0_1_";
-    public static final String CHILD_1_4 = "new vists_children1_4_";
-    public static final String CHILD_5_9 = "new vists_children5_9_";
-    public static final String CHILD_10_14 = "new vists_children10_14_";
-    public static final String CHILD_15_19 = "new vists_children15_19_";
-    public static final String CHILD_20_24 = "new vists_children20_24_";
-    public static final String PREGNANT = "new vists_pregnant_";
-    public static final String PF = "new vists_pf_";
-    public static final String CIOC = "new vists_customersInOralCare_";
-    public static final String OA = "new vists_otherAdults_";
-    public static final String TOTAL = "new vists_total_";
-    public static final String ENGINE = "new vists_reducedMobilityEngine_";
-    public static final String SENSORY = "new vists_reducedMobilitySensory_";
-    public static final String MICROSCOPIC = "malaria exams_microscopicTest_";
-    public static final String FAST = "malaria xams_fastTest_";
-    public static final String MALARIA = "malaria exams_testedForMalaria_";
-    public static final String PSMALARIA = "malaria exams_testedForMalariaPositive_";
+    public static final String CHILD_0_1 = "visits.children0_1_";
+    public static final String CHILD_1_4 = "visits.children1_4_";
+    public static final String CHILD_5_9 = "visits.children5_9_";
+    public static final String CHILD_10_14 = "visits.children10_14_";
+    public static final String CHILD_15_19 = "visits.children15_19_";
+    public static final String CHILD_20_24 = "visits.children20_24_";
+    public static final String PREGNANT = "visits.pregnant_";
+    public static final String PF = "visits.pf_";
+    public static final String CIOC = "visits.customersInOralCare_";
+    public static final String OA = "visits.otherAdults_";
+    public static final String TOTAL = "visits.total_";
+    public static final String ENGINE = "visits.reducedMobilityEngine_";
+    public static final String SENSORY = "visits.reducedMobilitySensory_";
+    public static final String MICROSCOPIC = "malaria.microscopicTest_";
+    public static final String FAST = "malaria.fastTest_";
+    public static final String MALARIA = "malaria.testedForMalaria_";
+    public static final String PSMALARIA = "malaria.testedForMalariaPositive_";
 
 
 

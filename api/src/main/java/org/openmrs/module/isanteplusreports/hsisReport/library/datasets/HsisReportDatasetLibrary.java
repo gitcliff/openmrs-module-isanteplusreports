@@ -29,7 +29,7 @@ public class HsisReportDatasetLibrary {
 
   public static CohortIndicatorDataSetDefinition getVistsDataset() {
     CohortIndicatorDataSetDefinition dsd = new CohortIndicatorDataSetDefinition();
-    dsd.setName("new vists");
+    dsd.setName("visits");
     dsd.addParameter(START_DATE);
     dsd.addParameter(END_DATE);
     dsd.addDimension("age", ReportUtils.map(new CommonDimension().ageZone(), "effectiveDate=${endDate}"));
@@ -41,7 +41,7 @@ public class HsisReportDatasetLibrary {
 
   public static CohortIndicatorDataSetDefinition getMalariaDataset() {
     CohortIndicatorDataSetDefinition dsd = new CohortIndicatorDataSetDefinition();
-    dsd.setName("malaria exams");
+    dsd.setName("malaria");
     dsd.addParameter(START_DATE);
     dsd.addParameter(END_DATE);
     dsd.addDimension("positive microscopic", ReportUtils.map(positiveMicroscopicDimension()));
@@ -49,7 +49,6 @@ public class HsisReportDatasetLibrary {
     dsd.addDimension("microscopic test", ReportUtils.map(microscopicTestDimension()));
     dsd.addDimension("fast test", ReportUtils.map(fastTestDimension()));
     dsd.addDimension("positive fastMicroscopicFast", ReportUtils.map(positiveMicroscopicFastDimension()));
-
     HsisReportColumns.addTypesOfExaminationsColumsForMalaria(dsd, getMalariaIndicator());
     return dsd;
   }
