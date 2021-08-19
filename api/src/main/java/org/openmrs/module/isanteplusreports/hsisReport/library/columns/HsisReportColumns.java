@@ -6,6 +6,7 @@ import static org.openmrs.module.isanteplusreports.hsisReport.utils.HsisReportUt
 
 public class HsisReportColumns {
 
+    //colums for the Vist Dataset
     public static final String CHILD_0_1 = "children0_1_";
     public static final String CHILD_1_4 = "children1_4_";
     public static final String CHILD_5_9 = "children5_9_";
@@ -19,10 +20,12 @@ public class HsisReportColumns {
     public static final String TOTAL = "total_";
     public static final String ENGINE = "reducedMobilityEngine_";
     public static final String SENSORY = "reducedMobilitySensory_";
-    public static final String MICROSCOPIC = "microscopicTest_";
-    public static final String FAST = "fastTest_";
-    public static final String MALARIA = "testedForMalaria_";
-    public static final String PSMALARIA = "testedForMalariaPositive_";
+
+    //colums for the Malaria Dataset
+    public static final String MICROSCOPIC = "microscopicTest";
+    public static final String FAST = "fastTest";
+    public static final String MALARIA = "testedForMalaria";
+    public static final String PSMALARIA = "testedForMalariaPositive";
 
 
 
@@ -43,11 +46,11 @@ public class HsisReportColumns {
     }
 
     public static void addTypesOfExaminationsColumsForMalaria(CohortIndicatorDataSetDefinition dsd, CohortIndicator cohortIndicator) {
-        constructColumn(MICROSCOPIC + "positive", "Malaria microscopic positive test", cohortIndicator, "malariaExam=microscopicTestPositive", dsd);
-        constructColumn(FAST + "positive", "Malaria fast positive test", cohortIndicator, "malariaExam=fastTestPositive", dsd);
+        constructColumn(MICROSCOPIC + "Positive", "Malaria microscopic positive test", cohortIndicator, "malariaExam=microscopicTestPositive", dsd);
+        constructColumn(FAST + "Positive", "Malaria fast positive test", cohortIndicator, "malariaExam=fastTestPositive", dsd);
         constructColumn(MICROSCOPIC, "Malaria microscopic test", cohortIndicator, "malariaExam=microscopicTest", dsd);
         constructColumn(FAST, "Malaria fast test", cohortIndicator, "malariaExam=fastTest", dsd);
-        constructColumn(PSMALARIA + "positive", "Positive number of people tested for Malaria", cohortIndicator, "malariaExam=fastTestPositiveMicroscopicFast", dsd);
+        constructColumn(PSMALARIA , "Positive number of people tested for Malaria", cohortIndicator, "malariaExam=fastTestPositiveMicroscopicFast", dsd);
         constructColumn(MALARIA, "Number of people tested for Malaria", cohortIndicator, "", dsd);
     }
 
