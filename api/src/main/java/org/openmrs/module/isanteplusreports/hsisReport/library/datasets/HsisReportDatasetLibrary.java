@@ -2,11 +2,11 @@ package org.openmrs.module.isanteplusreports.hsisReport.library.datasets;
 
 import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators.HsisIndicatorLibrary.getNewVistsIndicator;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators.HsisIndicatorLibrary.getSubsquentVistsIndicator;
-
+import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators.HsisIndicatorLibrary.getMalariaIndicator;
 import java.sql.Date;
-
 import org.openmrs.module.isanteplusreports.hsisReport.library.columns.HsisReportColumns;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.dimensions.HsisDimensionLibrary.generalDimension;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.dimensions.HsisDimensionLibrary.malariaDimension;
 import org.openmrs.module.isanteplusreports.library.dimension.CommonDimension;
 import org.openmrs.module.isanteplusreports.reporting.utils.ReportUtils;
 import org.openmrs.module.reporting.dataset.definition.CohortIndicatorDataSetDefinition;
@@ -22,7 +22,7 @@ public class HsisReportDatasetLibrary {
 
   public static CohortIndicatorDataSetDefinition getVistsDataset() {
     CohortIndicatorDataSetDefinition dsd = new CohortIndicatorDataSetDefinition();
-    dsd.setName("new vists");
+    dsd.setName("visits");
     dsd.addParameter(START_DATE);
     dsd.addParameter(END_DATE);
     dsd.addDimension("age", ReportUtils.map(new CommonDimension().ageZone(), "effectiveDate=${endDate}"));
@@ -32,4 +32,13 @@ public class HsisReportDatasetLibrary {
     return dsd;
   }
 
+  public static CohortIndicatorDataSetDefinition getMalariaDataset() {
+    CohortIndicatorDataSetDefinition dsd = new CohortIndicatorDataSetDefinition();
+    dsd.setName("malaria");
+    dsd.addParameter(START_DATE);
+    dsd.addParameter(END_DATE);
+    dsd.addDimension("malariaExams", ReportUtils.map(malariaDimension()));
+    HsisReportColumns.addTypesOfExaminationsColumsForMalaria(dsd, getMalariaIndicator());
+    return dsd;
+  }
 }

@@ -57,11 +57,15 @@ public class HsisReportManager extends BaseReportManager{
 		rd.setParameters(getParameters());
 		rd.setUuid(getUuid());
 		
-		CohortIndicatorDataSetDefinition cd = HsisReportDatasetLibrary.getVistsDataset();
+		CohortIndicatorDataSetDefinition cdv = HsisReportDatasetLibrary.getVistsDataset();
+		 CohortIndicatorDataSetDefinition cdm = HsisReportDatasetLibrary.getMalariaDataset();
+
 		Map<String, Object> parameterMappings = new HashMap<String, Object>();
 		parameterMappings.put("startDate", "${startDate}");
 		parameterMappings.put("endDate", "${endDate}");	
-		rd.addDataSetDefinition(getName(), cd, parameterMappings);		
+		rd.addDataSetDefinition("visits", cdv, parameterMappings);
+		rd.addDataSetDefinition("malaria", cdm, parameterMappings);		
+		
 		return rd;
     }
 

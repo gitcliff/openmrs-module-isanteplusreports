@@ -11,6 +11,11 @@ public class HsisIndicatorLibrary {
     }
 
     public static CohortIndicator getSubsquentVistsIndicator(){
-        return cohortIndicatorFromSqlResource("subsquentVists.sql", "subsquent Vists",getDateParameters()); 
+      return cohortIndicatorFromSqlResource("subsquentVists.sql", "subsquent Vists",getDateParameters()); 
+   }
+
+    public static CohortIndicator getMalariaIndicator(){
+        return cohortIndicatorFromSqlResource("malaria.sql", "Examinations for malaria",getDateParameters()); 
      }
+
 }
