@@ -44,6 +44,9 @@ public class HsisIndicatorLibrary {
 
    public static CohortIndicator getFifthVisitIndicator(){
       return cohortIndicatorFromSqlResource("fifthVisit.sql", "Fifth visit for women and mothers",getDateParameters()); 
+   }  
+   
+   public static CohortIndicator getSupportForPregnantWomenIndicator(){
+      return cohortIndicatorFromSqlResource("supportForPregnantWomen.sql", "Support For Pregnant Women",getDateParameters()); 
    }   
-
 }

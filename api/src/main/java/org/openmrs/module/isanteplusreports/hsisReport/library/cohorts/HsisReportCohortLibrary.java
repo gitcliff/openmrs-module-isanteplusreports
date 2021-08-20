@@ -153,4 +153,49 @@ public class HsisReportCohortLibrary {
     SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("sevenToNineMonths.sql", "7 -9 months pregnancy period");
     return cohortDefinition;
   }
+
+  public static CohortDefinition  pregnancyRiskCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("pregnancyRisk.sql", "Number of pregnancies at risk");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  pregnancyAnemiaCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("pregnancyAnemia.sql", "Case of anemia in pregnant women");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  pregnancyFolateIronCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("pregnancyFolateIron.sql", "Pregnant women receiving folate iron");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  pregnancyFerritiveCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("pregnancyFerritive.sql", "Pregnant women treated for ferrifive Anemia");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  deliveryPlanCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("deliveryPlan.sql", "Pregnant women with a delivery plan");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  pregnancyChloroquineCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("pregnancyChloroquine.sql", "Pregnant women with malaria confirmed treated with chloroquine");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  impregnantedMosquitoNetCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("impregnantedMosquitoNet.sql", "Pregnant women who received an impregnated mosquito net");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  pregnancyPbCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("pregnancyPb.sql", "Pregnant Women Pb <210mm (Mam / Mas)");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  pregnancyMamCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("pregnancyMam.sql", "Pregnant women MAM / Mas supported");
+    return cohortDefinition;
+  }
 }

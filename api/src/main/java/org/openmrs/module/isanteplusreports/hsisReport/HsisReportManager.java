@@ -61,8 +61,7 @@ public class HsisReportManager extends BaseReportManager{
 		CohortIndicatorDataSetDefinition cdm = HsisReportDatasetLibrary.getMalariaDataset();
 		CohortIndicatorDataSetDefinition cdp = HsisReportDatasetLibrary.getPregnantWomenDataset();
 		CohortIndicatorDataSetDefinition cdw = HsisReportDatasetLibrary.getWomenMotherDataset();
-
-
+		CohortIndicatorDataSetDefinition cds = HsisReportDatasetLibrary.getSupportDataset();
 
 		Map<String, Object> parameterMappings = new HashMap<String, Object>();
 		parameterMappings.put("startDate", "${startDate}");
@@ -70,8 +69,8 @@ public class HsisReportManager extends BaseReportManager{
 		rd.addDataSetDefinition("visits", cdv, parameterMappings);
 		rd.addDataSetDefinition("malaria", cdm, parameterMappings);	
 		rd.addDataSetDefinition("pregnant", cdp, parameterMappings);
-		rd.addDataSetDefinition("women", cdw, parameterMappings);			
-			
+		rd.addDataSetDefinition("women", cdw, parameterMappings);
+		rd.addDataSetDefinition("support", cds, parameterMappings);				
 		return rd;
     }
 

@@ -44,6 +44,18 @@ public class HsisReportColumns {
     public static final String TOTAL_TOURS = "total_tours_";
     public static final String TOTAL_VISITS = "total_visits_";
 
+     //colums for spport for pregnant women Dataset
+     public static final String RISK = "risk";
+     public static final String ANEMIA = "anemia";
+     public static final String FOLATE = "folate";
+     public static final String FERRIFIVE = "ferrifive";
+     public static final String DELIVERY_PLAN = "delivery_plan";
+     public static final String CHLOROQUINE = "chloroquine";
+     public static final String NET = "mosquito_net";
+     public static final String PB = "Pb";
+     public static final String MAM = "mam";
+
+
 
     public static void addAgeColumnsforVists(CohortIndicatorDataSetDefinition dsd, CohortIndicator cohortIndicator ,String vistType) {
         constructColumn(CHILD_0_1 + vistType, "0-1 Years", cohortIndicator, "age=0_1", dsd);
@@ -113,4 +125,17 @@ public class HsisReportColumns {
         constructColumn(TOTAL_TOURS + "4th_visit" , "Total women and mother with pregnancy period during fourth visit", cohortIndicator, "", dsd);
         constructColumn(TOTAL_TOURS + "5th_visit"  , "Total women and mother with pregnancy period during fifth visit", cohortIndicator, "", dsd);
     }
+
+    public static void addColumsForSupportForPregnantWomen(CohortIndicatorDataSetDefinition dsd, CohortIndicator cohortIndicator) {
+        constructColumn(RISK , "Support for pregnant women", cohortIndicator, "supportWomen=risk", dsd);
+        constructColumn(ANEMIA , "Support for pregnant women", cohortIndicator, "supportWomen=anemia", dsd);
+        constructColumn(FOLATE , "Support for pregnant women", cohortIndicator, "supportWomen=folateIron", dsd);
+        constructColumn(FERRIFIVE , "Support for pregnant women", cohortIndicator, "supportWomen=ferritive", dsd);
+        constructColumn(DELIVERY_PLAN , "Support for pregnant women", cohortIndicator, "supportWomen=deliveryPlan", dsd);
+        constructColumn(CHLOROQUINE, "Support for pregnant women", cohortIndicator, "supportWomen=chloroquine", dsd);
+        constructColumn(NET , "Support for pregnant women", cohortIndicator, "supportWomen=mosquitoNet", dsd);
+        constructColumn(PB , "Support for pregnant women", cohortIndicator, "supportWomen=pregnancyPb", dsd);
+        constructColumn(MAM , "Support for pregnant women", cohortIndicator, "supportWomen=pregnancyMam", dsd);
+    }
+
 }

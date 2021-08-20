@@ -10,6 +10,8 @@ import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators
 import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators.HsisIndicatorLibrary.getThirdVisitIndicator;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators.HsisIndicatorLibrary.getFourthVisitIndicator;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators.HsisIndicatorLibrary.getFifthVisitIndicator;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators.HsisIndicatorLibrary.getSupportForPregnantWomenIndicator;
+
 
 import java.sql.Date;
 import org.openmrs.module.isanteplusreports.hsisReport.library.columns.HsisReportColumns;
@@ -17,6 +19,8 @@ import static org.openmrs.module.isanteplusreports.hsisReport.library.dimensions
 import static org.openmrs.module.isanteplusreports.hsisReport.library.dimensions.HsisDimensionLibrary.malariaDimension;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.dimensions.HsisDimensionLibrary.pregnantDimension;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.dimensions.HsisDimensionLibrary.womenMotherDimension;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.dimensions.HsisDimensionLibrary.supportForPregnantWomenDimension;
+
 
 
 import org.openmrs.module.isanteplusreports.library.dimension.CommonDimension;
@@ -76,6 +80,16 @@ public class HsisReportDatasetLibrary {
     HsisReportColumns.addColumsForWomenMothers(dsd, getThirdVisitIndicator());
     HsisReportColumns.addColumsForWomenMothers(dsd, getFourthVisitIndicator());
     HsisReportColumns.addColumsForWomenMothers(dsd, getFifthVisitIndicator());
+    return dsd;
+  }
+
+  public static CohortIndicatorDataSetDefinition getSupportDataset() {
+    CohortIndicatorDataSetDefinition dsd = new CohortIndicatorDataSetDefinition();
+    dsd.setName("support");
+    dsd.addParameter(START_DATE);
+    dsd.addParameter(END_DATE);
+    dsd.addDimension("supportWomen", ReportUtils.map(supportForPregnantWomenDimension()));
+    HsisReportColumns.addColumsForSupportForPregnantWomen(dsd, getSupportForPregnantWomenIndicator());
     return dsd;
   }
 }

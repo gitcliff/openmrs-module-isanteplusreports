@@ -26,6 +26,16 @@ import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.Hs
 import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.zeroToThreeMonthsCohort;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.fourToSixMonthsCohort;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.sevenToNineMonthsCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.pregnancyRiskCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.pregnancyAnemiaCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.pregnancyFolateIronCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.pregnancyFerritiveCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.deliveryPlanCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.pregnancyChloroquineCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.impregnantedMosquitoNetCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.pregnancyPbCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.pregnancyMamCohort;
+
 import org.openmrs.module.isanteplusreports.reporting.utils.ReportUtils;
 import org.openmrs.module.reporting.indicator.dimension.CohortDefinitionDimension;
 
@@ -80,5 +90,20 @@ public class HsisDimensionLibrary {
           dim.addCohortDefinition("fourToSix", ReportUtils.map(fourToSixMonthsCohort()));
           dim.addCohortDefinition("sevenToNine", ReportUtils.map(sevenToNineMonthsCohort()));
         return dim;				  		  
-        }	      
+        }	   
+        
+        public static CohortDefinitionDimension supportForPregnantWomenDimension(){
+          CohortDefinitionDimension dim = new CohortDefinitionDimension();
+            dim.setName("supportWomen");
+            dim.addCohortDefinition("risk", ReportUtils.map(pregnancyRiskCohort()));
+            dim.addCohortDefinition("anemia", ReportUtils.map(pregnancyAnemiaCohort()));
+            dim.addCohortDefinition("folateIron", ReportUtils.map(pregnancyFolateIronCohort()));
+            dim.addCohortDefinition("ferritive", ReportUtils.map(pregnancyFerritiveCohort()));
+            dim.addCohortDefinition("deliveryPlan", ReportUtils.map(deliveryPlanCohort()));
+            dim.addCohortDefinition("chloroquine", ReportUtils.map(pregnancyChloroquineCohort()));
+            dim.addCohortDefinition("mosquitoNet", ReportUtils.map(impregnantedMosquitoNetCohort()));
+            dim.addCohortDefinition("pregnancyPb", ReportUtils.map(pregnancyPbCohort()));
+            dim.addCohortDefinition("pregnancyMam", ReportUtils.map(pregnancyMamCohort()));
+          return dim;				  		  
+          }	        
 }
