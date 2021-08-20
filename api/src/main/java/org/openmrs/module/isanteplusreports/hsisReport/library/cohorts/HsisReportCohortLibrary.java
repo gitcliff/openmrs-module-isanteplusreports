@@ -138,4 +138,19 @@ public class HsisReportCohortLibrary {
     SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("otherBloodGroup.sql", "Other pregnant women blood group");
     return cohortDefinition;
   }
+
+  public static CohortDefinition  zeroToThreeMonthsCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("zeroToThreeMonths.sql", "0 -3 months pregnancy period");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  fourToSixMonthsCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("fourToSixMonths.sql", "4 - 6 months pregnancy period");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  sevenToNineMonthsCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("sevenToNineMonths.sql", "7 -9 months pregnancy period");
+    return cohortDefinition;
+  }
 }

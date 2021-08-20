@@ -37,6 +37,12 @@ public class HsisReportColumns {
     public static final String OTHER_SICKLING = "otherSicklingTest";
     public static final String OTHER_BLODD = "otherBlood";
 
+    //colums for Women and mother pregnancy period Dataset
+    public static final String WOMEN_0_3 = "women0_3_";
+    public static final String WOMEN_4_6 = "women4_6_";
+    public static final String WOMEN_7_9 = "women7_9_";
+    public static final String TOTAL_TOURS = "total_tours_";
+    public static final String TOTAL_VISITS = "total_visits_";
 
 
     public static void addAgeColumnsforVists(CohortIndicatorDataSetDefinition dsd, CohortIndicator cohortIndicator ,String vistType) {
@@ -79,4 +85,32 @@ public class HsisReportColumns {
         constructColumn(OTHER_BLODD, "Other groups of pregnant women blood groups", cohortIndicator, "pregnantWomen=otherBloodGroup", dsd);
     }
 
+    public static void addColumsForWomenMothers(CohortIndicatorDataSetDefinition dsd, CohortIndicator cohortIndicator) {
+        constructColumn(WOMEN_0_3 + "1st_visit" , "women and mother with pregnancy period of 0 - 3 months", cohortIndicator, "womenMothers=zeroToThree", dsd);
+        constructColumn(WOMEN_0_3 + "2nd_visit" , "women and mother with pregnancy period of 0 - 3 months", cohortIndicator, "womenMothers=zeroToThree", dsd);
+        constructColumn(WOMEN_0_3 + "3rd_visit" , "women and mother with pregnancy period of 0 - 3 months", cohortIndicator, "womenMothers=zeroToThree", dsd);
+        constructColumn(WOMEN_0_3 + "4th_visit" , "women and mother with pregnancy period of 0 - 3 months", cohortIndicator, "womenMothers=zeroToThree", dsd);
+        constructColumn(WOMEN_0_3 + "5th_visit" , "women and mother with pregnancy period of 0 - 3 months", cohortIndicator, "womenMothers=zeroToThree", dsd);
+        constructColumn(TOTAL_VISITS + "0-3months", "Total women and mother with pregnancy period of 0 - 3 months", cohortIndicator, "", dsd);
+
+        constructColumn(WOMEN_4_6 + "1st_visit" , "women and mother with pregnancy period of 4 - 6 months", cohortIndicator, "womenMothers=fourToSix", dsd);
+        constructColumn(WOMEN_4_6 + "2nd_visit" , "women and mother with pregnancy period of 4 - 6 months", cohortIndicator, "womenMothers=fourToSix", dsd);
+        constructColumn(WOMEN_4_6 + "3rd_visit" , "women and mother with pregnancy period of 4 - 6 months", cohortIndicator, "womenMothers=fourToSix", dsd);
+        constructColumn(WOMEN_4_6 + "4th_visit" , "women and mother with pregnancy period of 4 - 6 months", cohortIndicator, "womenMothers=fourToSix", dsd);
+        constructColumn(WOMEN_4_6 + "5th_visit" , "women and mother with pregnancy period of 4 - 6 months", cohortIndicator, "womenMothers=fourToSix", dsd);
+        constructColumn(TOTAL_VISITS + "4-6months" , "Total women and mother with pregnancy period of 4 - 6 months", cohortIndicator, "", dsd);
+
+        constructColumn(WOMEN_7_9 + "1st_visit" , "women and mother with pregnancy period of 7 - 9 months", cohortIndicator, "womenMothers=sevenToNine", dsd);
+        constructColumn(WOMEN_7_9 + "2nd_visit" , "women and mother with pregnancy period of 7 - 9 months", cohortIndicator, "womenMothers=sevenToNine", dsd);
+        constructColumn(WOMEN_7_9 + "3rd_visit" , "women and mother with pregnancy period of 7 - 9 months", cohortIndicator, "womenMothers=sevenToNine", dsd);
+        constructColumn(WOMEN_7_9 + "4th_visit" , "women and mother with pregnancy period of 7 - 9 months", cohortIndicator, "womenMothers=sevenToNine", dsd);
+        constructColumn(WOMEN_7_9 + "5th_visit" , "women and mother with pregnancy period of 7 - 9 months", cohortIndicator, "womenMothers=sevenToNine", dsd);
+        constructColumn(TOTAL_VISITS + "7-9months", "Total women and mother with pregnancy period of 7 - 9 months", cohortIndicator, "", dsd);
+
+        constructColumn(TOTAL_TOURS + "1st_visit" , "Total women and mother with pregnancy period during first visit", cohortIndicator, "", dsd);
+        constructColumn(TOTAL_TOURS + "2nd_visit" , "Total women and mother with pregnancy period during second visit", cohortIndicator, "", dsd);
+        constructColumn(TOTAL_TOURS + "3rd_visit" , "Total women and mother with pregnancy period during third visit", cohortIndicator, "", dsd);
+        constructColumn(TOTAL_TOURS + "4th_visit" , "Total women and mother with pregnancy period during fourth visit", cohortIndicator, "", dsd);
+        constructColumn(TOTAL_TOURS + "5th_visit"  , "Total women and mother with pregnancy period during fifth visit", cohortIndicator, "", dsd);
+    }
 }

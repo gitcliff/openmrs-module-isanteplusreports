@@ -21,9 +21,29 @@ public class HsisIndicatorLibrary {
      public static CohortIndicator getPregnantWomenMalariaIndicator(){
       return cohortIndicatorFromSqlResource("pregnantWomenMalaria.sql", "Pregnant women under malaria",getDateParameters()); 
    } 
-   
+
    public static CohortIndicator getOtherGroupsMalariaIndicator(){
       return cohortIndicatorFromSqlResource("pregnantOtherGroups.sql", "Other groups pregnant women under malaria",getDateParameters()); 
+   }   
+   
+   public static CohortIndicator getFirstVisitIndicator(){
+      return cohortIndicatorFromSqlResource("firstVisit.sql", "First visit for women and mothers",getDateParameters()); 
+   }   
+
+   public static CohortIndicator getSecondVisitIndicator(){
+      return cohortIndicatorFromSqlResource("secondVisit.sql", "Second visit for women and mothers",getDateParameters()); 
+   }   
+
+   public static CohortIndicator getThirdVisitIndicator(){
+      return cohortIndicatorFromSqlResource("thirdVisit.sql", "Third visit for women and mothers",getDateParameters()); 
+   }   
+
+   public static CohortIndicator getFourthVisitIndicator(){
+      return cohortIndicatorFromSqlResource("fourthVisit.sql", "Fourth visit for women and mothers",getDateParameters()); 
+   }   
+
+   public static CohortIndicator getFifthVisitIndicator(){
+      return cohortIndicatorFromSqlResource("fifthVisit.sql", "Fifth visit for women and mothers",getDateParameters()); 
    }   
 
 }

@@ -23,8 +23,9 @@ import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.Hs
 import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.positiveRPRCohort;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.positiveSicklingTestCohort;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.positiveOtherSicklingTestCohort;
-
-
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.zeroToThreeMonthsCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.fourToSixMonthsCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.sevenToNineMonthsCohort;
 import org.openmrs.module.isanteplusreports.reporting.utils.ReportUtils;
 import org.openmrs.module.reporting.indicator.dimension.CohortDefinitionDimension;
 
@@ -70,5 +71,14 @@ public class HsisDimensionLibrary {
           dim.addCohortDefinition("sicklingPositive", ReportUtils.map(positiveSicklingTestCohort()));
           dim.addCohortDefinition("sicklingPositiveOthers", ReportUtils.map(positiveOtherSicklingTestCohort()));
         return dim;				  		  
-        }	    
+        }	 
+        
+      public static CohortDefinitionDimension womenMotherDimension(){
+        CohortDefinitionDimension dim = new CohortDefinitionDimension();
+          dim.setName("womenMothers");
+          dim.addCohortDefinition("zeroToThree", ReportUtils.map(zeroToThreeMonthsCohort()));
+          dim.addCohortDefinition("fourToSix", ReportUtils.map(fourToSixMonthsCohort()));
+          dim.addCohortDefinition("sevenToNine", ReportUtils.map(sevenToNineMonthsCohort()));
+        return dim;				  		  
+        }	      
 }
