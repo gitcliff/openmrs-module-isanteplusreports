@@ -92,4 +92,15 @@ public class HsisReportDatasetLibrary {
     HsisReportColumns.addColumsForSupportForPregnantWomen(dsd, getSupportForPregnantWomenIndicator());
     return dsd;
   }
+
+  public static CohortIndicatorDataSetDefinition getDeliveriesDataset() {
+    CohortIndicatorDataSetDefinition dsd = new CohortIndicatorDataSetDefinition();
+    dsd.setName("deliveries");
+    dsd.addParameter(START_DATE);
+    dsd.addParameter(END_DATE);
+    dsd.addDimension("age", ReportUtils.map(new CommonDimension().ageZone(), "effectiveDate=${endDate}"));
+    dsd.addDimension("deliveriesMothers", ReportUtils.map(supportForPregnantWomenDimension()));
+    HsisReportColumns.addColumsForSupportForPregnantWomen(dsd, getSupportForPregnantWomenIndicator());
+    return dsd;
+  }
 }

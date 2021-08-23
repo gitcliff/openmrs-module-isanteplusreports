@@ -55,6 +55,17 @@ public class HsisReportColumns {
      public static final String PB = "Pb";
      public static final String MAM = "mam";
 
+     //colums for deliveries age of mothers
+    public static final String MOTHERS_0_15 = "mothers0_1_";
+    public static final String MOTHERS_15_19 = "mothers5_9_";
+    public static final String MOTHERS_20_24 = "mothers10_14_";
+    public static final String MOTHERS_25_29 = "mothers15_19_";
+    public static final String MOTHERS_30_ABOVE = "mothers20_24_";
+    public static final String UNKNOWN = "unkown_";
+    public static final String WORKMANSHIP = "workmanship_";
+    public static final String PARTOGRAM = "partogram_";
+    public static final String MGT = "management_";
+
 
 
     public static void addAgeColumnsforVists(CohortIndicatorDataSetDefinition dsd, CohortIndicator cohortIndicator ,String vistType) {
@@ -137,5 +148,71 @@ public class HsisReportColumns {
         constructColumn(PB , "Support for pregnant women", cohortIndicator, "supportWomen=pregnancyPb", dsd);
         constructColumn(MAM , "Support for pregnant women", cohortIndicator, "supportWomen=pregnancyMam", dsd);
     }
+
+    public static void addColumsForDeliveriesOnAgeOfMothers(CohortIndicatorDataSetDefinition dsd, CohortIndicator cohortIndicator) {
+        constructColumn(MOTHERS_0_15, "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+        constructColumn(MOTHERS_0_15 + "normal", "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+        constructColumn(MOTHERS_0_15 + "cs", "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+        constructColumn(MOTHERS_0_15 + "inst", "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+        constructColumn(MOTHERS_0_15 + "mid", "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+        constructColumn(MOTHERS_0_15 + "comp", "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+
+        constructColumn(MOTHERS_15_19, "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+        constructColumn(MOTHERS_15_19 + "normal", "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+        constructColumn(MOTHERS_15_19 + "cs", "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+        constructColumn(MOTHERS_15_19 + "inst", "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+        constructColumn(MOTHERS_15_19 + "mid", "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+        constructColumn(MOTHERS_15_19 + "comp", "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+
+        constructColumn(MOTHERS_20_24, "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+        constructColumn(MOTHERS_20_24 + "normal", "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+        constructColumn(MOTHERS_20_24 + "cs", "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+        constructColumn(MOTHERS_20_24 + "inst", "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+        constructColumn(MOTHERS_20_24 + "mid", "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+        constructColumn(MOTHERS_20_24 + "comp", "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+
+        constructColumn(MOTHERS_25_29, "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+        constructColumn(MOTHERS_25_29 + "normal", "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+        constructColumn(MOTHERS_25_29 + "cs", "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+        constructColumn(MOTHERS_25_29 + "inst", "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+        constructColumn(MOTHERS_25_29 + "mid", "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+        constructColumn(MOTHERS_25_29 + "comp", "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+
+        constructColumn(MOTHERS_30_ABOVE, "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+        constructColumn(MOTHERS_30_ABOVE + "normal", "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+        constructColumn(MOTHERS_30_ABOVE + "cs", "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+        constructColumn(MOTHERS_30_ABOVE + "inst", "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+        constructColumn(MOTHERS_30_ABOVE  + "mid", "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+        constructColumn(MOTHERS_30_ABOVE + "comp", "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+
+        constructColumn(UNKNOWN, "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+        constructColumn(UNKNOWN + "normal", "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+        constructColumn(UNKNOWN + "cs", "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+        constructColumn(UNKNOWN + "inst", "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+        constructColumn(UNKNOWN  + "mid", "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+        constructColumn(UNKNOWN  + "comp", "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+
+        constructColumn(WORKMANSHIP, "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+        constructColumn(WORKMANSHIP + "normal", "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+        constructColumn(WORKMANSHIP + "cs", "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+        constructColumn(WORKMANSHIP + "inst", "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+        constructColumn(WORKMANSHIP + "mid", "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+        constructColumn(WORKMANSHIP + "comp", "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+
+        constructColumn(PARTOGRAM, "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+        constructColumn(PARTOGRAM  + "normal", "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+        constructColumn(PARTOGRAM  + "cs", "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+        constructColumn(PARTOGRAM  + "inst", "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+        constructColumn(PARTOGRAM  + "mid", "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+        constructColumn(PARTOGRAM  + "comp", "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+
+        constructColumn(MGT, "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+        constructColumn(MGT + "normal", "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+        constructColumn(MGT + "cs", "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+        constructColumn(MGT + "inst", "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+        constructColumn(MGT + "mid", "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+        constructColumn(MGT + "comp", "Deliveries for age of mothers ", cohortIndicator, "deliveries=bloodGroup", dsd);
+    }
+
 
 }

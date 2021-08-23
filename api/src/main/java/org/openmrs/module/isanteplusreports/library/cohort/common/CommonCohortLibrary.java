@@ -93,5 +93,18 @@ public class CommonCohortLibrary {
 		    cohort.setUnknownAgeIncluded(true);
 		    return cohort;
 		 }
+
+	  /**
+	   * Patients whose age is workmanship
+	   *
+	   * @return the cohort definition
+	   */
+	  public CohortDefinition workmanShipAgeCohort() {
+		AgeCohortDefinition cohort = new AgeCohortDefinition();
+		cohort.setName("uk");
+		cohort.setMinAge(200);
+		cohort.setUnknownAgeIncluded(true);
+		return cohort;
+	 }	 
 	  
 }
