@@ -64,13 +64,11 @@ public class HsisReportColumns {
         constructColumn(CHILD_10_14 + vistType, "10-14 Years", cohortIndicator, "age=10_14", dsd);
         constructColumn(CHILD_15_19 + vistType, "15-19 Years", cohortIndicator, "age=15_19", dsd);
         constructColumn(CHILD_20_24 + vistType, "20-24 Years", cohortIndicator, "age=20_24", dsd);
+        constructColumn(OA + vistType, "Other Adults", cohortIndicator, "age=24_", dsd);
         constructColumn(PREGNANT + vistType, "Pregnant", cohortIndicator, "general=pregnant", dsd);
         constructColumn(PF + vistType, "PF clients", cohortIndicator, "general=pf", dsd);
-        constructColumn(CIOC + vistType, "Customers in oral care", cohortIndicator, "general=customersInOralCare", dsd);
-        constructColumn(OA + vistType, "Other Adults", cohortIndicator, "general=otherAdults", dsd);
+        constructColumn(CIOC + vistType, "Customers in oral care", cohortIndicator, "general=customersInOralCare", dsd);   
         constructColumn(TOTAL + vistType, "Total", cohortIndicator, "", dsd);
-        constructColumn(ENGINE + vistType, "People with reduced mobility (engine)", cohortIndicator, "general=reducedMobilityEngine", dsd);
-        constructColumn(SENSORY + vistType, "People with reduced mobility (sensory)", cohortIndicator, "general=reducedMobilitySensory", dsd);   
     }
 
     public static void addTypesOfExaminationsColumsForMalaria(CohortIndicatorDataSetDefinition dsd, CohortIndicator cohortIndicator) {
@@ -124,6 +122,7 @@ public class HsisReportColumns {
         constructColumn(TOTAL_TOURS + "3rd_visit" , "Total women and mother with pregnancy period during third visit", cohortIndicator, "", dsd);
         constructColumn(TOTAL_TOURS + "4th_visit" , "Total women and mother with pregnancy period during fourth visit", cohortIndicator, "", dsd);
         constructColumn(TOTAL_TOURS + "5th_visit"  , "Total women and mother with pregnancy period during fifth visit", cohortIndicator, "", dsd);
+        constructColumn(TOTAL_TOURS   , "Total women ", cohortIndicator, "", dsd);
     }
 
     public static void addColumsForSupportForPregnantWomen(CohortIndicatorDataSetDefinition dsd, CohortIndicator cohortIndicator) {

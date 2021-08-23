@@ -34,21 +34,6 @@ public class HsisReportCohortLibrary {
     return cohortDefinition;
   }
 
-  public static CohortDefinition otherAdultsCohort() {
-    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("otherAdults.sql", "Other Adults");
-    return cohortDefinition;
-  }
-
-  public static CohortDefinition reducedMobilityEngineCohort() {
-    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("reducedMobilityEngine.sql", "People with reduced mobility (engine)");
-    return cohortDefinition;
-  }
-
-  public static CohortDefinition reducedMobilitySensoryCohort() {
-    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("reducedMobilitySensory.sql", "People with reduced mobility (sensory)");
-    return cohortDefinition;
-  }
-
   public static CohortDefinition microscopicTestCohort() {
     SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("microscopicTest.sql", "Malaria microscopic test");
     return cohortDefinition;
