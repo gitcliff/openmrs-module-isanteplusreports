@@ -35,10 +35,10 @@ import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.Hs
 import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.impregnantedMosquitoNetCohort;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.pregnancyPbCohort;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.pregnancyMamCohort;
-import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.workManshipCohort;
-import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.unknownCohort;
-import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.partogramCohort;
-import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.managementCohort;
+// import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.workManshipCohort;
+// import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.unknownCohort;
+// import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.partogramCohort;
+// import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.managementCohort;
 
 
 import org.openmrs.module.isanteplusreports.reporting.utils.ReportUtils;
@@ -115,10 +115,10 @@ public class HsisDimensionLibrary {
           public static CohortDefinitionDimension deliveriesMothersDimension(){
             CohortDefinitionDimension dim = new CohortDefinitionDimension();
               dim.setName("deliveriesMothers");
-              dim.addCohortDefinition("unknown", ReportUtils.map(unknownCohort()));
-              dim.addCohortDefinition("workManship", ReportUtils.map(workManshipCohort()));
-              dim.addCohortDefinition("partogram", ReportUtils.map(partogramCohort()));
-              dim.addCohortDefinition("management", ReportUtils.map(managementCohort()));
+              // dim.addCohortDefinition("unknown", ReportUtils.map(unknownCohort()));
+              // dim.addCohortDefinition("workManship", ReportUtils.map(workManshipCohort()));
+              // dim.addCohortDefinition("partogram", ReportUtils.map(partogramCohort()));
+              // dim.addCohortDefinition("management", ReportUtils.map(managementCohort()));
             return dim;				  		  
             }	        
 }
