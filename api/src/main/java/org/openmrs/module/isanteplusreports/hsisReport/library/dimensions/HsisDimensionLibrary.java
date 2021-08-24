@@ -35,6 +35,9 @@ import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.Hs
 import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.impregnantedMosquitoNetCohort;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.pregnancyPbCohort;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.pregnancyMamCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.partogramCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.managementCohort;
+
 
 import org.openmrs.module.isanteplusreports.reporting.utils.ReportUtils;
 import org.openmrs.module.reporting.indicator.dimension.CohortDefinitionDimension;
@@ -65,7 +68,7 @@ public class HsisDimensionLibrary {
       return dim;				  		  
       }	
 
-      public static CohortDefinitionDimension pregnantDimension(){
+    public static CohortDefinitionDimension pregnantDimension(){
         CohortDefinitionDimension dim = new CohortDefinitionDimension();
           dim.setName("pregnantWomen");
           dim.addCohortDefinition("hemogram", ReportUtils.map(hemogramCohort()));
@@ -83,7 +86,7 @@ public class HsisDimensionLibrary {
         return dim;				  		  
         }	 
         
-      public static CohortDefinitionDimension womenMotherDimension(){
+    public static CohortDefinitionDimension womenMotherDimension(){
         CohortDefinitionDimension dim = new CohortDefinitionDimension();
           dim.setName("womenMothers");
           dim.addCohortDefinition("zeroToThree", ReportUtils.map(zeroToThreeMonthsCohort()));
@@ -91,8 +94,16 @@ public class HsisDimensionLibrary {
           dim.addCohortDefinition("sevenToNine", ReportUtils.map(sevenToNineMonthsCohort()));
         return dim;				  		  
         }	   
+
+    public static CohortDefinitionDimension deliveriesDimension(){
+          CohortDefinitionDimension dim = new CohortDefinitionDimension();
+            dim.setName("deliveriesMothers");
+            dim.addCohortDefinition("partogram", ReportUtils.map(partogramCohort()));
+            dim.addCohortDefinition("mgt", ReportUtils.map(managementCohort()));
+          return dim;				  		  
+          }	       
         
-        public static CohortDefinitionDimension supportForPregnantWomenDimension(){
+    public static CohortDefinitionDimension supportForPregnantWomenDimension(){
           CohortDefinitionDimension dim = new CohortDefinitionDimension();
             dim.setName("supportWomen");
             dim.addCohortDefinition("risk", ReportUtils.map(pregnancyRiskCohort()));

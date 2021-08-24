@@ -49,4 +49,27 @@ public class HsisIndicatorLibrary {
    public static CohortIndicator getSupportForPregnantWomenIndicator(){
       return cohortIndicatorFromSqlResource("supportForPregnantWomen.sql", "Support For Pregnant Women",getDateParameters()); 
    }   
+
+   public static CohortIndicator  getNormalDeliveryIndicator() {
+      return cohortIndicatorFromSqlResource("normal.sql", "Delivery institutional normal",getDateParameters());
+   
+    }
+  
+    public static CohortIndicator  getCaesareanDeliveryIndicator() {
+      return cohortIndicatorFromSqlResource("caesarean.sql", "Delivery institutional Caesarean section",getDateParameters());
+    }
+  
+    public static CohortIndicator   getInstrumentaisedDeliveryIndicator() {
+      return cohortIndicatorFromSqlResource("instrumentalised.sql", "Delivery institutional instrumentalised",getDateParameters());
+      
+    }
+  
+    public static CohortIndicator  getMidwivesDeliveryIndicator() {
+      return cohortIndicatorFromSqlResource("midwives.sql", "Delivery community Midwives",getDateParameters());
+      
+    }
+  
+    public static CohortIndicator  getComplicationsDeliveryIndicator() {
+      return cohortIndicatorFromSqlResource("complications.sql", "Delivery community Number of obstetric complications referred",getDateParameters());
+    }
 }

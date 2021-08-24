@@ -198,4 +198,14 @@ public class HsisReportCohortLibrary {
     SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("pregnancyMam.sql", "Pregnant women MAM / Mas supported");
     return cohortDefinition;
   }
+
+  public static CohortDefinition  partogramCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("partogram.sql", "Age of mothers");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  managementCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("management.sql", "Age of mothers");
+    return cohortDefinition;
+  }
 }
