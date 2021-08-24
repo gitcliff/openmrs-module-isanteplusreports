@@ -66,7 +66,6 @@ public class HsisReportColumns {
     public static final String MGT = "management_";
 
 
-
     public static void addAgeColumnsforVists(CohortIndicatorDataSetDefinition dsd, CohortIndicator cohortIndicator ,String vistType) {
         constructColumn(CHILD_0_1 + vistType, "0-1 Years", cohortIndicator, "age=0_1", dsd);
         constructColumn(CHILD_1_4 + vistType, "1-4 Years", cohortIndicator, "age=1_4", dsd);
@@ -107,33 +106,12 @@ public class HsisReportColumns {
         constructColumn(OTHER_BLODD, "Other groups of pregnant women blood groups", cohortIndicator, "pregnantWomen=otherBloodGroup", dsd);
     }
 
-    public static void addColumsForWomenMothers(CohortIndicatorDataSetDefinition dsd, CohortIndicator cohortIndicator) {
-        constructColumn(WOMEN_0_3 + "1st_visit" , "women and mother with pregnancy period of 0 - 3 months", cohortIndicator, "womenMothers=zeroToThree", dsd);
-        constructColumn(WOMEN_0_3 + "2nd_visit" , "women and mother with pregnancy period of 0 - 3 months", cohortIndicator, "womenMothers=zeroToThree", dsd);
-        constructColumn(WOMEN_0_3 + "3rd_visit" , "women and mother with pregnancy period of 0 - 3 months", cohortIndicator, "womenMothers=zeroToThree", dsd);
-        constructColumn(WOMEN_0_3 + "4th_visit" , "women and mother with pregnancy period of 0 - 3 months", cohortIndicator, "womenMothers=zeroToThree", dsd);
-        constructColumn(WOMEN_0_3 + "5th_visit" , "women and mother with pregnancy period of 0 - 3 months", cohortIndicator, "womenMothers=zeroToThree", dsd);
-        constructColumn(TOTAL_VISITS + "0-3months", "Total women and mother with pregnancy period of 0 - 3 months", cohortIndicator, "", dsd);
-
-        constructColumn(WOMEN_4_6 + "1st_visit" , "women and mother with pregnancy period of 4 - 6 months", cohortIndicator, "womenMothers=fourToSix", dsd);
-        constructColumn(WOMEN_4_6 + "2nd_visit" , "women and mother with pregnancy period of 4 - 6 months", cohortIndicator, "womenMothers=fourToSix", dsd);
-        constructColumn(WOMEN_4_6 + "3rd_visit" , "women and mother with pregnancy period of 4 - 6 months", cohortIndicator, "womenMothers=fourToSix", dsd);
-        constructColumn(WOMEN_4_6 + "4th_visit" , "women and mother with pregnancy period of 4 - 6 months", cohortIndicator, "womenMothers=fourToSix", dsd);
-        constructColumn(WOMEN_4_6 + "5th_visit" , "women and mother with pregnancy period of 4 - 6 months", cohortIndicator, "womenMothers=fourToSix", dsd);
-        constructColumn(TOTAL_VISITS + "4-6months" , "Total women and mother with pregnancy period of 4 - 6 months", cohortIndicator, "", dsd);
-
-        constructColumn(WOMEN_7_9 + "1st_visit" , "women and mother with pregnancy period of 7 - 9 months", cohortIndicator, "womenMothers=sevenToNine", dsd);
-        constructColumn(WOMEN_7_9 + "2nd_visit" , "women and mother with pregnancy period of 7 - 9 months", cohortIndicator, "womenMothers=sevenToNine", dsd);
-        constructColumn(WOMEN_7_9 + "3rd_visit" , "women and mother with pregnancy period of 7 - 9 months", cohortIndicator, "womenMothers=sevenToNine", dsd);
-        constructColumn(WOMEN_7_9 + "4th_visit" , "women and mother with pregnancy period of 7 - 9 months", cohortIndicator, "womenMothers=sevenToNine", dsd);
-        constructColumn(WOMEN_7_9 + "5th_visit" , "women and mother with pregnancy period of 7 - 9 months", cohortIndicator, "womenMothers=sevenToNine", dsd);
-        constructColumn(TOTAL_VISITS + "7-9months", "Total women and mother with pregnancy period of 7 - 9 months", cohortIndicator, "", dsd);
-
-        constructColumn(TOTAL_TOURS + "1st_visit" , "Total women and mother with pregnancy period during first visit", cohortIndicator, "", dsd);
-        constructColumn(TOTAL_TOURS + "2nd_visit" , "Total women and mother with pregnancy period during second visit", cohortIndicator, "", dsd);
-        constructColumn(TOTAL_TOURS + "3rd_visit" , "Total women and mother with pregnancy period during third visit", cohortIndicator, "", dsd);
-        constructColumn(TOTAL_TOURS + "4th_visit" , "Total women and mother with pregnancy period during fourth visit", cohortIndicator, "", dsd);
-        constructColumn(TOTAL_TOURS + "5th_visit"  , "Total women and mother with pregnancy period during fifth visit", cohortIndicator, "", dsd);
+    public static void addColumsForWomenMothers(CohortIndicatorDataSetDefinition dsd, CohortIndicator cohortIndicator, String visitPosition) {
+        constructColumn(WOMEN_0_3 + visitPosition , "women and mother with pregnancy period of 0 - 3 months", cohortIndicator, "womenMothers=zeroToThree", dsd);
+        constructColumn(WOMEN_7_9 + visitPosition , "women and mother with pregnancy period of 7 - 9 months", cohortIndicator, "womenMothers=sevenToNine", dsd);
+        constructColumn(WOMEN_4_6 + visitPosition , "women and mother with pregnancy period of 4 - 6 months", cohortIndicator, "womenMothers=fourToSix", dsd);
+        constructColumn(TOTAL_VISITS + visitPosition , "Total women and mother with pregnancy period", cohortIndicator, "", dsd);
+        constructColumn(TOTAL_TOURS + visitPosition , "Total women and mother with pregnancy period during first visit", cohortIndicator, "", dsd);   
     }
 
     public static void addColumsForSupportForPregnantWomen(CohortIndicatorDataSetDefinition dsd, CohortIndicator cohortIndicator) {
@@ -148,41 +126,14 @@ public class HsisReportColumns {
         constructColumn(MAM , "Support for pregnant women", cohortIndicator, "supportWomen=pregnancyMam", dsd);
     }
 
-    public static void addColumsForDeliveriesOnAgeOfMothers(CohortIndicatorDataSetDefinition dsd, CohortIndicator cohortIndicator) {
-        constructColumn(MOTHERS_0_15 + "normal", "Deliveries for age of mothers ", cohortIndicator, "age=<15", dsd);
-        constructColumn(MOTHERS_0_15 + "cs", "Deliveries for age of mothers ", cohortIndicator, "age=<15", dsd);
-        constructColumn(MOTHERS_0_15 + "inst", "Deliveries for age of mothers ", cohortIndicator, "age=<15", dsd);
-        constructColumn(MOTHERS_0_15 + "mid", "Deliveries for age of mothers ", cohortIndicator, "age=<15", dsd);
-        constructColumn(MOTHERS_0_15 + "comp", "Deliveries for age of mothers ", cohortIndicator, "age=<15", dsd);
-        constructColumn(MOTHERS_15_19 + "normal", "Deliveries for age of mothers ", cohortIndicator, "age=15_19", dsd);
-        constructColumn(MOTHERS_15_19 + "cs", "Deliveries for age of mothers ", cohortIndicator, "age=15_19", dsd);
-        constructColumn(MOTHERS_15_19 + "inst", "Deliveries for age of mothers ", cohortIndicator, "age=15_19", dsd);
-        constructColumn(MOTHERS_15_19 + "mid", "Deliveries for age of mothers ", cohortIndicator, "age=15_19", dsd);
-        constructColumn(MOTHERS_15_19 + "comp", "Deliveries for age of mothers ", cohortIndicator, "age=15_19", dsd);
-        constructColumn(MOTHERS_20_24 + "normal", "Deliveries for age of mothers ", cohortIndicator, "age=20_24", dsd);
-        constructColumn(MOTHERS_20_24 + "cs", "Deliveries for age of mothers ", cohortIndicator, "age=20_24", dsd);
-        constructColumn(MOTHERS_20_24 + "inst", "Deliveries for age of mothers ", cohortIndicator, "age=20_24", dsd);
-        constructColumn(MOTHERS_20_24 + "mid", "Deliveries for age of mothers ", cohortIndicator, "age=20_24", dsd);
-        constructColumn(MOTHERS_20_24 + "comp", "Deliveries for age of mothers ", cohortIndicator, "age=20_24", dsd);
-        constructColumn(MOTHERS_25_29 + "normal", "Deliveries for age of mothers ", cohortIndicator, "age=25_29", dsd);
-        constructColumn(MOTHERS_25_29 + "cs", "Deliveries for age of mothers ", cohortIndicator, "age=25_29", dsd);
-        constructColumn(MOTHERS_25_29 + "inst", "Deliveries for age of mothers ", cohortIndicator, "age=25_29", dsd);
-        constructColumn(MOTHERS_25_29 + "mid", "Deliveries for age of mothers ", cohortIndicator, "age=25_29", dsd);
-        constructColumn(MOTHERS_25_29 + "comp", "Deliveries for age of mothers ", cohortIndicator, "age=25_29", dsd);
-        constructColumn(MOTHERS_30_ABOVE + "normal", "Deliveries for age of mothers ", cohortIndicator, "age=30", dsd);
-        constructColumn(MOTHERS_30_ABOVE + "cs", "Deliveries for age of mothers ", cohortIndicator, "age=30", dsd);
-        constructColumn(MOTHERS_30_ABOVE + "inst", "Deliveries for age of mothers ", cohortIndicator, "age=30", dsd);
-        constructColumn(MOTHERS_30_ABOVE  + "mid", "Deliveries for age of mothers ", cohortIndicator, "age=30", dsd);
-        constructColumn(MOTHERS_30_ABOVE + "comp", "Deliveries for age of mothers ", cohortIndicator, "age=30", dsd);
-        constructColumn(UNKNOWN + "normal", "Deliveries for age of mothers ", cohortIndicator, "age=unknown", dsd);
-        constructColumn(UNKNOWN + "cs", "Deliveries for age of mothers ", cohortIndicator, "age=unknown", dsd);
-        constructColumn(UNKNOWN + "inst", "Deliveries for age of mothers ", cohortIndicator, "age=unknown", dsd);
-        constructColumn(UNKNOWN  + "mid", "Deliveries for age of mothers ", cohortIndicator, "age=unknown", dsd);
-        constructColumn(UNKNOWN  + "comp", "Deliveries for age of mothers ", cohortIndicator, "age=unknown", dsd);
-        constructColumn(PARTOGRAM  + "normal", "Deliveries for age of mothers ", cohortIndicator, "deliveryMother=partogram", dsd);
-        constructColumn(PARTOGRAM  + "cs", "Deliveries for age of mothers ", cohortIndicator, "deliveryMother=partogram", dsd);
-        constructColumn(PARTOGRAM  + "inst", "Deliveries for age of mothers ", cohortIndicator, "deliveryMother=partogram", dsd);
-        constructColumn(MGT + "normal", "Deliveries for age of mothers ", cohortIndicator, "deliveryMother=mgt", dsd);
-        constructColumn(MGT + "inst", "Deliveries for age of mothers ", cohortIndicator, "deliveryMother=mgt", dsd);
+    public static void addColumsForDeliveriesOnAgeOfMothers(CohortIndicatorDataSetDefinition dsd, CohortIndicator cohortIndicator,String mode) {
+        constructColumn(MOTHERS_0_15 + mode , "Deliveries for age of mothers <15 years", cohortIndicator, "age=<15", dsd);
+        constructColumn(MOTHERS_15_19 + mode, "Deliveries for age of mothers 15 – 19years", cohortIndicator, "age=15_19", dsd); 
+        constructColumn(MOTHERS_20_24 + mode, "Deliveries for age of mothers 20 - 24 years", cohortIndicator, "age=20_24", dsd);
+        constructColumn(MOTHERS_25_29 + mode, "Deliveries for age of mothers 25 - 29 years", cohortIndicator, "age=25_29", dsd); 
+        constructColumn(MOTHERS_30_ABOVE + mode, "Deliveries for age of mothers 30 years and over", cohortIndicator, "age=30", dsd);  
+        constructColumn(UNKNOWN + mode, "Deliveries for age of mothers unknown ", cohortIndicator, "age=unknown", dsd);  
+        constructColumn(PARTOGRAM  + mode, "Deliveries for age of mothers ", cohortIndicator, "deliveryMother=partogram", dsd);  
+        constructColumn(MGT + mode, "Deliveries for age of mothers active management of the 3rd phase of work ", cohortIndicator, "deliveryMother=mgt", dsd);
     }
 }

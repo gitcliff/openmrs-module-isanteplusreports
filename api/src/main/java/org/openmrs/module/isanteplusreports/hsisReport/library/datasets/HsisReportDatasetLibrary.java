@@ -16,6 +16,7 @@ import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators
 import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators.HsisIndicatorLibrary.getInstrumentaisedDeliveryIndicator;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators.HsisIndicatorLibrary.getCaesareanDeliveryIndicator;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators.HsisIndicatorLibrary.getComplicationsDeliveryIndicator;
+
 import java.sql.Date;
 import org.openmrs.module.isanteplusreports.hsisReport.library.columns.HsisReportColumns;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.dimensions.HsisDimensionLibrary.generalDimension;
@@ -52,24 +53,16 @@ public class HsisReportDatasetLibrary {
     return dsd;
   }
 
-  public static CohortIndicatorDataSetDefinition getMalariaDataset() {
+  public static CohortIndicatorDataSetDefinition getLaboratoryDataset() {
     CohortIndicatorDataSetDefinition dsd = new CohortIndicatorDataSetDefinition();
-    dsd.setName("malaria");
+    dsd.setName("laboratory");
     dsd.addParameter(START_DATE);
     dsd.addParameter(END_DATE);
     dsd.addDimension("malariaExam", ReportUtils.map(malariaDimension()));
-    HsisReportColumns.addTypesOfExaminationsColumsForMalaria(dsd, getMalariaIndicator());
-    return dsd;
-  }
-
-  public static CohortIndicatorDataSetDefinition getPregnantWomenDataset() {
-    CohortIndicatorDataSetDefinition dsd = new CohortIndicatorDataSetDefinition();
-    dsd.setName("pregnant");
-    dsd.addParameter(START_DATE);
-    dsd.addParameter(END_DATE);
     dsd.addDimension("pregnantWomen", ReportUtils.map(pregnantDimension()));
     HsisReportColumns.addColumsForPregnantWomen(dsd, getPregnantWomenMalariaIndicator());
     HsisReportColumns.addColumsForPregnantWomen(dsd, getOtherGroupsMalariaIndicator());
+    HsisReportColumns.addTypesOfExaminationsColumsForMalaria(dsd, getMalariaIndicator());
     return dsd;
   }
 
@@ -79,11 +72,11 @@ public class HsisReportDatasetLibrary {
     dsd.addParameter(START_DATE);
     dsd.addParameter(END_DATE);
     dsd.addDimension("womenMothers", ReportUtils.map(womenMotherDimension()));
-    HsisReportColumns.addColumsForWomenMothers(dsd, getFirstVisitIndicator());
-    HsisReportColumns.addColumsForWomenMothers(dsd, getSecondVisitIndicator());
-    HsisReportColumns.addColumsForWomenMothers(dsd, getThirdVisitIndicator());
-    HsisReportColumns.addColumsForWomenMothers(dsd, getFourthVisitIndicator());
-    HsisReportColumns.addColumsForWomenMothers(dsd, getFifthVisitIndicator());
+    HsisReportColumns.addColumsForWomenMothers(dsd, getFirstVisitIndicator(), "1st_visit");
+    HsisReportColumns.addColumsForWomenMothers(dsd, getSecondVisitIndicator(),"2nd_visit");
+    HsisReportColumns.addColumsForWomenMothers(dsd, getThirdVisitIndicator(), "3rd_visit");
+    HsisReportColumns.addColumsForWomenMothers(dsd, getFourthVisitIndicator(),"4th_visit");
+    HsisReportColumns.addColumsForWomenMothers(dsd, getFifthVisitIndicator(),"5th_visit");
     return dsd;
   }
 
@@ -104,11 +97,12 @@ public class HsisReportDatasetLibrary {
     dsd.addParameter(END_DATE);
     dsd.addDimension("age", ReportUtils.map(new CommonDimension().ageZone(), "effectiveDate=${endDate}"));
     dsd.addDimension("deliveryMother", ReportUtils.map(deliveriesDimension()));
-    HsisReportColumns.addColumsForDeliveriesOnAgeOfMothers(dsd, getNormalDeliveryIndicator());
-    HsisReportColumns.addColumsForDeliveriesOnAgeOfMothers(dsd, getMidwivesDeliveryIndicator());
-    HsisReportColumns.addColumsForDeliveriesOnAgeOfMothers(dsd, getInstrumentaisedDeliveryIndicator());
-    HsisReportColumns.addColumsForDeliveriesOnAgeOfMothers(dsd, getComplicationsDeliveryIndicator());
-    HsisReportColumns.addColumsForDeliveriesOnAgeOfMothers(dsd, getCaesareanDeliveryIndicator());
+    HsisReportColumns.addColumsForDeliveriesOnAgeOfMothers(dsd, getNormalDeliveryIndicator(),"normal");
+    HsisReportColumns.addColumsForDeliveriesOnAgeOfMothers(dsd, getMidwivesDeliveryIndicator(),"cs");
+    HsisReportColumns.addColumsForDeliveriesOnAgeOfMothers(dsd, getInstrumentaisedDeliveryIndicator(), "inst");
+    HsisReportColumns.addColumsForDeliveriesOnAgeOfMothers(dsd, getComplicationsDeliveryIndicator(), "mid");
+    HsisReportColumns.addColumsForDeliveriesOnAgeOfMothers(dsd, getCaesareanDeliveryIndicator(), "comp");
     return dsd;
   }
+
 }

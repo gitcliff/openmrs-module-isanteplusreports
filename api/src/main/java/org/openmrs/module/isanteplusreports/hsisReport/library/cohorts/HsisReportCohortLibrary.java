@@ -208,4 +208,14 @@ public class HsisReportCohortLibrary {
     SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("management.sql", "Age of mothers");
     return cohortDefinition;
   }
+
+  public static CohortDefinition  undevelopedCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("undeveloped.sql", "Live births undeveloped");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  immediatelyCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("immediately.sql", "Live births put within immediately");
+    return cohortDefinition;
+  }
 }

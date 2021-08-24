@@ -72,4 +72,27 @@ public class HsisIndicatorLibrary {
     public static CohortIndicator  getComplicationsDeliveryIndicator() {
       return cohortIndicatorFromSqlResource("complications.sql", "Delivery community Number of obstetric complications referred",getDateParameters());
     }
+
+    public static CohortIndicator  getNormalBirthIndicator() {
+      return cohortIndicatorFromSqlResource("normalBirth.sql", "Live births institutional normal",getDateParameters());
+   
+    }
+  
+    public static CohortIndicator  getCaesareanBirthIndicator() {
+      return cohortIndicatorFromSqlResource("caesareanBirth.sql", "Live births institutional Caesarean section",getDateParameters());
+    }
+  
+    public static CohortIndicator   getInstrumentaisedBirthIndicator() {
+      return cohortIndicatorFromSqlResource("instrumentalisedBirth.sql", "Live births institutional instrumentalised",getDateParameters());
+      
+    }
+  
+    public static CohortIndicator  getMidwivesBirthIndicator() {
+      return cohortIndicatorFromSqlResource("midwivesBirth.sql", "Live births community Midwives",getDateParameters());
+      
+    }
+  
+    public static CohortIndicator  getComplicationsBirthIndicator() {
+      return cohortIndicatorFromSqlResource("complicationsBirth.sql", "Live births community Number of obstetric complications referred",getDateParameters());
+    }
 }

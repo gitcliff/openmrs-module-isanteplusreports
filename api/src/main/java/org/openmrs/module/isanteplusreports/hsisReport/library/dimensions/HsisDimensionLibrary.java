@@ -101,7 +101,15 @@ public class HsisDimensionLibrary {
             dim.addCohortDefinition("partogram", ReportUtils.map(partogramCohort()));
             dim.addCohortDefinition("mgt", ReportUtils.map(managementCohort()));
           return dim;				  		  
-          }	       
+          }	 
+          
+    public static CohortDefinitionDimension liveBirthsDimension(){
+          CohortDefinitionDimension dim = new CohortDefinitionDimension();
+            dim.setName("deliveriesMothers");
+            dim.addCohortDefinition("undeveloped", ReportUtils.map(partogramCohort()));
+            dim.addCohortDefinition("immediately", ReportUtils.map(managementCohort()));
+          return dim;				  		  
+          }	          
         
     public static CohortDefinitionDimension supportForPregnantWomenDimension(){
           CohortDefinitionDimension dim = new CohortDefinitionDimension();
