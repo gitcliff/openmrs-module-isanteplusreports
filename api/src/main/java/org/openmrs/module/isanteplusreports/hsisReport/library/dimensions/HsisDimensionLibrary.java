@@ -37,6 +37,49 @@ import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.Hs
 import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.pregnancyMamCohort;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.partogramCohort;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.managementCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.ppWomenCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.pcWomenCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.dropperWomenCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.implantWomenCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.iudWomenCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.necklaceWomenCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.mamaWomenCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.condomWomenCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.condomMenCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.vasectomyCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.ligatureWomenCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.firstTimeScreenPdstCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.firstTimeMeasuredPdstCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.firstTImeMeasuredPbCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.totalChildrenSeenCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.firstTimeScreenT_AgeCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.firstTimeMamCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.firstTimeMasCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.firstTimeChildrenCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.firstVisitCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.secondVisitCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.thirdVisitCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.fourthVisitCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.fifthVisitCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.twoPointFIveKgPlusCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.betweenOnePointFiveAndUnderTwoPointFIveKgCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.underOnePointFiveKgCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.undevelopedCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.immediatelyCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.breastFeedingVitaminACohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.nursingWomenMamCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.postnatalConsultationsUnderSixHoursCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.postnatalConsultationsSixDaysCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.postnatalConsultationsBetweenSevenToFourtyTwoDaysCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.homemadeVisitsCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.nursingWomenPbCohort;
+
+
+
+
+
+
+
 
 
 import org.openmrs.module.isanteplusreports.reporting.utils.ReportUtils;
@@ -86,18 +129,18 @@ public class HsisDimensionLibrary {
         return dim;				  		  
         }	 
         
-    public static CohortDefinitionDimension womenMotherDimension(){
+    public static CohortDefinitionDimension pregnancyMonthsDimension(){
         CohortDefinitionDimension dim = new CohortDefinitionDimension();
-          dim.setName("womenMothers");
-          dim.addCohortDefinition("zeroToThree", ReportUtils.map(zeroToThreeMonthsCohort()));
-          dim.addCohortDefinition("fourToSix", ReportUtils.map(fourToSixMonthsCohort()));
-          dim.addCohortDefinition("sevenToNine", ReportUtils.map(sevenToNineMonthsCohort()));
+          dim.setName("pregnancyPeriod");
+          dim.addCohortDefinition("0-3", ReportUtils.map(zeroToThreeMonthsCohort()));
+          dim.addCohortDefinition("4-6", ReportUtils.map(fourToSixMonthsCohort()));
+          dim.addCohortDefinition("7-9", ReportUtils.map(sevenToNineMonthsCohort()));
         return dim;				  		  
         }	   
 
-    public static CohortDefinitionDimension deliveriesDimension(){
+    public static CohortDefinitionDimension ageOfMothersDimension(){
           CohortDefinitionDimension dim = new CohortDefinitionDimension();
-            dim.setName("deliveriesMothers");
+            dim.setName("ageOfMothers");
             dim.addCohortDefinition("partogram", ReportUtils.map(partogramCohort()));
             dim.addCohortDefinition("mgt", ReportUtils.map(managementCohort()));
           return dim;				  		  
@@ -105,9 +148,12 @@ public class HsisDimensionLibrary {
           
     public static CohortDefinitionDimension liveBirthsDimension(){
           CohortDefinitionDimension dim = new CohortDefinitionDimension();
-            dim.setName("deliveriesMothers");
-            dim.addCohortDefinition("undeveloped", ReportUtils.map(partogramCohort()));
-            dim.addCohortDefinition("immediately", ReportUtils.map(managementCohort()));
+            dim.setName("birth");
+            dim.addCohortDefinition("plus", ReportUtils.map(twoPointFIveKgPlusCohort()));
+            dim.addCohortDefinition("between", ReportUtils.map(betweenOnePointFiveAndUnderTwoPointFIveKgCohort()));
+            dim.addCohortDefinition("under", ReportUtils.map(underOnePointFiveKgCohort()));
+            dim.addCohortDefinition("undeveloped", ReportUtils.map(undevelopedCohort()));
+            dim.addCohortDefinition("immediately", ReportUtils.map(immediatelyCohort()));
           return dim;				  		  
           }	          
         
@@ -124,5 +170,60 @@ public class HsisDimensionLibrary {
             dim.addCohortDefinition("pregnancyPb", ReportUtils.map(pregnancyPbCohort()));
             dim.addCohortDefinition("pregnancyMam", ReportUtils.map(pregnancyMamCohort()));
           return dim;				  		  
-          }	        
+          }	 
+
+    public static CohortDefinitionDimension visitDimension(){
+            CohortDefinitionDimension dim = new CohortDefinitionDimension();
+              dim.setName("visitWome");
+              dim.addCohortDefinition("first", ReportUtils.map(firstVisitCohort()));
+              dim.addCohortDefinition("second", ReportUtils.map(secondVisitCohort()));
+              dim.addCohortDefinition("third", ReportUtils.map(thirdVisitCohort()));
+              dim.addCohortDefinition("fourth", ReportUtils.map(fourthVisitCohort()));
+              dim.addCohortDefinition("fifth", ReportUtils.map(fifthVisitCohort()));  
+            return dim;				  		  
+            }	       
+          
+    public static CohortDefinitionDimension servicesProvidedDimension(){
+          CohortDefinitionDimension dim = new CohortDefinitionDimension();
+            dim.setName("childSupport");
+            dim.addCohortDefinition("firstTimeMas", ReportUtils.map(firstTimeMasCohort()));
+            dim.addCohortDefinition("firstTimeMam", ReportUtils.map(firstTimeMamCohort()));
+            dim.addCohortDefinition("t_age", ReportUtils.map(firstTimeScreenT_AgeCohort()));
+            dim.addCohortDefinition("screen", ReportUtils.map(firstTimeScreenPdstCohort()));
+            dim.addCohortDefinition("timeMeasuredPdst", ReportUtils.map(firstTimeMeasuredPdstCohort()));
+            dim.addCohortDefinition("timeMeasuredPb", ReportUtils.map(firstTImeMeasuredPbCohort()));
+            dim.addCohortDefinition("firstTimeChildren", ReportUtils.map(firstTimeChildrenCohort()));
+            dim.addCohortDefinition("totalChildrenSeen", ReportUtils.map(totalChildrenSeenCohort()));
+          return dim;				  		  
+          }	
+          
+    public static CohortDefinitionDimension clientDimension(){
+          CohortDefinitionDimension dim = new CohortDefinitionDimension();
+            dim.setName("clientWomen");
+            dim.addCohortDefinition("vasectomy", ReportUtils.map(vasectomyCohort()));
+            dim.addCohortDefinition("ligature", ReportUtils.map(ligatureWomenCohort()));
+            dim.addCohortDefinition("condomMen", ReportUtils.map(condomMenCohort()));
+            dim.addCohortDefinition("condomWomen", ReportUtils.map(condomWomenCohort()));
+            dim.addCohortDefinition("mama", ReportUtils.map(mamaWomenCohort()));
+            dim.addCohortDefinition("necklace", ReportUtils.map(necklaceWomenCohort()));
+            dim.addCohortDefinition("iud", ReportUtils.map(iudWomenCohort()));
+            dim.addCohortDefinition("implant", ReportUtils.map(implantWomenCohort()));
+            dim.addCohortDefinition("dropper", ReportUtils.map(dropperWomenCohort()));
+            dim.addCohortDefinition("pp", ReportUtils.map(ppWomenCohort()));
+            dim.addCohortDefinition("pc", ReportUtils.map(pcWomenCohort()));
+          return dim;				  		  
+          }	  
+          
+    public static CohortDefinitionDimension postnatalDimension(){
+          CohortDefinitionDimension dim = new CohortDefinitionDimension();
+            dim.setName("postnatal");
+            dim.addCohortDefinition("breastFeeding", ReportUtils.map(breastFeedingVitaminACohort()));
+            dim.addCohortDefinition("nursingWomenPb", ReportUtils.map(nursingWomenPbCohort()));
+            dim.addCohortDefinition("nursingWomenMam", ReportUtils.map(nursingWomenMamCohort()));
+            dim.addCohortDefinition("0-6", ReportUtils.map(postnatalConsultationsUnderSixHoursCohort()));
+            dim.addCohortDefinition("7am-6days", ReportUtils.map(postnatalConsultationsSixDaysCohort()));
+            dim.addCohortDefinition("7-42days", ReportUtils.map(postnatalConsultationsBetweenSevenToFourtyTwoDaysCohort()));
+            dim.addCohortDefinition("homemade", ReportUtils.map(homemadeVisitsCohort()));
+          return dim;				  		  
+          }	              
 }

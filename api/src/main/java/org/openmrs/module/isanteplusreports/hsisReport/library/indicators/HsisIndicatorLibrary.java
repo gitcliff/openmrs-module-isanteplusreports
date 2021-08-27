@@ -26,26 +26,10 @@ public class HsisIndicatorLibrary {
       return cohortIndicatorFromSqlResource("pregnantOtherGroups.sql", "Other groups pregnant women under malaria",getDateParameters()); 
    }   
    
-   public static CohortIndicator getFirstVisitIndicator(){
-      return cohortIndicatorFromSqlResource("firstVisit.sql", "First visit for women and mothers",getDateParameters()); 
+   public static CohortIndicator getWomenVisitIndicator(){
+      return cohortIndicatorFromSqlResource("womenVisit.sql", "Visit for women and mothers",getDateParameters()); 
    }   
 
-   public static CohortIndicator getSecondVisitIndicator(){
-      return cohortIndicatorFromSqlResource("secondVisit.sql", "Second visit for women and mothers",getDateParameters()); 
-   }   
-
-   public static CohortIndicator getThirdVisitIndicator(){
-      return cohortIndicatorFromSqlResource("thirdVisit.sql", "Third visit for women and mothers",getDateParameters()); 
-   }   
-
-   public static CohortIndicator getFourthVisitIndicator(){
-      return cohortIndicatorFromSqlResource("fourthVisit.sql", "Fourth visit for women and mothers",getDateParameters()); 
-   }   
-
-   public static CohortIndicator getFifthVisitIndicator(){
-      return cohortIndicatorFromSqlResource("fifthVisit.sql", "Fifth visit for women and mothers",getDateParameters()); 
-   }  
-   
    public static CohortIndicator getSupportForPregnantWomenIndicator(){
       return cohortIndicatorFromSqlResource("supportForPregnantWomen.sql", "Support For Pregnant Women",getDateParameters()); 
    }   
@@ -65,8 +49,7 @@ public class HsisIndicatorLibrary {
     }
   
     public static CohortIndicator  getMidwivesDeliveryIndicator() {
-      return cohortIndicatorFromSqlResource("midwives.sql", "Delivery community Midwives",getDateParameters());
-      
+      return cohortIndicatorFromSqlResource("midwives.sql", "Delivery community Midwives",getDateParameters());  
     }
   
     public static CohortIndicator  getComplicationsDeliveryIndicator() {
@@ -75,7 +58,6 @@ public class HsisIndicatorLibrary {
 
     public static CohortIndicator  getNormalBirthIndicator() {
       return cohortIndicatorFromSqlResource("normalBirth.sql", "Live births institutional normal",getDateParameters());
-   
     }
   
     public static CohortIndicator  getCaesareanBirthIndicator() {
@@ -83,16 +65,40 @@ public class HsisIndicatorLibrary {
     }
   
     public static CohortIndicator   getInstrumentaisedBirthIndicator() {
-      return cohortIndicatorFromSqlResource("instrumentalisedBirth.sql", "Live births institutional instrumentalised",getDateParameters());
-      
+      return cohortIndicatorFromSqlResource("instrumentalisedBirth.sql", "Live births institutional instrumentalised",getDateParameters()); 
     }
   
     public static CohortIndicator  getMidwivesBirthIndicator() {
       return cohortIndicatorFromSqlResource("midwivesBirth.sql", "Live births community Midwives",getDateParameters());
-      
     }
   
     public static CohortIndicator  getComplicationsBirthIndicator() {
       return cohortIndicatorFromSqlResource("complicationsBirth.sql", "Live births community Number of obstetric complications referred",getDateParameters());
     }
+
+    public static CohortIndicator  getAcceptingIndicator() {
+      return cohortIndicatorFromSqlResource("accepting.sql", "Accepting methods",getDateParameters());
+    }
+
+    public static CohortIndicator  getTotalUsersIndicator() {
+      return cohortIndicatorFromSqlResource("totalUsers.sql", "Total users",getDateParameters());
+    }
+
+    public static CohortIndicator  getPostnatalFollowUpIndicator() {
+      return cohortIndicatorFromSqlResource("postnatalFollowUp.sql", "Post natal follow-up",getDateParameters());
+    }
+ 
+    public static CohortIndicator  getChildrenUnderSixMonthsIndicator() {
+      return cohortIndicatorFromSqlResource("childrenUnderSixMonths.sql", "Support for the child male Children <6 months",getDateParameters());
+    }
+
+    public static CohortIndicator  getChildrenBetweenSixAndTwentyThreeMonthsIndicator() {
+      return cohortIndicatorFromSqlResource("childrenBetweenSixAndTwentyThreeMonths.sql", "Support for the child male Children 6 - 23 months",getDateParameters());
+    }
+
+    public static CohortIndicator  getChildrenBetweenTwentyFourAndFiftyNineMonthsIndicator() {
+      return cohortIndicatorFromSqlResource("childrenBetweenTwentyFourAndFiftyNineMonths.sql", "Support for the child male Children 24 - 59 months",getDateParameters());
+    }
+
+   
 }

@@ -93,6 +93,24 @@ public class CommonDimension {
 		    dim.addCohortDefinition("unknown", ReportUtils.map(ageCohortLibrary.unknownAgeCohort(), ""));
 		    return dim;
 		  }
+
+	  public CohortDefinitionDimension ageZoneBy25() {
+		    CohortDefinitionDimension dim = new CohortDefinitionDimension();
+		    CommonCohortLibrary ageCohortLibrary = new CommonCohortLibrary();
+		    dim.addParameter(new Parameter("effectiveDate", "Effective Date", Date.class));
+		    dim.setName("age25");
+			dim.addCohortDefinition("<25", ReportUtils.map(ageCohortLibrary.agedAtMostCohort(25), "effectiveDate=${endDate}"));
+		    return dim;
+		  }	
+		  
+	  public CohortDefinitionDimension ageZoneBy25Plus() {
+		    CohortDefinitionDimension dim = new CohortDefinitionDimension();
+		    CommonCohortLibrary ageCohortLibrary = new CommonCohortLibrary();
+		    dim.addParameter(new Parameter("effectiveDate", "Effective Date", Date.class));
+		    dim.setName("age25+");
+			dim.addCohortDefinition("25", ReportUtils.map(ageCohortLibrary.agedAtMostCohort(25), "effectiveDate=${endDate}"));
+		    return dim;
+		  }	  	  
 	  
 	  public CohortDefinitionDimension CervicalCancerStatusDimension(){		  
 		  CohortDefinitionDimension dim = new CohortDefinitionDimension();
