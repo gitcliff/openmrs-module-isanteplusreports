@@ -170,7 +170,7 @@ public class HsisReportColumns {
         constructColumn(TOTAL_TOURS + "3rd_visit", "Total women and mother with pregnancy period during third visit", cohortIndicator, "visit=third", dsd);   
         constructColumn(TOTAL_TOURS + "4th_visit", "Total women and mother with pregnancy period during fourth visit", cohortIndicator, "visit=fourth", dsd);   
         constructColumn(TOTAL_TOURS + "5th_visit", "Total women and mother with pregnancy period during fifth visit", cohortIndicator, "visit=fifth", dsd);   
-        constructColumn(TOTAL_TOURS, "Total women and mother with pregnancy period during first visit", cohortIndicator, "", dsd);   
+        constructColumn(TOTAL_TOURS + "all_visits", "Total women and mother with pregnancy period during all visits", cohortIndicator, "", dsd);   
     }
 
     public static void addColumsForSupportForLiveBirth(CohortIndicatorDataSetDefinition dsd, CohortIndicator cohortIndicator, String liveBirths) {
@@ -179,7 +179,6 @@ public class HsisReportColumns {
         constructColumn(MORE + liveBirths, "Live births", cohortIndicator, "birth=plus", dsd);   
         constructColumn(UNDEVELOPED + liveBirths, "Live births", cohortIndicator, "birth=undeveloped", dsd);   
         constructColumn(IMMEDIATELY + liveBirths, "Live births", cohortIndicator, "birth=immediately", dsd);   
-
     }
 
     public static void addColumsForSupportForPregnantWomen(CohortIndicatorDataSetDefinition dsd, CohortIndicator cohortIndicator) {
@@ -273,7 +272,7 @@ public class HsisReportColumns {
         constructColumn(TCH + "f_6-23", "Support for the child services", cohortIndicator, "childSupport=totalChildrenSeen|gender=F", dsd);
         constructColumn(TCH + "f_24-59", "Support for the child services", cohortIndicator, "childSupport=totalChildrenSeen|gender=F", dsd);
         constructColumn(TCH + "m_24-59", "Support for the child services", cohortIndicator, "childSupport=totalChildrenSeen|gender=M", dsd);
-        constructColumn(TOTAL_SERVICES + "totalChilden", "Support for the child services", cohortIndicator, "childSupport=totalChildrenSeen", dsd);
+        constructColumn(TOTAL_SERVICES + "totalChildren", "Support for the child services", cohortIndicator, "childSupport=totalChildrenSeen", dsd);
         constructColumn(FT + "m_6months", "Support for the child services", cohortIndicator, "childSupport=firstTimeChildren|gender=M", dsd);
         constructColumn(FT + "f_6months", "Support for the child services", cohortIndicator, "childSupport=firstTimeChildren|gender=F", dsd);
         constructColumn(FT + "m_6-23", "Support for the child services", cohortIndicator, "childSupport=firstTimeChildren|gender=M", dsd);

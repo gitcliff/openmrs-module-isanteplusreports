@@ -73,15 +73,6 @@ import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.Hs
 import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.postnatalConsultationsBetweenSevenToFourtyTwoDaysCohort;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.homemadeVisitsCohort;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.nursingWomenPbCohort;
-
-
-
-
-
-
-
-
-
 import org.openmrs.module.isanteplusreports.reporting.utils.ReportUtils;
 import org.openmrs.module.reporting.indicator.dimension.CohortDefinitionDimension;
 
@@ -174,7 +165,7 @@ public class HsisDimensionLibrary {
 
     public static CohortDefinitionDimension visitDimension(){
             CohortDefinitionDimension dim = new CohortDefinitionDimension();
-              dim.setName("visitWome");
+              dim.setName("visit");
               dim.addCohortDefinition("first", ReportUtils.map(firstVisitCohort()));
               dim.addCohortDefinition("second", ReportUtils.map(secondVisitCohort()));
               dim.addCohortDefinition("third", ReportUtils.map(thirdVisitCohort()));

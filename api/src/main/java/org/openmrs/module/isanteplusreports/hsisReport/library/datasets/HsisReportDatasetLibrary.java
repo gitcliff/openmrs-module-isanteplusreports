@@ -80,7 +80,7 @@ public class HsisReportDatasetLibrary {
     dsd.addParameter(START_DATE);
     dsd.addParameter(END_DATE);
     dsd.addDimension("pregnancyPeriod", ReportUtils.map(pregnancyMonthsDimension()));
-    dsd.addDimension("visits", ReportUtils.map(visitDimension()));
+    dsd.addDimension("visit", ReportUtils.map(visitDimension()));
     HsisReportColumns.addColumsForWomenMothers(dsd, getWomenVisitIndicator());
     return dsd;
   }
@@ -101,7 +101,7 @@ public class HsisReportDatasetLibrary {
     dsd.addParameter(START_DATE);
     dsd.addParameter(END_DATE);
     dsd.addDimension("age", ReportUtils.map(new CommonDimension().ageZone(), "effectiveDate=${endDate}"));
-    dsd.addDimension("deliveryMother", ReportUtils.map(ageOfMothersDimension()));
+    dsd.addDimension("ageOfMothers", ReportUtils.map(ageOfMothersDimension()));
     dsd.addDimension("birth", ReportUtils.map(liveBirthsDimension()));
     dsd.addDimension("postnatal", ReportUtils.map(postnatalDimension()));
     HsisReportColumns.addColumsForDeliveriesOnAgeOfMothers(dsd, getNormalDeliveryIndicator(),"normal");
@@ -137,7 +137,7 @@ public class HsisReportDatasetLibrary {
     dsd.addParameter(START_DATE);
     dsd.addParameter(END_DATE);
     dsd.addDimension("childSupport", ReportUtils.map(servicesProvidedDimension()));
-    dsd.addDimension("gender", ReportUtils.map(new CommonDimension().gender(), "effectiveDate=${endDate}"));
+    dsd.addDimension("gender", ReportUtils.map(new CommonDimension().gender()));
     HsisReportColumns.addColumsForChildSupport(dsd, getChildrenUnderSixMonthsIndicator());
     HsisReportColumns.addColumsForChildSupport(dsd, getChildrenBetweenSixAndTwentyThreeMonthsIndicator());
     HsisReportColumns.addColumsForChildSupport(dsd, getChildrenBetweenTwentyFourAndFiftyNineMonthsIndicator());
