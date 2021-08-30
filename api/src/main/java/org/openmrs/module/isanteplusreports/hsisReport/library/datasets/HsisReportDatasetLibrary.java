@@ -5,24 +5,37 @@ import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators
 import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators.HsisIndicatorLibrary.getMalariaIndicator;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators.HsisIndicatorLibrary.getPregnantWomenMalariaIndicator;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators.HsisIndicatorLibrary.getOtherGroupsMalariaIndicator;
-import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators.HsisIndicatorLibrary.getFirstVisitIndicator;
-import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators.HsisIndicatorLibrary.getSecondVisitIndicator;
-import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators.HsisIndicatorLibrary.getThirdVisitIndicator;
-import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators.HsisIndicatorLibrary.getFourthVisitIndicator;
-import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators.HsisIndicatorLibrary.getFifthVisitIndicator;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators.HsisIndicatorLibrary.getWomenVisitIndicator;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators.HsisIndicatorLibrary.getSupportForPregnantWomenIndicator;
-
-
+import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators.HsisIndicatorLibrary.getNormalDeliveryIndicator;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators.HsisIndicatorLibrary.getMidwivesDeliveryIndicator;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators.HsisIndicatorLibrary.getInstrumentaisedDeliveryIndicator;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators.HsisIndicatorLibrary.getCaesareanDeliveryIndicator;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators.HsisIndicatorLibrary.getComplicationsDeliveryIndicator;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators.HsisIndicatorLibrary.getNormalBirthIndicator;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators.HsisIndicatorLibrary.getMidwivesBirthIndicator;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators.HsisIndicatorLibrary.getInstrumentaisedBirthIndicator;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators.HsisIndicatorLibrary.getCaesareanBirthIndicator;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators.HsisIndicatorLibrary.getComplicationsBirthIndicator;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators.HsisIndicatorLibrary.getAcceptingIndicator;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators.HsisIndicatorLibrary.getTotalUsersIndicator;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators.HsisIndicatorLibrary.getPostnatalFollowUpIndicator;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators.HsisIndicatorLibrary.getChildrenUnderSixMonthsIndicator;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators.HsisIndicatorLibrary.getChildrenBetweenSixAndTwentyThreeMonthsIndicator;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators.HsisIndicatorLibrary.getChildrenBetweenTwentyFourAndFiftyNineMonthsIndicator;
 import java.sql.Date;
 import org.openmrs.module.isanteplusreports.hsisReport.library.columns.HsisReportColumns;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.dimensions.HsisDimensionLibrary.generalDimension;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.dimensions.HsisDimensionLibrary.servicesProvidedDimension;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.dimensions.HsisDimensionLibrary.clientDimension;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.dimensions.HsisDimensionLibrary.ageOfMothersDimension;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.dimensions.HsisDimensionLibrary.malariaDimension;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.dimensions.HsisDimensionLibrary.pregnantDimension;
-import static org.openmrs.module.isanteplusreports.hsisReport.library.dimensions.HsisDimensionLibrary.womenMotherDimension;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.dimensions.HsisDimensionLibrary.pregnancyMonthsDimension;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.dimensions.HsisDimensionLibrary.supportForPregnantWomenDimension;
-
-
-
+import static org.openmrs.module.isanteplusreports.hsisReport.library.dimensions.HsisDimensionLibrary.visitDimension;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.dimensions.HsisDimensionLibrary.liveBirthsDimension;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.dimensions.HsisDimensionLibrary.postnatalDimension;
 import org.openmrs.module.isanteplusreports.library.dimension.CommonDimension;
 import org.openmrs.module.isanteplusreports.reporting.utils.ReportUtils;
 import org.openmrs.module.reporting.dataset.definition.CohortIndicatorDataSetDefinition;
@@ -48,24 +61,16 @@ public class HsisReportDatasetLibrary {
     return dsd;
   }
 
-  public static CohortIndicatorDataSetDefinition getMalariaDataset() {
+  public static CohortIndicatorDataSetDefinition getLaboratoryDataset() {
     CohortIndicatorDataSetDefinition dsd = new CohortIndicatorDataSetDefinition();
-    dsd.setName("malaria");
+    dsd.setName("laboratory");
     dsd.addParameter(START_DATE);
     dsd.addParameter(END_DATE);
     dsd.addDimension("malariaExam", ReportUtils.map(malariaDimension()));
-    HsisReportColumns.addTypesOfExaminationsColumsForMalaria(dsd, getMalariaIndicator());
-    return dsd;
-  }
-
-  public static CohortIndicatorDataSetDefinition getPregnantWomenDataset() {
-    CohortIndicatorDataSetDefinition dsd = new CohortIndicatorDataSetDefinition();
-    dsd.setName("pregnant");
-    dsd.addParameter(START_DATE);
-    dsd.addParameter(END_DATE);
     dsd.addDimension("pregnantWomen", ReportUtils.map(pregnantDimension()));
     HsisReportColumns.addColumsForPregnantWomen(dsd, getPregnantWomenMalariaIndicator());
     HsisReportColumns.addColumsForPregnantWomen(dsd, getOtherGroupsMalariaIndicator());
+    HsisReportColumns.addTypesOfExaminationsColumsForMalaria(dsd, getMalariaIndicator());
     return dsd;
   }
 
@@ -74,12 +79,9 @@ public class HsisReportDatasetLibrary {
     dsd.setName("women");
     dsd.addParameter(START_DATE);
     dsd.addParameter(END_DATE);
-    dsd.addDimension("womenMothers", ReportUtils.map(womenMotherDimension()));
-    HsisReportColumns.addColumsForWomenMothers(dsd, getFirstVisitIndicator());
-    HsisReportColumns.addColumsForWomenMothers(dsd, getSecondVisitIndicator());
-    HsisReportColumns.addColumsForWomenMothers(dsd, getThirdVisitIndicator());
-    HsisReportColumns.addColumsForWomenMothers(dsd, getFourthVisitIndicator());
-    HsisReportColumns.addColumsForWomenMothers(dsd, getFifthVisitIndicator());
+    dsd.addDimension("pregnancyPeriod", ReportUtils.map(pregnancyMonthsDimension()));
+    dsd.addDimension("visit", ReportUtils.map(visitDimension()));
+    HsisReportColumns.addColumsForWomenMothers(dsd, getWomenVisitIndicator());
     return dsd;
   }
 
@@ -92,4 +94,55 @@ public class HsisReportDatasetLibrary {
     HsisReportColumns.addColumsForSupportForPregnantWomen(dsd, getSupportForPregnantWomenIndicator());
     return dsd;
   }
+
+  public static CohortIndicatorDataSetDefinition getDeliveriesDataset() {
+    CohortIndicatorDataSetDefinition dsd = new CohortIndicatorDataSetDefinition();
+    dsd.setName("delivery");
+    dsd.addParameter(START_DATE);
+    dsd.addParameter(END_DATE);
+    dsd.addDimension("age", ReportUtils.map(new CommonDimension().ageZone(), "effectiveDate=${endDate}"));
+    dsd.addDimension("ageOfMothers", ReportUtils.map(ageOfMothersDimension()));
+    dsd.addDimension("birth", ReportUtils.map(liveBirthsDimension()));
+    dsd.addDimension("postnatal", ReportUtils.map(postnatalDimension()));
+    HsisReportColumns.addColumsForDeliveriesOnAgeOfMothers(dsd, getNormalDeliveryIndicator(),"normal");
+    HsisReportColumns.addColumsForDeliveriesOnAgeOfMothers(dsd, getMidwivesDeliveryIndicator(),"cs");
+    HsisReportColumns.addColumsForDeliveriesOnAgeOfMothers(dsd, getInstrumentaisedDeliveryIndicator(), "inst");
+    HsisReportColumns.addColumsForDeliveriesOnAgeOfMothers(dsd, getComplicationsDeliveryIndicator(), "mid");
+    HsisReportColumns.addColumsForDeliveriesOnAgeOfMothers(dsd, getCaesareanDeliveryIndicator(), "comp");
+    HsisReportColumns.addColumsForSupportForLiveBirth(dsd, getNormalBirthIndicator(),"normal");
+    HsisReportColumns.addColumsForSupportForLiveBirth(dsd, getMidwivesBirthIndicator(),"cs");
+    HsisReportColumns.addColumsForSupportForLiveBirth(dsd, getInstrumentaisedBirthIndicator(), "inst");
+    HsisReportColumns.addColumsForSupportForLiveBirth(dsd, getComplicationsBirthIndicator(), "mid");
+    HsisReportColumns.addColumsForSupportForLiveBirth(dsd, getCaesareanBirthIndicator(), "comp");
+    HsisReportColumns.addColumsForPostNatalFollowUp(dsd, getPostnatalFollowUpIndicator());
+    return dsd;
+  }
+
+  public static CohortIndicatorDataSetDefinition getClientDataset() {
+    CohortIndicatorDataSetDefinition dsd = new CohortIndicatorDataSetDefinition();
+    dsd.setName("client");
+    dsd.addParameter(START_DATE);
+    dsd.addParameter(END_DATE);
+    dsd.addDimension("clientWomen", ReportUtils.map(clientDimension()));
+    dsd.addDimension("age25", ReportUtils.map(new CommonDimension().ageZoneBy25(), "effectiveDate=${endDate}"));
+    dsd.addDimension("age25+", ReportUtils.map(new CommonDimension().ageZoneBy25Plus(), "effectiveDate=${endDate}"));
+    HsisReportColumns.addColumsForPfClient(dsd, getAcceptingIndicator());
+    HsisReportColumns.addColumsForPfClient(dsd, getTotalUsersIndicator());
+    return dsd;
+  }
+
+  public static CohortIndicatorDataSetDefinition getSupportForChildDataset() {
+    CohortIndicatorDataSetDefinition dsd = new CohortIndicatorDataSetDefinition();
+    dsd.setName("child");
+    dsd.addParameter(START_DATE);
+    dsd.addParameter(END_DATE);
+    dsd.addDimension("childSupport", ReportUtils.map(servicesProvidedDimension()));
+    dsd.addDimension("gender", ReportUtils.map(new CommonDimension().gender()));
+    HsisReportColumns.addColumsForChildSupport(dsd, getChildrenUnderSixMonthsIndicator());
+    HsisReportColumns.addColumsForChildSupport(dsd, getChildrenBetweenSixAndTwentyThreeMonthsIndicator());
+    HsisReportColumns.addColumsForChildSupport(dsd, getChildrenBetweenTwentyFourAndFiftyNineMonthsIndicator());
+    return dsd;
+  }
+
+
 }

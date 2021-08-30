@@ -58,19 +58,24 @@ public class HsisReportManager extends BaseReportManager{
 		rd.setUuid(getUuid());
 		
 		CohortIndicatorDataSetDefinition cdv = HsisReportDatasetLibrary.getVistsDataset();
-		CohortIndicatorDataSetDefinition cdm = HsisReportDatasetLibrary.getMalariaDataset();
-		CohortIndicatorDataSetDefinition cdp = HsisReportDatasetLibrary.getPregnantWomenDataset();
+		CohortIndicatorDataSetDefinition cdm = HsisReportDatasetLibrary.getLaboratoryDataset();
 		CohortIndicatorDataSetDefinition cdw = HsisReportDatasetLibrary.getWomenMotherDataset();
 		CohortIndicatorDataSetDefinition cds = HsisReportDatasetLibrary.getSupportDataset();
+		CohortIndicatorDataSetDefinition cdd = HsisReportDatasetLibrary.getDeliveriesDataset();
+		CohortIndicatorDataSetDefinition cdc = HsisReportDatasetLibrary.getClientDataset();
+		CohortIndicatorDataSetDefinition cdsc = HsisReportDatasetLibrary.getSupportForChildDataset();
 
 		Map<String, Object> parameterMappings = new HashMap<String, Object>();
 		parameterMappings.put("startDate", "${startDate}");
 		parameterMappings.put("endDate", "${endDate}");	
 		rd.addDataSetDefinition("visits", cdv, parameterMappings);
-		rd.addDataSetDefinition("malaria", cdm, parameterMappings);	
-		rd.addDataSetDefinition("pregnant", cdp, parameterMappings);
+		rd.addDataSetDefinition("laboratory", cdm, parameterMappings);	
 		rd.addDataSetDefinition("women", cdw, parameterMappings);
-		rd.addDataSetDefinition("support", cds, parameterMappings);				
+		rd.addDataSetDefinition("support", cds, parameterMappings);	
+		rd.addDataSetDefinition( "delivery",cdd, parameterMappings);	
+		rd.addDataSetDefinition( "client",cdc, parameterMappings);	
+		rd.addDataSetDefinition( "child",cdsc, parameterMappings);	
+
 		return rd;
     }
 
@@ -198,7 +203,7 @@ public class HsisReportManager extends BaseReportManager{
 		designProperties.put("label.accepting", translate("label.accepting"));
 		designProperties.put("label.under.25years", translate("label.under.25years"));
 		designProperties.put("label.25years.and.above", translate("label.25years.and.above"));
-		designProperties.put("label.26years.and.above", translate("label.26years.and.above"));
+		designProperties.put("label.25years.and.above", translate("label.25years.and.above"));
 		designProperties.put("label.total.users", translate("label.total.users"));
 		designProperties.put("label.support.for.the.child", translate("label.support.for.the.child"));
 		designProperties.put("label.services.provided", translate("label.services.provided"));
