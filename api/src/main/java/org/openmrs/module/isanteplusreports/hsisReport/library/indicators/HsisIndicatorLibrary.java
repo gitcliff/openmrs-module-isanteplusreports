@@ -100,5 +100,8 @@ public class HsisIndicatorLibrary {
       return cohortIndicatorFromSqlResource("childrenBetweenTwentyFourAndFiftyNineMonths.sql", "Support for the child male Children 24 - 59 months",getDateParameters());
     }
 
+   public static CohortIndicator getDiseasesDisaggregationIndicator(){
+      return cohortIndicatorFromSqlResource("diseasesDisaggregation.sql", "Diseases Disaggregation Per Age",getDateParameters()); 
+   } 
    
 }

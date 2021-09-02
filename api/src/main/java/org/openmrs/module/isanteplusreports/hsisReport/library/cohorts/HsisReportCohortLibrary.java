@@ -374,4 +374,205 @@ public class HsisReportCohortLibrary {
     SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("fifthVisit.sql", "Fifht visit pregnancy period");
     return cohortDefinition;
   }
+
+
+  public static CohortDefinition  animalRangeCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("animalRange.sql", "Diseases / Symptoms (disaggregation by age and sex), Aggression by suspected animal rage");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  cutaneousCoalCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("cutaneousCoal.sql", "Diseases / Symptoms (disaggregation by age and sex),Cutaneous coal");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  chikungunyaCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("chikungunya.sql", "Diseases / Symptoms (disaggregation by age and sex),Chikungunya");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  pertussisCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("pertussis.sql", "Diseases / Symptoms (disaggregation by age and sex), Pertussis");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  dengueCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("dengue.sql", "Diseases / Symptoms (disaggregation by age and sex), Dengue");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  aqueousDiarrheaCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("aqueousDiarrhea.sql", "Diseases / Symptoms (disaggregation by age and sex), AqueousDiarrhea");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  bloodyDiarrheaCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("bloodyDiarrhea.sql", "Diseases / Symptoms (disaggregation by age and sex), BloodyDiarrhea");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  diphtheriaCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("diphtheria.sql", "Diseases / Symptoms (disaggregation by age and sex),Diphtheria");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  epilepsyCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("epilepsy.sql", "Diseases / Symptoms (disaggregation by age and sex), Epilepsy");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  indeterminateFeverCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("indeterminateFever.sql", "Diseases / Symptoms (disaggregation by age and sex), Indeterminate fever");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  haemorrhagicFeverCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("haemorrhagicFever.sql", "Diseases / Symptoms (disaggregation by age and sex), Haemorrhagic fever");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  lymphaticFilariasisCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("lymphaticFilariasis.sql", "Diseases / Symptoms (disaggregation by age and sex), lymphatic Filariasis");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  acuteRespiratoryInfectionsCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("acuteRespiratoryInfections.sql", "Diseases / Symptoms (disaggregation by age and sex), Acute Respiratory Infections (IRA)");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  standCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("stand.sql", "Diseases / Symptoms (disaggregation by age and sex), Stand");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  collectiveFoodInfectionCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("collectiveFoodInfection.sql", "Diseases / Symptoms (disaggregation by age and sex), Collective food infection (TIAC)");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  meadowCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("meadow.sql", "Diseases / Symptoms (disaggregation by age and sex), Meadow");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  leptospirosisCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("leptospirosis.sql", "Diseases / Symptoms (disaggregation by age and sex), Leptospirosis");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  malariaConfirmedTreatedCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("malariaConfirmedTreated.sql", "Diseases / Symptoms (disaggregation by age and sex), Malaria confirmed treated");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  malnutritionCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("malnutrition.sql", "Diseases / Symptoms (disaggregation by age and sex), Malnutrition");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  bacterialMeningitisCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("bacterialMeningitis.sql", "Diseases / Symptoms (disaggregation by age and sex), bacterial Meningitis");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  mumpsCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("mumps.sql", "Diseases / Symptoms (disaggregation by age and sex), Mumps ");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  intestinalParasitosisCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("intestinalParasitosis.sql", "Diseases / Symptoms (disaggregation by age and sex), Intestinal parasitosis");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  abnormalPhenomenonCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("abnormalPhenomenon.sql", "Diseases / Symptoms (disaggregation by age and sex), Abnormal phenomenon");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  humanRageCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("humanRage.sql", "Diseases / Symptoms (disaggregation by age and sex), Human rage");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  measlesCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("measles.sql", "Diseases / Symptoms (disaggregation by age and sex), Measles");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  congenitalRubellaCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("congenitalRubella.sql", "Diseases / Symptoms (disaggregation by age and sex), Congenital rubella");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  febrileIctericSyndromeCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("febrileIctericSyndrome.sql", "Diseases / Symptoms (disaggregation by age and sex), Febrile icteric syndrome");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  sarsCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("sars.sql", "Diseases / Symptoms (disaggregation by age and sex), Severe Acute Respiratory Syndrome(SARS)");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  syphilisCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("syphilis.sql", "Diseases / Symptoms (disaggregation by age and sex), Syphilis");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  tetanusCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("tetanus.sql", "Diseases / Symptoms (disaggregation by age and sex), Tetanus");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  neonatalTetanusCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("neonatalTetanus.sql", "Diseases / Symptoms (disaggregation by age and sex), Neonatal Tetanus");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  respiratorySymptomsCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("respiratorySymptoms.sql", "Diseases / Symptoms (disaggregation by age and sex), Respiratory symptoms");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  congenitalSyphilisCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("congenitalSyphilis.sql", "Diseases / Symptoms (disaggregation by age and sex), Congenital syphilis");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  tuberculosisCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("tuberculosis.sql", "Diseases / Symptoms (disaggregation by age and sex), Bacteriological pulmonary tuberculosis");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  tuberculosisNoCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("tuberculosisNo.sql", "Diseases / Symptoms (disaggregation by age and sex), Bacteriological pulmonary tuberculosis no");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  totalCasesOfTuberculosisCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("totalCasesOfTuberculosis.sql", "Diseases / Symptoms (disaggregation by age and sex), Total cases of tuberculosis");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  typhoidCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("typhoid.sql", "Diseases / Symptoms (disaggregation by age and sex), Typhoid ");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  hivPlusCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("hivPlus.sql", "Diseases / Symptoms (disaggregation by age and sex), HIV +");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  xerophthalmiaCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("xerophthalmia.sql", "Diseases / Symptoms (disaggregation by age and sex), Xerophthalmia");
+    return cohortDefinition;
+  }
+
+  public static CohortDefinition  otherDiseasesCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("otherDiseases.sql", "Diseases / Symptoms (disaggregation by age and sex), other Diseases");
+    return cohortDefinition;
+  }          
 }
