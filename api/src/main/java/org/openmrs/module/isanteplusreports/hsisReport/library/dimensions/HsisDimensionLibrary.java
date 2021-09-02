@@ -232,8 +232,8 @@ public class HsisDimensionLibrary {
               dim.addCohortDefinition("lymphaticFilariasis", ReportUtils.map(HsisReportCohortLibrary.lymphaticFilariasisCohort()));
               dim.addCohortDefinition("acuteRespiratoryInfections", ReportUtils.map(HsisReportCohortLibrary.acuteRespiratoryInfectionsCohort()));
               dim.addCohortDefinition("stand", ReportUtils.map(HsisReportCohortLibrary.standCohort()));
-              // dim.addCohortDefinition("collectiveFoodInfection", ReportUtils.map(HsisReportCohortLibrary.collectiveFoodInfectionCohort()));
-              // dim.addCohortDefinition("syphilis", ReportUtils.map(HsisReportCohortLibrary.syphilisCohort()));
+              dim.addCohortDefinition("collectiveFoodInfection", ReportUtils.map(HsisReportCohortLibrary.collectiveFoodInfectionCohort()));
+              dim.addCohortDefinition("syphilis", ReportUtils.map(HsisReportCohortLibrary.syphilisCohort()));
               dim.addCohortDefinition("meadow", ReportUtils.map(HsisReportCohortLibrary.meadowCohort()));
               dim.addCohortDefinition("leptospirosis", ReportUtils.map(HsisReportCohortLibrary.leptospirosisCohort()));
               dim.addCohortDefinition("malariaConfirmedTreated", ReportUtils.map(HsisReportCohortLibrary.malariaConfirmedTreatedCohort()));
