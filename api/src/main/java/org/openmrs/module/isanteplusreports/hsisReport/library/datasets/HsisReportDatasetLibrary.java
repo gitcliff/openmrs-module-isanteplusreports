@@ -23,6 +23,8 @@ import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators
 import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators.HsisIndicatorLibrary.getChildrenUnderSixMonthsIndicator;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators.HsisIndicatorLibrary.getChildrenBetweenSixAndTwentyThreeMonthsIndicator;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators.HsisIndicatorLibrary.getChildrenBetweenTwentyFourAndFiftyNineMonthsIndicator;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators.HsisIndicatorLibrary.getDiseasesDisaggregationIndicator;
+
 import java.sql.Date;
 import org.openmrs.module.isanteplusreports.hsisReport.library.columns.HsisReportColumns;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.dimensions.HsisDimensionLibrary.generalDimension;
@@ -36,6 +38,8 @@ import static org.openmrs.module.isanteplusreports.hsisReport.library.dimensions
 import static org.openmrs.module.isanteplusreports.hsisReport.library.dimensions.HsisDimensionLibrary.visitDimension;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.dimensions.HsisDimensionLibrary.liveBirthsDimension;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.dimensions.HsisDimensionLibrary.postnatalDimension;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.dimensions.HsisDimensionLibrary.diseaseDimension;
+
 import org.openmrs.module.isanteplusreports.library.dimension.CommonDimension;
 import org.openmrs.module.isanteplusreports.reporting.utils.ReportUtils;
 import org.openmrs.module.reporting.dataset.definition.CohortIndicatorDataSetDefinition;
@@ -141,6 +145,18 @@ public class HsisReportDatasetLibrary {
     HsisReportColumns.addColumsForChildSupport(dsd, getChildrenUnderSixMonthsIndicator());
     HsisReportColumns.addColumsForChildSupport(dsd, getChildrenBetweenSixAndTwentyThreeMonthsIndicator());
     HsisReportColumns.addColumsForChildSupport(dsd, getChildrenBetweenTwentyFourAndFiftyNineMonthsIndicator());
+    return dsd;
+  }
+
+  public static CohortIndicatorDataSetDefinition getDiseaseDataset() {
+    CohortIndicatorDataSetDefinition dsd = new CohortIndicatorDataSetDefinition();
+    dsd.setName("disease");
+    dsd.addParameter(START_DATE);
+    dsd.addParameter(END_DATE);
+    dsd.addDimension("gender", ReportUtils.map(new CommonDimension().gender()));
+    dsd.addDimension("age", ReportUtils.map(new CommonDimension().ageZone(), "effectiveDate=${endDate}"));
+    dsd.addDimension("diseaseComplication", ReportUtils.map(diseaseDimension()));
+    HsisReportColumns.addColumsForEpisodesOfDiseases(dsd, getDiseasesDisaggregationIndicator());
     return dsd;
   }
 

@@ -21,6 +21,9 @@ import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.Hs
 import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.positiveSicklingTestCohort;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.positiveOtherSicklingTestCohort;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.zeroToThreeMonthsCohort;
+
+import org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary;
+
 import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.fourToSixMonthsCohort;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.sevenToNineMonthsCohort;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.pregnancyRiskCohort;
@@ -210,5 +213,52 @@ public class HsisDimensionLibrary {
             dim.addCohortDefinition("7-42days", ReportUtils.map(postnatalConsultationsBetweenSevenToFourtyTwoDaysCohort()));
             dim.addCohortDefinition("homemade", ReportUtils.map(homemadeVisitsCohort()));
           return dim;				  		  
-          }	              
+          }	  
+          
+    public static CohortDefinitionDimension diseaseDimension(){
+            CohortDefinitionDimension dim = new CohortDefinitionDimension();
+              dim.setName("diseaseComplication");
+              dim.addCohortDefinition("animalRange", ReportUtils.map(HsisReportCohortLibrary.animalRangeCohort()));
+              dim.addCohortDefinition("cutaneousCoal", ReportUtils.map(HsisReportCohortLibrary.cutaneousCoalCohort()));
+              dim.addCohortDefinition("chikungunya", ReportUtils.map(HsisReportCohortLibrary.chikungunyaCohort()));
+              dim.addCohortDefinition("pertussis", ReportUtils.map(HsisReportCohortLibrary.pertussisCohort()));
+              dim.addCohortDefinition("dengue", ReportUtils.map(HsisReportCohortLibrary.dengueCohort()));
+              dim.addCohortDefinition("aqueousDiarrhea", ReportUtils.map(HsisReportCohortLibrary.aqueousDiarrheaCohort()));
+              dim.addCohortDefinition("bloodyDiarrhea", ReportUtils.map(HsisReportCohortLibrary.bloodyDiarrheaCohort()));
+              dim.addCohortDefinition("diphtheria", ReportUtils.map(HsisReportCohortLibrary.diphtheriaCohort()));
+              dim.addCohortDefinition("epilepsy", ReportUtils.map(HsisReportCohortLibrary.epilepsyCohort()));
+              dim.addCohortDefinition("indeterminateFever", ReportUtils.map(HsisReportCohortLibrary.indeterminateFeverCohort()));
+              dim.addCohortDefinition("haemorrhagicFever", ReportUtils.map(HsisReportCohortLibrary.haemorrhagicFeverCohort()));
+              dim.addCohortDefinition("lymphaticFilariasis", ReportUtils.map(HsisReportCohortLibrary.lymphaticFilariasisCohort()));
+              dim.addCohortDefinition("acuteRespiratoryInfections", ReportUtils.map(HsisReportCohortLibrary.acuteRespiratoryInfectionsCohort()));
+              dim.addCohortDefinition("stand", ReportUtils.map(HsisReportCohortLibrary.standCohort()));
+              // dim.addCohortDefinition("foodInfection", ReportUtils.map(HsisReportCohortLibrary.collectiveFoodInfectionCohort()));
+              dim.addCohortDefinition("syphilis", ReportUtils.map(HsisReportCohortLibrary.syphilisCohort()));
+              dim.addCohortDefinition("meadow", ReportUtils.map(HsisReportCohortLibrary.meadowCohort()));
+              dim.addCohortDefinition("leptospirosis", ReportUtils.map(HsisReportCohortLibrary.leptospirosisCohort()));
+              dim.addCohortDefinition("malariaConfirmedTreated", ReportUtils.map(HsisReportCohortLibrary.malariaConfirmedTreatedCohort()));
+              dim.addCohortDefinition("malnutrition", ReportUtils.map(HsisReportCohortLibrary.malnutritionCohort()));
+              dim.addCohortDefinition("bacterialMeningitis", ReportUtils.map(HsisReportCohortLibrary.bacterialMeningitisCohort()));
+              dim.addCohortDefinition("mumps", ReportUtils.map(HsisReportCohortLibrary.mumpsCohort()));
+              dim.addCohortDefinition("intestinalParasitosis", ReportUtils.map(HsisReportCohortLibrary.intestinalParasitosisCohort()));
+              dim.addCohortDefinition("abnormalPhenomenon", ReportUtils.map(HsisReportCohortLibrary.abnormalPhenomenonCohort()));
+              dim.addCohortDefinition("humanRage", ReportUtils.map(HsisReportCohortLibrary.humanRageCohort()));
+              dim.addCohortDefinition("measles", ReportUtils.map(HsisReportCohortLibrary.measlesCohort()));
+              dim.addCohortDefinition("congenitalRubella", ReportUtils.map(HsisReportCohortLibrary.congenitalRubellaCohort()));
+              dim.addCohortDefinition("febrileIctericSyndrome", ReportUtils.map(HsisReportCohortLibrary.febrileIctericSyndromeCohort()));
+              dim.addCohortDefinition("sars", ReportUtils.map(HsisReportCohortLibrary.sarsCohort()));
+              dim.addCohortDefinition("tetanus", ReportUtils.map(HsisReportCohortLibrary.tetanusCohort()));
+              dim.addCohortDefinition("neonatalTetanus", ReportUtils.map(HsisReportCohortLibrary.neonatalTetanusCohort()));
+              dim.addCohortDefinition("respiratorySymptoms", ReportUtils.map(HsisReportCohortLibrary.respiratorySymptomsCohort()));
+              dim.addCohortDefinition("congenitalSyphilis", ReportUtils.map(HsisReportCohortLibrary.congenitalSyphilisCohort()));
+              dim.addCohortDefinition("tuberculosis", ReportUtils.map(HsisReportCohortLibrary.tuberculosisCohort()));
+              dim.addCohortDefinition("tuberculosisNo", ReportUtils.map(HsisReportCohortLibrary.tuberculosisNoCohort()));
+              dim.addCohortDefinition("totalCasesOfTuberculosis", ReportUtils.map(HsisReportCohortLibrary.totalCasesOfTuberculosisCohort()));
+              dim.addCohortDefinition("typhoid", ReportUtils.map(HsisReportCohortLibrary.typhoidCohort()));
+              dim.addCohortDefinition("hivPlus", ReportUtils.map(HsisReportCohortLibrary.hivPlusCohort()));
+              dim.addCohortDefinition("xerophthalmia", ReportUtils.map(HsisReportCohortLibrary.xerophthalmiaCohort()));
+              dim.addCohortDefinition("otherDiseases", ReportUtils.map(HsisReportCohortLibrary.otherDiseasesCohort()));
+            return dim;				  		  
+            }	 
+                       
 }

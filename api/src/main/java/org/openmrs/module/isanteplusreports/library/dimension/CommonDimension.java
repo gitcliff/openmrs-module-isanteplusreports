@@ -50,7 +50,8 @@ public class CommonDimension {
 		    dim.addCohortDefinition("<15", ReportUtils.map(ageCohortLibrary.agedAtLeastCohort(15), "effectiveDate=${endDate}"));
 		    dim.addCohortDefinition("30_34", ReportUtils.map(ageCohortLibrary.ageRangeCohort(30, 34), "effectiveDate=${endDate}"));
 		    dim.addCohortDefinition("35_39", ReportUtils.map(ageCohortLibrary.ageRangeCohort(35, 39), "effectiveDate=${endDate}"));
-		    dim.addCohortDefinition("40_44", ReportUtils.map(ageCohortLibrary.ageRangeCohort(40, 44), "effectiveDate=${endDate}"));
+			dim.addCohortDefinition("40_44", ReportUtils.map(ageCohortLibrary.ageRangeCohort(40, 44), "effectiveDate=${endDate}"));
+			dim.addCohortDefinition("25_49", ReportUtils.map(ageCohortLibrary.ageRangeCohort(25, 49), "effectiveDate=${endDate}"));
 		    dim.addCohortDefinition("45_49", ReportUtils.map(ageCohortLibrary.ageRangeCohort(45, 49), "effectiveDate=${endDate}"));
 		    dim.addCohortDefinition("50", ReportUtils.map(ageCohortLibrary.agedAtLeastCohort(50), "effectiveDate=${endDate}"));
 			dim.addCohortDefinition("24_", ReportUtils.map(ageCohortLibrary.agedAtLeastCohort(25), "effectiveDate=${endDate}"));
