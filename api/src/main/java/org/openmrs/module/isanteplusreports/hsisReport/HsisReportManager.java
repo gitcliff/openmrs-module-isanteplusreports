@@ -78,7 +78,6 @@ public class HsisReportManager extends BaseReportManager{
 		rd.addDataSetDefinition( "child",cdsc, parameterMappings);	
 		rd.addDataSetDefinition( "disease",cde, parameterMappings);	
 
-
 		return rd;
     }
 
