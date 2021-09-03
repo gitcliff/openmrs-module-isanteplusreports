@@ -119,7 +119,7 @@ public class HsisReportColumns {
      public static final String LYMP = "lymphatic_";
      public static final String IRA = "ira_";
      public static final String STAND = "stand_";
-     public static final String FOOD = "food_";
+    public static final String  FOOD = "food_";
      public static final String MEADOW = "meadow_";
      public static final String LEPTOS = "leptospirosis_";
      public static final String MALARIA_CNFM = "malaria_confirmed_treated_";
@@ -488,7 +488,7 @@ public class HsisReportColumns {
        constructColumn(SYPHILIS + "m_50+", "Diseases (disaggregation by age and sex)", cohortIndicator, "diseaseComplication=syphilis|gender=M|age=50+", dsd);
        constructColumn(TOTAL_DISEASES + "fsyphilisf_f", "Diseases (disaggregation by age and sex)", cohortIndicator, "diseaseComplication=syphilis|gender=F", dsd);
        constructColumn(TOTAL_DISEASES + "fsyphilisf_m", "Diseases (disaggregation by age and sex)", cohortIndicator, "diseaseComplication=syphilis|gender=M", dsd);
-       constructColumn(TOTAL_CASES_REF + "fsyphilis", "Diseases (disaggregation by age and sex)", cohortIndicator, "diseaseComplication=syphilis", dsd);
+       constructColumn(TOTAL_CASES_REF + "fsyphilisf", "Diseases (disaggregation by age and sex)", cohortIndicator, "diseaseComplication=syphilis", dsd);
        constructColumn(DECEASED + "fsyphilisf", "Diseases (disaggregation by age and sex)", cohortIndicator, "diseaseComplication=syphilis", dsd);
 
        constructColumn(MEADOW + "f_0-1", "Diseases (disaggregation by age and sex)", cohortIndicator, "diseaseComplication=meadow|gender=F|age=0_1", dsd);

@@ -259,5 +259,6 @@ public class HsisDimensionLibrary {
               dim.addCohortDefinition("xerophthalmia", ReportUtils.map(HsisReportCohortLibrary.xerophthalmiaCohort()));
               dim.addCohortDefinition("otherDiseases", ReportUtils.map(HsisReportCohortLibrary.otherDiseasesCohort()));
             return dim;				  		  
-            }	            
+            }	 
+                       
 }
