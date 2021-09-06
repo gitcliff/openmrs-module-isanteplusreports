@@ -65,6 +65,8 @@ public class HsisReportManager extends BaseReportManager{
 		CohortIndicatorDataSetDefinition cdc = HsisReportDatasetLibrary.getClientDataset();
 		CohortIndicatorDataSetDefinition cdsc = HsisReportDatasetLibrary.getSupportForChildDataset();
 		CohortIndicatorDataSetDefinition cde = HsisReportDatasetLibrary.getDiseaseDataset();
+		CohortIndicatorDataSetDefinition cc = HsisReportDatasetLibrary.getchronicDataset();
+
 
 		Map<String, Object> parameterMappings = new HashMap<String, Object>();
 		parameterMappings.put("startDate", "${startDate}");
@@ -77,7 +79,7 @@ public class HsisReportManager extends BaseReportManager{
 		rd.addDataSetDefinition( "client",cdc, parameterMappings);	
 		rd.addDataSetDefinition( "child",cdsc, parameterMappings);	
 		rd.addDataSetDefinition( "disease",cde, parameterMappings);	
-
+		rd.addDataSetDefinition( "chronic",cc, parameterMappings);	
 		return rd;
     }
 

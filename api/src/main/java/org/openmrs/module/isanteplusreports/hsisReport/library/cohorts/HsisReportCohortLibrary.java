@@ -574,5 +574,55 @@ public class HsisReportCohortLibrary {
   public static CohortDefinition  otherDiseasesCohort() {
     SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("otherDiseases.sql", "Diseases / Symptoms (disaggregation by age and sex), other Diseases");
     return cohortDefinition;
-  }          
+  }      
+  
+  public static CohortDefinition  diabetesCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("diabetes.sql", "Chronic Diseases / Symptoms (disaggregation by age and sex), other Diseases");
+    return cohortDefinition;
+  } 
+
+  public static CohortDefinition  htaCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("hta.sql", "Chronic Diseases / Symptoms (disaggregation by age and sex), other Diseases");
+    return cohortDefinition;
+  } 
+  
+  public static CohortDefinition  burkittCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("burkitt.sql", "Chronic Diseases / Symptoms (disaggregation by age and sex), other Diseases");
+    return cohortDefinition;
+  }  
+  
+  public static CohortDefinition  cervicalCancerCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("cervicalCancer.sql", "Chronic Diseases / Symptoms (disaggregation by age and sex), other Diseases");
+    return cohortDefinition;
+  }  
+
+  public static CohortDefinition  breastCancerCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("breastCancer.sql", "Chronic Diseases / Symptoms (disaggregation by age and sex), other Diseases");
+    return cohortDefinition;
+  }  
+
+  public static CohortDefinition  prostateCancerCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("prostateCancer.sql", "Chronic Diseases / Symptoms (disaggregation by age and sex), other Diseases");
+    return cohortDefinition;
+  }  
+
+  public static CohortDefinition  obesityCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("obesity.sql", "Chronic Diseases / Symptoms (disaggregation by age and sex), other Diseases");
+    return cohortDefinition;
+  }  
+
+  public static CohortDefinition  glaucomaCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("glaucoma.sql", "Chronic Diseases / Symptoms (disaggregation by age and sex), other Diseases");
+    return cohortDefinition;
+  }  
+
+  public static CohortDefinition  cataractCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("cataract.sql", "Chronic Diseases / Symptoms (disaggregation by age and sex), other Diseases");
+    return cohortDefinition;
+  }  
+
+  public static CohortDefinition  renalFailureCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("renalFailure.sql", "Chronic Diseases / Symptoms (disaggregation by age and sex), other Diseases");
+    return cohortDefinition;
+  }  
 }

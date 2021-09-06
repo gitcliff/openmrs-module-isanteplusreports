@@ -260,5 +260,21 @@ public class HsisDimensionLibrary {
               dim.addCohortDefinition("otherDiseases", ReportUtils.map(HsisReportCohortLibrary.otherDiseasesCohort()));
             return dim;				  		  
             }	 
+
+    public static CohortDefinitionDimension chronicDimension(){
+            CohortDefinitionDimension dim = new CohortDefinitionDimension();
+                dim.setName("chronicDisease");
+                dim.addCohortDefinition("diabetes", ReportUtils.map(HsisReportCohortLibrary.diabetesCohort()));
+                dim.addCohortDefinition("hta", ReportUtils.map(HsisReportCohortLibrary.htaCohort()));
+                dim.addCohortDefinition("burkitt", ReportUtils.map(HsisReportCohortLibrary.burkittCohort()));
+                dim.addCohortDefinition("cervical", ReportUtils.map(HsisReportCohortLibrary.cervicalCancerCohort()));
+                dim.addCohortDefinition("breast", ReportUtils.map(HsisReportCohortLibrary.breastCancerCohort()));
+                dim.addCohortDefinition("prostate", ReportUtils.map(HsisReportCohortLibrary.prostateCancerCohort()));
+                dim.addCohortDefinition("obesity", ReportUtils.map(HsisReportCohortLibrary.obesityCohort()));
+                dim.addCohortDefinition("glaucoma", ReportUtils.map(HsisReportCohortLibrary.glaucomaCohort()));
+                dim.addCohortDefinition("cataract", ReportUtils.map(HsisReportCohortLibrary.cataractCohort()));
+                dim.addCohortDefinition("renal", ReportUtils.map(HsisReportCohortLibrary.renalFailureCohort()));   
+            return dim;				  		  
+            }	         
                        
 }
