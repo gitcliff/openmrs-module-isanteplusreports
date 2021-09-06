@@ -40,8 +40,8 @@ public class CommonDimension {
 		    dim.setName("age");
 			dim.addCohortDefinition("0_1", ReportUtils.map(ageCohortLibrary.ageRangeCohort(0, 1), "effectiveDate=${endDate}"));
 		    dim.addCohortDefinition("1_4", ReportUtils.map(ageCohortLibrary.ageRangeCohort(1, 4), "effectiveDate=${endDate}"));
-		dim.addCohortDefinition("5_9", ReportUtils.map(ageCohortLibrary.ageRangeCohort(5, 9), "effectiveDate=${endDate}"));
-		dim.addCohortDefinition("0_10", ReportUtils.map(ageCohortLibrary.ageRangeCohort(0,10), "effectiveDate=${endDate}"));
+		    dim.addCohortDefinition("5_9", ReportUtils.map(ageCohortLibrary.ageRangeCohort(5, 9), "effectiveDate=${endDate}"));
+		    dim.addCohortDefinition("0_10", ReportUtils.map(ageCohortLibrary.ageRangeCohort(0,10), "effectiveDate=${endDate}"));
 		    dim.addCohortDefinition("10_14", ReportUtils.map(ageCohortLibrary.ageRangeCohort(10, 14),"effectiveDate=${endDate}"));
 		    dim.addCohortDefinition("0_15", ReportUtils.map(ageCohortLibrary.ageRangeCohort(0, 15),"effectiveDate=${endDate}"));
 		    dim.addCohortDefinition("15_19", ReportUtils.map(ageCohortLibrary.ageRangeCohort(15, 19), "effectiveDate=${endDate}"));
@@ -53,11 +53,11 @@ public class CommonDimension {
 		    dim.addCohortDefinition("35_39", ReportUtils.map(ageCohortLibrary.ageRangeCohort(35, 39), "effectiveDate=${endDate}"));
 			dim.addCohortDefinition("40_44", ReportUtils.map(ageCohortLibrary.ageRangeCohort(40, 44), "effectiveDate=${endDate}"));
 			dim.addCohortDefinition("25_49", ReportUtils.map(ageCohortLibrary.ageRangeCohort(25, 49), "effectiveDate=${endDate}"));
-		      dim.addCohortDefinition("45_49", ReportUtils.map(ageCohortLibrary.ageRangeCohort(45, 49), "effectiveDate=${endDate}"));
+		    dim.addCohortDefinition("45_49", ReportUtils.map(ageCohortLibrary.ageRangeCohort(45, 49), "effectiveDate=${endDate}"));
 			dim.addCohortDefinition("50", ReportUtils.map(ageCohortLibrary.agedAtLeastCohort(50), "effectiveDate=${endDate}"));
 			dim.addCohortDefinition("50+", ReportUtils.map(ageCohortLibrary.ageRangeCohort(50,100), "effectiveDate=${endDate}"));
 			dim.addCohortDefinition("24_", ReportUtils.map(ageCohortLibrary.agedAtLeastCohort(25), "effectiveDate=${endDate}"));
-		      dim.addCohortDefinition("unknown", ReportUtils.map(ageCohortLibrary.unknownAgeCohort(), ""));
+		    dim.addCohortDefinition("unknown", ReportUtils.map(ageCohortLibrary.unknownAgeCohort(), ""));
 
 		    return dim;
 		  }
