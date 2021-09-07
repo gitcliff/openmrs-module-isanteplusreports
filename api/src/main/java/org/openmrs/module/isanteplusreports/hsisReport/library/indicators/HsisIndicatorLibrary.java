@@ -103,5 +103,9 @@ public class HsisIndicatorLibrary {
    public static CohortIndicator getDiseasesDisaggregationIndicator(){
       return cohortIndicatorFromSqlResource("diseasesDisaggregation.sql", "Diseases Disaggregation Per Age",getDateParameters()); 
    } 
+
+   public static CohortIndicator getChronicDiseasesIndicator(){
+    return cohortIndicatorFromSqlResource("chronicDiseases.sql", "Diseases Disaggregation Per Age and Sex",getDateParameters()); 
+  } 
    
 }

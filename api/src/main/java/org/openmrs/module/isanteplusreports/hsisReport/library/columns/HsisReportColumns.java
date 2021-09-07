@@ -119,7 +119,7 @@ public class HsisReportColumns {
      public static final String LYMP = "lymphatic_";
      public static final String IRA = "ira_";
      public static final String STAND = "stand_";
-    public static final String  FOOD = "food_";
+     public static final String  FOOD = "food_";
      public static final String MEADOW = "meadow_";
      public static final String LEPTOS = "leptospirosis_";
      public static final String MALARIA_CNFM = "malaria_confirmed_treated_";
@@ -148,6 +148,278 @@ public class HsisReportColumns {
      public static final String TOTAL_CASES_REF = "total_cases_";
      public static final String DECEASED = "deceased_";
      public static final String RESPIRATORY = "resp_symptoms_";
+
+
+      //Chronic Diseases / Symptoms (disaggregation by age and sex)
+      public static final String DIABETES = "diabetes_";
+      public static final String HTA = "hta_";
+      public static final String BURKITI = "burkiti_";
+      public static final String CERVICAL = "cervical_";
+      public static final String BREAST = "breast_";
+      public static final String PROSTATE = "prostate_";
+      public static final String OBESITY = "obesity_";
+      public static final String GLAUCOMA = "glaucoma_";
+      public static final String CATARACT = "cataract_";
+      public static final String RENAL = "renal_";
+      public static final String DECEASED_CHRONIC = "deceased_chronic_";
+      public static final String TOTAL_CASES_REF_CHRONIC = "total_cases_chronic_";
+
+      public static void addColumsForChronicDiseases(CohortIndicatorDataSetDefinition dsd, CohortIndicator cohortIndicator) {
+
+        constructColumn(DIABETES  + "f_0-10_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=diabetes|gender=F|age=0_10", dsd);
+        constructColumn(DIABETES  + "m_0-10_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=diabetes|gender=M|age=0_10", dsd);
+        constructColumn(DIABETES  + "f_10-14_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=diabetes|gender=F|age=10_14", dsd);
+        constructColumn(DIABETES  + "m_10-14_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=diabetes|gender=M|age=10_14", dsd);
+        constructColumn(DIABETES  + "f_15-19_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=diabetes|gender=F|age=15_19", dsd);
+        constructColumn(DIABETES  + "m_15-19_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=diabetes|gender=M|age=15_19", dsd);
+        constructColumn(DIABETES  + "f_20-24_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=diabetes|gender=F|age=20_24", dsd);
+        constructColumn(DIABETES  + "m_20-24_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=diabetes|gender=M|age=20_24", dsd);
+        constructColumn(DIABETES  + "f_25-49_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=diabetes|gender=F|age=25_49", dsd);
+        constructColumn(DIABETES  + "m_25-49_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=diabetes|gender=M|age=25_49", dsd);
+        constructColumn(DIABETES  + "f_50+_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=diabetes|gender=F|age=50+", dsd);
+        constructColumn(DIABETES  + "m_50+_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=diabetes|gender=M|age=50+", dsd);
+        constructColumn(DECEASED_CHRONIC + "diabetes" , "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=diabetes", dsd);
+        constructColumn(TOTAL_CASES_REF_CHRONIC  + "new_diabetes", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=diabetes", dsd);
+
+        constructColumn(DIABETES  + "f_0-10_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=diabetes|gender=F|age=0_10", dsd);
+        constructColumn(DIABETES  + "m_0-10_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=diabetes|gender=M|age=0_10", dsd);
+        constructColumn(DIABETES  + "f_10-14_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=diabetes|gender=F|age=10_14", dsd);
+        constructColumn(DIABETES  + "m_10-14_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=diabetes|gender=M|age=10_14", dsd);
+        constructColumn(DIABETES  + "f_15-19_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=diabetes|gender=F|age=15_19", dsd);
+        constructColumn(DIABETES  + "m_15-19_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=diabetes|gender=M|age=15_19", dsd);
+        constructColumn(DIABETES  + "f_20-24_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=diabetes|gender=F|age=20_24", dsd);
+        constructColumn(DIABETES  + "m_20-24_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=diabetes|gender=M|age=20_24", dsd);
+        constructColumn(DIABETES  + "f_25-49_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=diabetes|gender=F|age=25_49", dsd);
+        constructColumn(DIABETES  + "m_25-49_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=diabetes|gender=M|age=25_49", dsd);
+        constructColumn(DIABETES  + "f_50+_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=diabetes|gender=F|age=50+", dsd);
+        constructColumn(DIABETES  + "m_50+_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=diabetes|gender=M|age=50+", dsd);
+        constructColumn(DECEASED_CHRONIC + "diabetes" , "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=diabetes", dsd);
+        constructColumn(TOTAL_CASES_REF_CHRONIC  + "old_diabetes", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=diabetes", dsd);
+
+        constructColumn(HTA  + "f_0-10_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=hta|gender=F|age=0_10", dsd);
+        constructColumn(HTA  + "m_0-10_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=hta|gender=M|age=0_10", dsd);
+        constructColumn(HTA  + "f_10-14_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=hta|gender=F|age=10_14", dsd);
+        constructColumn(HTA  + "m_10-14_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=hta|gender=M|age=10_14", dsd);
+        constructColumn(HTA  + "f_15-19_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=hta|gender=F|age=15_19", dsd);
+        constructColumn(HTA  + "m_15-19_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=hta|gender=M|age=15_19", dsd);
+        constructColumn(HTA  + "f_20-24_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=hta|gender=F|age=20_24", dsd);
+        constructColumn(HTA  + "m_20-24_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=hta|gender=M|age=20_24", dsd);
+        constructColumn(HTA  + "f_25-49_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=hta|gender=F|age=25_49", dsd);
+        constructColumn(HTA  + "m_25-49_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=hta|gender=M|age=25_49", dsd);
+        constructColumn(HTA  + "f_50+_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=hta|gender=F|age=50+", dsd);
+        constructColumn(HTA  + "m_50+_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=hta|gender=M|age=50+", dsd);
+        constructColumn(DECEASED_CHRONIC + "hta" , "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=hta", dsd);
+        constructColumn(TOTAL_CASES_REF_CHRONIC  + "new_hta", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=hta", dsd);
+
+        constructColumn(HTA  + "f_0-10_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=hta|gender=F|age=0_10", dsd);
+        constructColumn(HTA  + "m_0-10_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=hta|gender=M|age=0_10", dsd);
+        constructColumn(HTA  + "f_10-14_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=hta|gender=F|age=10_14", dsd);
+        constructColumn(HTA  + "m_10-14_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=hta|gender=M|age=10_14", dsd);
+        constructColumn(HTA  + "f_15-19_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=hta|gender=F|age=15_19", dsd);
+        constructColumn(HTA  + "m_15-19_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=hta|gender=M|age=15_19", dsd);
+        constructColumn(HTA  + "f_20-24_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=hta|gender=F|age=20_24", dsd);
+        constructColumn(HTA  + "m_20-24_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=hta|gender=M|age=20_24", dsd);
+        constructColumn(HTA  + "f_25-49_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=hta|gender=F|age=25_49", dsd);
+        constructColumn(HTA  + "m_25-49_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=hta|gender=M|age=25_49", dsd);
+        constructColumn(HTA  + "f_50+_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=hta|gender=F|age=50+", dsd);
+        constructColumn(HTA  + "m_50+_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=hta|gender=M|age=50+", dsd);
+        constructColumn(DECEASED_CHRONIC + "hta" , "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=hta", dsd);
+        constructColumn(TOTAL_CASES_REF_CHRONIC  + "old_hta", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=hta", dsd);
+
+        constructColumn(BURKITI  + "f_0-10_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=burkitt|gender=F|age=0_10", dsd);
+        constructColumn(BURKITI  + "m_0-10_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=burkitt|gender=M|age=0_10", dsd);
+        constructColumn(BURKITI  + "f_10-14_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=burkitt|gender=F|age=10_14", dsd);
+        constructColumn(BURKITI  + "m_10-14_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=burkitt|gender=M|age=10_14", dsd);
+        constructColumn(BURKITI  + "f_15-19_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=burkitt|gender=F|age=15_19", dsd);
+        constructColumn(BURKITI  + "m_15-19_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=burkitt|gender=M|age=15_19", dsd);
+        constructColumn(BURKITI  + "f_20-24_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=burkitt|gender=F|age=20_24", dsd);
+        constructColumn(BURKITI  + "m_20-24_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=burkitt|gender=M|age=20_24", dsd);
+        constructColumn(BURKITI  + "f_25-49_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=burkitt|gender=F|age=25_49", dsd);
+        constructColumn(BURKITI  + "m_25-49_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=burkitt|gender=M|age=25_49", dsd);
+        constructColumn(BURKITI  + "f_50+_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=burkitt|gender=F|age=50+", dsd);
+        constructColumn(BURKITI  + "m_50+_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=burkitt|gender=M|age=50+", dsd);
+        constructColumn(DECEASED_CHRONIC + "burkiti" , "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=burkitt", dsd);
+        constructColumn(TOTAL_CASES_REF_CHRONIC  + "new_burkiti", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=burkitt", dsd);
+
+        constructColumn(BURKITI + "f_10-14_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=burkitt|gender=F|age=10_14", dsd);
+        constructColumn(BURKITI  + "m_10-14_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=burkitt|gender=M|age=10_14", dsd);
+        constructColumn(BURKITI  + "f_15-19_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=burkitt|gender=F|age=15_19", dsd);
+        constructColumn(BURKITI  + "m_15-19_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=burkitt|gender=M|age=15_19", dsd);
+        constructColumn(BURKITI  + "f_20-24_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=burkitt|gender=F|age=20_24", dsd);
+        constructColumn(BURKITI  + "m_20-24_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=burkitt|gender=M|age=20_24", dsd);
+        constructColumn(BURKITI  + "f_25-49_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=burkitt|gender=F|age=25_49", dsd);
+        constructColumn(BURKITI  + "m_25-49_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=burkitt|gender=M|age=25_49", dsd);
+        constructColumn(BURKITI  + "f_50+_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=burkitt|gender=F|age=50+", dsd);
+        constructColumn(BURKITI  + "m_50+_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=burkitt|gender=M|age=50+", dsd);
+        constructColumn(DECEASED_CHRONIC + "burkiti" , "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=burkitt", dsd);
+        constructColumn(TOTAL_CASES_REF_CHRONIC  + "old_burkiti", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=burkitt", dsd);
+
+        constructColumn(CERVICAL  + "f_10-14_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=cervical|gender=F|age=10_14", dsd);
+        constructColumn(CERVICAL  + "f_15-19_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=cervical|gender=F|age=15_19", dsd);
+        constructColumn(CERVICAL  + "f_20-24_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=cervical|gender=F|age=20_24", dsd);
+        constructColumn(CERVICAL  + "f_25-49_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=cervical|gender=F|age=25_49", dsd);
+        constructColumn(CERVICAL  + "f_50+_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=cervical|gender=F|age=50+", dsd);
+        constructColumn(DECEASED_CHRONIC + "cervical" , "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=cervical", dsd);
+        constructColumn(TOTAL_CASES_REF_CHRONIC  + "new_cervical", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=cervical", dsd);
+
+        constructColumn(CERVICAL + "f_10-14_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=cervical|gender=F|age=10_14", dsd);
+        constructColumn(CERVICAL  + "f_15-19_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=cervical|gender=F|age=15_19", dsd);
+        constructColumn(CERVICAL  + "f_20-24_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=cervical|gender=F|age=20_24", dsd);
+        constructColumn(CERVICAL  + "f_25-49_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=cervical|gender=F|age=25_49", dsd);
+        constructColumn(CERVICAL  + "f_50+_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=cervical|gender=F|age=50+", dsd);
+        constructColumn(DECEASED_CHRONIC + "cervical" , "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=cervical", dsd);
+        constructColumn(TOTAL_CASES_REF_CHRONIC  + "old_cervical", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=cervical", dsd);
+
+        constructColumn(BREAST  + "f_10-14_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=breast|gender=F|age=10_14", dsd);
+        constructColumn(BREAST  + "f_15-19_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=breast|gender=F|age=15_19", dsd);
+        constructColumn(BREAST  + "f_20-24_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=breast|gender=F|age=20_24", dsd);
+        constructColumn(BREAST  + "f_25-49_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=breast|gender=F|age=25_49", dsd);
+        constructColumn(BREAST  + "f_50+_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=breast|gender=F|age=50+", dsd);
+        constructColumn(DECEASED_CHRONIC + "breast" , "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=breast", dsd);
+        constructColumn(TOTAL_CASES_REF_CHRONIC  + "new_breast", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=breast", dsd);
+
+        constructColumn(BREAST + "f_10-14_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=breast|gender=F|age=10_14", dsd);
+        constructColumn(BREAST  + "f_15-19_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=breast|gender=F|age=15_19", dsd);
+        constructColumn(BREAST + "f_20-24_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=breast|gender=F|age=20_24", dsd);
+        constructColumn(BREAST  + "f_25-49_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=breast|gender=F|age=25_49", dsd);
+        constructColumn(BREAST  + "f_50+_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=breast|gender=F|age=50+", dsd);
+        constructColumn(DECEASED_CHRONIC + "breast" , "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=breast", dsd);
+        constructColumn(TOTAL_CASES_REF_CHRONIC  + "old_breast", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=breast", dsd);
+
+        constructColumn(PROSTATE  + "m_10-14_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=prostate|gender=M|age=10_14", dsd);
+        constructColumn(PROSTATE  + "m_15-19_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=prostate|gender=M|age=15_19", dsd);
+        constructColumn(PROSTATE  + "m_20-24_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=prostate|gender=M|age=20_24", dsd);
+        constructColumn(PROSTATE  + "m_25-49_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=prostate|gender=M|age=25_49", dsd);
+        constructColumn(PROSTATE  + "m_50+_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=prostate|gender=M|age=50+", dsd);
+        constructColumn(DECEASED_CHRONIC + "prostate" , "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=prostate", dsd);
+        constructColumn(TOTAL_CASES_REF_CHRONIC  + "new_prostate", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=prostate", dsd);
+
+        constructColumn(PROSTATE + "m_10-14_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=prostate|gender=M|age=10_14", dsd);
+        constructColumn(PROSTATE  + "m_15-19_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=prostate|gender=M|age=15_19", dsd);
+        constructColumn(PROSTATE + "m_20-24_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=prostate|gender=M|age=20_24", dsd);
+        constructColumn(PROSTATE  + "m_25-49_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=prostate|gender=M|age=25_49", dsd);
+        constructColumn(PROSTATE  + "m_50+_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=prostate|gender=M|age=50+", dsd);
+        constructColumn(DECEASED_CHRONIC + "prostate" , "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=prostate", dsd);
+        constructColumn(TOTAL_CASES_REF_CHRONIC  + "old_prostate", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=prostate", dsd);
+
+        constructColumn(OBESITY  + "f_0-10_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=obesity|gender=F|age=0_10", dsd);
+        constructColumn(OBESITY  + "m_0-10_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=obesity|gender=M|age=0_10", dsd);
+        constructColumn(OBESITY  + "f_10-14_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=obesity|gender=F|age=10_14", dsd);
+        constructColumn(OBESITY  + "m_10-14_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=obesity|gender=M|age=10_14", dsd);
+        constructColumn(OBESITY  + "f_15-19_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=obesity|gender=F|age=15_19", dsd);
+        constructColumn(OBESITY  + "m_15-19_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=obesity|gender=M|age=15_19", dsd);
+        constructColumn(OBESITY  + "f_20-24_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=obesity|gender=F|age=20_24", dsd);
+        constructColumn(OBESITY  + "m_20-24_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=obesity|gender=M|age=20_24", dsd);
+        constructColumn(OBESITY  + "f_25-49_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=obesity|gender=F|age=25_49", dsd);
+        constructColumn(OBESITY  + "m_25-49_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=obesity|gender=M|age=25_49", dsd);
+        constructColumn(OBESITY  + "f_50+_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=obesity|gender=F|age=50+", dsd);
+        constructColumn(OBESITY  + "m_50+_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=obesity|gender=M|age=50+", dsd);
+        constructColumn(TOTAL_CASES_REF_CHRONIC  + "new_obesity", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=obesity", dsd);
+
+        constructColumn(OBESITY  + "f_0-10_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=obesity|gender=F|age=0_10", dsd);
+        constructColumn(OBESITY  + "m_0-10_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=obesity|gender=M|age=0_10", dsd);
+        constructColumn(OBESITY  + "f_10-14_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=obesity|gender=F|age=10_14", dsd);
+        constructColumn(OBESITY  + "m_10-14_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=obesity|gender=M|age=10_14", dsd);
+        constructColumn(OBESITY  + "f_15-19_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=obesity|gender=F|age=15_19", dsd);
+        constructColumn(OBESITY  + "m_15-19_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=obesity|gender=M|age=15_19", dsd);
+        constructColumn(OBESITY  + "f_20-24_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=obesity|gender=F|age=20_24", dsd);
+        constructColumn(OBESITY  + "m_20-24_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=obesity|gender=M|age=20_24", dsd);
+        constructColumn(OBESITY  + "f_25-49_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=obesity|gender=F|age=25_49", dsd);
+        constructColumn(OBESITY  + "m_25-49_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=obesity|gender=M|age=25_49", dsd);
+        constructColumn(OBESITY  + "f_50+_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=obesity|gender=F|age=50+", dsd);
+        constructColumn(OBESITY  + "m_50+_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=obesity|gender=M|age=50+", dsd);
+        constructColumn(TOTAL_CASES_REF_CHRONIC  + "old_obesity", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=obesity", dsd);
+
+
+        constructColumn(GLAUCOMA  + "f_0-10_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=glaucoma|gender=F|age=0_10", dsd);
+        constructColumn(GLAUCOMA  + "m_0-10_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=glaucoma|gender=M|age=0_10", dsd);
+        constructColumn(GLAUCOMA  + "f_10-14_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=glaucoma|gender=F|age=10_14", dsd);
+        constructColumn(GLAUCOMA  + "m_10-14_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=glaucoma|gender=M|age=10_14", dsd);
+        constructColumn(GLAUCOMA  + "f_15-19_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=glaucoma|gender=F|age=15_19", dsd);
+        constructColumn(GLAUCOMA  + "m_15-19_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=glaucoma|gender=M|age=15_19", dsd);
+        constructColumn(GLAUCOMA  + "f_20-24_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=glaucoma|gender=F|age=20_24", dsd);
+        constructColumn(GLAUCOMA  + "m_20-24_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=glaucoma|gender=M|age=20_24", dsd);
+        constructColumn(GLAUCOMA  + "f_25-49_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=glaucoma|gender=F|age=25_49", dsd);
+        constructColumn(GLAUCOMA  + "m_25-49_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=glaucoma|gender=M|age=25_49", dsd);
+        constructColumn(GLAUCOMA  + "f_50+_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=glaucoma|gender=F|age=50+", dsd);
+        constructColumn(GLAUCOMA  + "m_50+_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=glaucoma|gender=M|age=50+", dsd);
+        constructColumn(TOTAL_CASES_REF_CHRONIC  + "new_glaucoma", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=glaucoma", dsd);
+
+        constructColumn(GLAUCOMA  + "f_0-10_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=glaucoma|gender=F|age=0_10", dsd);
+        constructColumn(GLAUCOMA  + "m_0-10_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=glaucoma|gender=M|age=0_10", dsd);
+        constructColumn(GLAUCOMA  + "f_10-14_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=glaucoma|gender=F|age=10_14", dsd);
+        constructColumn(GLAUCOMA  + "m_10-14_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=glaucoma|gender=M|age=10_14", dsd);
+        constructColumn(GLAUCOMA  + "f_15-19_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=glaucoma|gender=F|age=15_19", dsd);
+        constructColumn(GLAUCOMA  + "m_15-19_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=glaucoma|gender=M|age=15_19", dsd);
+        constructColumn(GLAUCOMA  + "f_20-24_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=glaucoma|gender=F|age=20_24", dsd);
+        constructColumn(GLAUCOMA  + "m_20-24_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=glaucoma|gender=M|age=20_24", dsd);
+        constructColumn(GLAUCOMA  + "f_25-49_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=glaucoma|gender=F|age=25_49", dsd);
+        constructColumn(GLAUCOMA  + "m_25-49_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=glaucoma|gender=M|age=25_49", dsd);
+        constructColumn(GLAUCOMA  + "f_50+_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=glaucoma|gender=F|age=50+", dsd);
+        constructColumn(GLAUCOMA  + "m_50+_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=glaucoma|gender=M|age=50+", dsd);
+        constructColumn(TOTAL_CASES_REF_CHRONIC  + "old_glaucoma", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=glaucoma", dsd);
+
+        constructColumn(CATARACT  + "f_0-10_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=cataract|gender=F|age=0_10", dsd);
+        constructColumn(CATARACT  + "m_0-10_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=cataract|gender=M|age=0_10", dsd);
+        constructColumn(CATARACT  + "f_10-14_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=cataract|gender=F|age=10_14", dsd);
+        constructColumn(CATARACT  + "m_10-14_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=cataract|gender=M|age=10_14", dsd);
+        constructColumn(CATARACT  + "f_15-19_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=cataract|gender=F|age=15_19", dsd);
+        constructColumn(CATARACT  + "m_15-19_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=cataract|gender=M|age=15_19", dsd);
+        constructColumn(CATARACT  + "f_20-24_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=cataract|gender=F|age=20_24", dsd);
+        constructColumn(CATARACT  + "m_20-24_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=cataract|gender=M|age=20_24", dsd);
+        constructColumn(CATARACT  + "f_25-49_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=cataract|gender=F|age=25_49", dsd);
+        constructColumn(CATARACT  + "m_25-49_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=cataract|gender=M|age=25_49", dsd);
+        constructColumn(CATARACT  + "f_50+_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=cataract|gender=F|age=50+", dsd);
+        constructColumn(CATARACT  + "m_50+_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=cataract|gender=M|age=50+", dsd);
+        constructColumn(TOTAL_CASES_REF_CHRONIC  + "new_cataract", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=cataract", dsd);
+
+        constructColumn(CATARACT  + "f_0-10_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=cataract|gender=F|age=0_10", dsd);
+        constructColumn(CATARACT  + "m_0-10_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=cataract|gender=M|age=0_10", dsd);
+        constructColumn(CATARACT  + "f_10-14_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=cataract|gender=F|age=10_14", dsd);
+        constructColumn(CATARACT  + "m_10-14_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=cataract|gender=M|age=10_14", dsd);
+        constructColumn(CATARACT  + "f_15-19_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=cataract|gender=F|age=15_19", dsd);
+        constructColumn(CATARACT  + "m_15-19_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=cataract|gender=M|age=15_19", dsd);
+        constructColumn(CATARACT  + "f_20-24_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=cataract|gender=F|age=20_24", dsd);
+        constructColumn(CATARACT  + "m_20-24_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=cataract|gender=M|age=20_24", dsd);
+        constructColumn(CATARACT  + "f_25-49_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=cataract|gender=F|age=25_49", dsd);
+        constructColumn(CATARACT  + "m_25-49_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=cataract|gender=M|age=25_49", dsd);
+        constructColumn(CATARACT  + "f_50+_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=cataract|gender=F|age=50+", dsd);
+        constructColumn(CATARACT  + "m_50+_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=cataract|gender=M|age=50+", dsd);
+        constructColumn(TOTAL_CASES_REF_CHRONIC  + "old_cataract", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=cataract", dsd);
+
+        constructColumn(RENAL  + "f_0-10_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=renal|gender=F|age=0_10", dsd);
+        constructColumn(RENAL  + "m_0-10_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=renal|gender=M|age=0_10", dsd);
+        constructColumn(RENAL  + "f_10-14_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=renal|gender=F|age=10_14", dsd);
+        constructColumn(RENAL  + "m_10-14_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=renal|gender=M|age=10_14", dsd);
+        constructColumn(RENAL  + "f_15-19_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=renal|gender=F|age=15_19", dsd);
+        constructColumn(RENAL  + "m_15-19_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=renal|gender=M|age=15_19", dsd);
+        constructColumn(RENAL  + "f_20-24_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=renal|gender=F|age=20_24", dsd);
+        constructColumn(RENAL  + "m_20-24_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=renal|gender=M|age=20_24", dsd);
+        constructColumn(RENAL  + "f_25-49_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=renal|gender=F|age=25_49", dsd);
+        constructColumn(RENAL  + "m_25-49_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=renal|gender=M|age=25_49", dsd);
+        constructColumn(RENAL  + "f_50+_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=renal|gender=F|age=50+", dsd);
+        constructColumn(RENAL  + "m_50+_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=renal|gender=M|age=50+", dsd);
+        constructColumn(DECEASED_CHRONIC + "renal" , "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=renal", dsd);
+        constructColumn(TOTAL_CASES_REF_CHRONIC  + "new_renal", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=renal", dsd);
+
+        constructColumn(RENAL  + "f_0-10_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=renal|gender=F|age=0_10", dsd);
+        constructColumn(RENAL  + "m_0-10_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=renal|gender=M|age=0_10", dsd);
+        constructColumn(RENAL  + "f_10-14_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=renal|gender=F|age=10_14", dsd);
+        constructColumn(RENAL  + "m_10-14_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=renal|gender=M|age=10_14", dsd);
+        constructColumn(RENAL  + "f_15-19_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=renal|gender=F|age=15_19", dsd);
+        constructColumn(RENAL  + "m_15-19_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=renal|gender=M|age=15_19", dsd);
+        constructColumn(RENAL  + "f_20-24_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=renal|gender=F|age=20_24", dsd);
+        constructColumn(RENAL  + "m_20-24_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=renal|gender=M|age=20_24", dsd);
+        constructColumn(RENAL  + "f_25-49_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=renal|gender=F|age=25_49", dsd);
+        constructColumn(RENAL  + "m_25-49_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=renal|gender=M|age=25_49", dsd);
+        constructColumn(RENAL  + "f_50+_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=renal|gender=F|age=50+", dsd);
+        constructColumn(RENAL  + "m_50+_old", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=renal|gender=M|age=50+", dsd);
+        constructColumn(DECEASED_CHRONIC + "renal" , "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=renal", dsd);
+        constructColumn(TOTAL_CASES_REF_CHRONIC  + "old_renal", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=renal", dsd);
+
+      }
+
+
 
 
 
