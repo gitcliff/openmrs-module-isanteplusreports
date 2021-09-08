@@ -275,6 +275,29 @@ public class HsisDimensionLibrary {
                 dim.addCohortDefinition("cataract", ReportUtils.map(HsisReportCohortLibrary.cataractCohort()));
                 dim.addCohortDefinition("renal", ReportUtils.map(HsisReportCohortLibrary.renalFailureCohort()));   
             return dim;				  		  
-            }	         
+            }	 
+            
+    public static CohortDefinitionDimension vaccinationDimension(){
+            CohortDefinitionDimension dim = new CohortDefinitionDimension();
+                dim.setName("vaccination");
+                dim.addCohortDefinition("bcg", ReportUtils.map(HsisReportCohortLibrary.bcgCohort()));
+                dim.addCohortDefinition("vpo", ReportUtils.map(HsisReportCohortLibrary.vpoCohort()));
+                dim.addCohortDefinition("vpo1", ReportUtils.map(HsisReportCohortLibrary.vpoOneCohort()));
+                dim.addCohortDefinition("vpo2", ReportUtils.map(HsisReportCohortLibrary.vpoTwoCohort()));
+                dim.addCohortDefinition("vpoReminder", ReportUtils.map(HsisReportCohortLibrary.vpoReminderCohort()));
+                dim.addCohortDefinition("vpi", ReportUtils.map(HsisReportCohortLibrary.vpiCohort()));
+                dim.addCohortDefinition("penta1", ReportUtils.map(HsisReportCohortLibrary.pentaOneCohort()));
+                dim.addCohortDefinition("penta2", ReportUtils.map(HsisReportCohortLibrary.pentaTwoCohort()));
+                dim.addCohortDefinition("penta3", ReportUtils.map(HsisReportCohortLibrary.pentaThreeCohort()));
+                dim.addCohortDefinition("rota1", ReportUtils.map(HsisReportCohortLibrary.rotaOneCohort())); 
+                dim.addCohortDefinition("rota2", ReportUtils.map(HsisReportCohortLibrary.rotaTwoCohort())); 
+                dim.addCohortDefinition("rr1", ReportUtils.map(HsisReportCohortLibrary.rrOneCohort())); 
+                dim.addCohortDefinition("rr2", ReportUtils.map(HsisReportCohortLibrary.rrTwoCohort()));  
+                dim.addCohortDefinition("pneumo1", ReportUtils.map(HsisReportCohortLibrary.pneumoOneCohort())); 
+                dim.addCohortDefinition("pneumo2", ReportUtils.map(HsisReportCohortLibrary.pneumoTwoCohort()));   
+                dim.addCohortDefinition("pneumo3", ReportUtils.map(HsisReportCohortLibrary.pneumoThreeCohort()));   
+                dim.addCohortDefinition("dtpReminder", ReportUtils.map(HsisReportCohortLibrary.dtpReminderCohort()));   
+            return dim;				  		  
+            }	                 
                        
 }
