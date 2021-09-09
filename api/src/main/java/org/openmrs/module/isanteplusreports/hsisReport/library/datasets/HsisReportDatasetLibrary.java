@@ -34,8 +34,6 @@ import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators
 import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators.HsisIndicatorLibrary.getGirlsUnderElevenMonthsCommIndicator;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators.HsisIndicatorLibrary.getGirlsUnderElevenMonthsInstIndicator;
 
-
-
 import java.sql.Date;
 import org.openmrs.module.isanteplusreports.hsisReport.library.columns.HsisReportColumns;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.dimensions.HsisDimensionLibrary.generalDimension;
@@ -52,9 +50,6 @@ import static org.openmrs.module.isanteplusreports.hsisReport.library.dimensions
 import static org.openmrs.module.isanteplusreports.hsisReport.library.dimensions.HsisDimensionLibrary.diseaseDimension;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.dimensions.HsisDimensionLibrary.chronicDimension;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.dimensions.HsisDimensionLibrary.vaccinationDimension;
-
-
-
 import org.openmrs.module.isanteplusreports.library.dimension.CommonDimension;
 import org.openmrs.module.isanteplusreports.reporting.utils.ReportUtils;
 import org.openmrs.module.reporting.dataset.definition.CohortIndicatorDataSetDefinition;
@@ -192,8 +187,6 @@ public class HsisReportDatasetLibrary {
     dsd.setName("vaccine");
     dsd.addParameter(START_DATE);
     dsd.addParameter(END_DATE);
-    dsd.addDimension("gender", ReportUtils.map(new CommonDimension().gender()));
-    dsd.addDimension("age", ReportUtils.map(new CommonDimension().ageZone(), "effectiveDate=${endDate}"));
     dsd.addDimension("vaccination", ReportUtils.map(vaccinationDimension()));
     HsisReportColumns.addColumsForVaccines(dsd, getGirlsUnderElevenMonthsInstIndicator());
     HsisReportColumns.addColumsForVaccines(dsd, getGirlsUnderElevenMonthsCommIndicator());
@@ -203,11 +196,7 @@ public class HsisReportDatasetLibrary {
     HsisReportColumns.addColumsForVaccines(dsd, getGirlsBetweenTwelveToTwentyThreeMonthsInstCommIndicator());
     HsisReportColumns.addColumsForVaccines(dsd, getBoysBetweenTwelveToTwentyThreeMonthsInstInstIndicator());
     HsisReportColumns.addColumsForVaccines(dsd, getBoysBetweenTwelveToTwentyThreeMonthsInstCommIndicator());
-
-
     return dsd;
   }
-
-
 
 }

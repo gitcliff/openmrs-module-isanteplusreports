@@ -82,7 +82,7 @@ public class HsisReportManager extends BaseReportManager{
 		rd.addDataSetDefinition( "child",cdsc, parameterMappings);	
 		rd.addDataSetDefinition( "disease",cde, parameterMappings);	
 		rd.addDataSetDefinition( "chronic",cc, parameterMappings);	
-		rd.addDataSetDefinition( "vaccination",vv, parameterMappings);	
+		rd.addDataSetDefinition( "vaccine",vv, parameterMappings);	
 
 		return rd;
     }
