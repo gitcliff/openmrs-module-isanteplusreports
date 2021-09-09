@@ -625,4 +625,92 @@ public class HsisReportCohortLibrary {
     SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("renalFailure.sql", "Chronic Diseases / Symptoms (disaggregation by age and sex), other Diseases");
     return cohortDefinition;
   }  
+
+
+
+  public static CohortDefinition  bcgCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("bcg.sql", "Vaccines, Bcg");
+    return cohortDefinition;
+  }  
+
+  public static CohortDefinition  vpoCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("vpo.sql", "Vaccines, VPO");
+    return cohortDefinition;
+  }  
+
+  public static CohortDefinition  vpoOneCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("vpoOne.sql", "Vaccines, VPO1");
+    return cohortDefinition;
+  }  
+
+  public static CohortDefinition  vpoTwoCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("vpoTwo.sql", "Vaccines, VPO2");
+    return cohortDefinition;
+  }  
+
+  public static CohortDefinition  vpoReminderCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("vpoReminder.sql", "Vaccines, VPO reminder");
+    return cohortDefinition;
+  }  
+
+  public static CohortDefinition  vpiCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("vpi.sql", "Vaccines, VPI");
+    return cohortDefinition;
+  }  
+
+  public static CohortDefinition  pentaOneCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("pentaOne.sql", "Vaccines, Penta 1");
+    return cohortDefinition;
+  }  
+
+  public static CohortDefinition  pentaTwoCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("pentaTwo.sql", "Vaccines, Penta 2");
+    return cohortDefinition;
+  }  
+
+  public static CohortDefinition  pentaThreeCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("pentaThree.sql", "Vaccines, Penta 3");
+    return cohortDefinition;
+  }  
+
+  public static CohortDefinition  rotaOneCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("rotaOne.sql", "Vaccines, Rota 1");
+    return cohortDefinition;
+  }  
+
+  public static CohortDefinition  rotaTwoCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("rotaTwo.sql", "Vaccines, Rota 2");
+    return cohortDefinition;
+  }  
+
+  public static CohortDefinition  rrOneCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("rrOne.sql", "Vaccines, RR 1");
+    return cohortDefinition;
+  }  
+
+  public static CohortDefinition  rrTwoCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("rrTwo.sql", "Vaccines, RR 2");
+    return cohortDefinition;
+  }  
+
+  public static CohortDefinition  pneumoOneCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("pneumoOne.sql", "Vaccines, Pneumo 1");
+    return cohortDefinition;
+  }  
+
+  public static CohortDefinition  pneumoTwoCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("pneumoTwo.sql", "Vaccines, Pneumo 2");
+    return cohortDefinition;
+  }  
+
+  public static CohortDefinition  pneumoThreeCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("pneumoThree.sql", "Vaccines, Pneumo 3");
+    return cohortDefinition;
+  }  
+
+  public static CohortDefinition  dtpReminderCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("dtpReminder.sql", "Vaccines, DTP Reminder");
+    return cohortDefinition;
+  }  
+
 }

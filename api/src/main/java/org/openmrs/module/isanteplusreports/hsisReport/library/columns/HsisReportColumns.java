@@ -164,6 +164,208 @@ public class HsisReportColumns {
       public static final String DECEASED_CHRONIC = "deceased_chronic_";
       public static final String TOTAL_CASES_REF_CHRONIC = "total_cases_chronic_";
 
+      //Vaccines
+      public static final String BCG = "bcg_";
+      public static final String VPO = "vpo_";
+      public static final String VPO1 = "vpo1_";
+      public static final String VPO2 = "vpo2_";
+      public static final String VPO_REMINDER = "vpo_reminder_";
+      public static final String VPI = "vpi_";
+      public static final String PENTA1 = "penta1_";
+      public static final String PENTA2 = "penta2_";
+      public static final String PENTA3 = "penta3_";
+      public static final String ROTA1 = "rota1_";
+      public static final String ROTA2 = "rota2_";
+      public static final String RR1 = "rr1_";
+      public static final String RR2 = "rr2_";
+      public static final String PNEUMO1 = "pneumo1_";
+      public static final String PNEUMO2 = "pneumo2_";
+      public static final String PNEUMO3 = "pneumo3_";
+      public static final String DTP = "dtp_";
+      public static final String TOTAL_CASES_REF_VACCINE = "total_cases_vaccine_";
+      public static final String DECEASED_VACCINE = "deceased_vaccine_";
+
+
+
+
+
+      public static void addColumsForVaccines(CohortIndicatorDataSetDefinition dsd, CohortIndicator cohortIndicator) {
+        constructColumn(BCG  + "g_0-11_inst", "Vaccines", cohortIndicator, "vaccination=bcg", dsd);
+        constructColumn(BCG  + "g_0-11", "Vaccines", cohortIndicator, "vaccination=bcg", dsd);
+        constructColumn(BCG  + "b_0-11_inst", "Vaccines", cohortIndicator, "vaccination=bcg", dsd);
+        constructColumn(BCG  + "b_0-11", "Vaccines", cohortIndicator, "vaccination=bcg", dsd);
+        constructColumn(TOTAL_CASES_REF_VACCINE  + "bcg", "Vaccines", cohortIndicator, "vaccination=bcg", dsd);
+        constructColumn( DECEASED_VACCINE  + "bcg_used", "Vaccines", cohortIndicator, "vaccination=bcg", dsd);
+        constructColumn( DECEASED_VACCINE  + "bcg_admin", "Vaccines", cohortIndicator, "vaccination=bcg", dsd);
+
+        constructColumn(VPO  + "g_0-11_inst", "Vaccines", cohortIndicator, "vaccination=vpo", dsd);
+        constructColumn(VPO  + "g_0-11_comm", "Vaccines", cohortIndicator, "vaccination=vpo", dsd);
+        constructColumn(VPO  + "g_0-11", "Vaccines", cohortIndicator, "vaccination=vpo", dsd);
+        constructColumn(VPO + "b_0-11_inst", "Vaccines", cohortIndicator, "vaccination=vpo", dsd);
+        constructColumn(VPO  + "b_0-11_comm", "Vaccines", cohortIndicator, "vaccination=vpo", dsd);
+        constructColumn(VPO  + "b_0-11", "Vaccines", cohortIndicator, "vaccination=vpo", dsd); 
+        constructColumn(TOTAL_CASES_REF_VACCINE  + "vpo", "Vaccines", cohortIndicator, "vaccination=vpo", dsd);
+        constructColumn( DECEASED_VACCINE  + "vpo_used", "Vaccines", cohortIndicator, "vaccination=vpo", dsd);
+        constructColumn( DECEASED_VACCINE  + "vpo_admin", "Vaccines", cohortIndicator, "vaccination=vpo", dsd);
+
+        constructColumn(VPO1  + "g_0-11_inst", "Vaccines", cohortIndicator, "vaccination=vpo1", dsd);
+        constructColumn(VPO1  + "g_0-11_comm", "Vaccines", cohortIndicator, "vaccination=vpo1", dsd);
+        constructColumn(VPO1  + "g_0-11", "Vaccines", cohortIndicator, "vaccination=vpo1", dsd);
+        constructColumn(VPO1 + "b_0-11_inst", "Vaccines", cohortIndicator, "vaccination=vpo1", dsd);
+        constructColumn(VPO1  + "b_0-11_comm", "Vaccines", cohortIndicator, "vaccination=vpo1", dsd);
+        constructColumn(VPO1  + "b_0-11", "Vaccines", cohortIndicator, "vaccination=vpo1", dsd); 
+        constructColumn(TOTAL_CASES_REF_VACCINE  + "vpo1", "Vaccines", cohortIndicator, "vaccination=vpo1", dsd);
+        constructColumn( DECEASED_VACCINE  + "vpo1_used", "Vaccines", cohortIndicator, "vaccination=vpo1", dsd);
+        constructColumn( DECEASED_VACCINE  + "vpo1_admin", "Vaccines", cohortIndicator, "vaccination=vpo1", dsd);
+
+        constructColumn(VPO2  + "g_0-11_inst", "Vaccines", cohortIndicator, "vaccination=vpo2", dsd);
+        constructColumn(VPO2  + "g_0-11_comm", "Vaccines", cohortIndicator, "vaccination=vpo2", dsd);
+        constructColumn(VPO2  + "g_0-11", "Vaccines", cohortIndicator, "vaccination=vpo2", dsd);
+        constructColumn(VPO2 + "b_0-11_inst", "Vaccines", cohortIndicator, "vaccination=vpo2", dsd);
+        constructColumn(VPO2  + "b_0-11_comm", "Vaccines", cohortIndicator, "vaccination=vpo2", dsd);
+        constructColumn(VPO2 + "b_0-11", "Vaccines", cohortIndicator, "vaccination=vpo2", dsd); 
+        constructColumn(TOTAL_CASES_REF_VACCINE  + "vpo2", "Vaccines", cohortIndicator, "vaccination=vpo2", dsd);
+        constructColumn( DECEASED_VACCINE  + "vpo2_used", "Vaccines", cohortIndicator, "vaccination=vpo2", dsd);
+        constructColumn( DECEASED_VACCINE  + "vpo2_admin", "Vaccines", cohortIndicator, "vaccination=vpo2", dsd);
+
+        constructColumn(VPO_REMINDER  + "g_0-11_inst", "Vaccines", cohortIndicator, "vaccination=vpoReminder", dsd);
+        constructColumn(VPO_REMINDER  + "g_0-11_comm", "Vaccines", cohortIndicator, "vaccination=vpoReminder", dsd);
+        constructColumn(VPO_REMINDER  + "g_0-11", "Vaccines", cohortIndicator, "vaccination=vpoReminder", dsd);
+        constructColumn(VPO_REMINDER + "b_0-11_inst", "Vaccines", cohortIndicator, "vaccination=vpoReminder", dsd);
+        constructColumn(VPO_REMINDER  + "b_0-11_comm", "Vaccines", cohortIndicator, "vaccination=vpoReminder", dsd);
+        constructColumn(VPO_REMINDER + "b_0-11", "Vaccines", cohortIndicator, "vaccination=vpoReminder", dsd); 
+        constructColumn(TOTAL_CASES_REF_VACCINE  + "vpo_reminder", "Vaccines", cohortIndicator, "vaccination=vpoReminder", dsd);
+        constructColumn( DECEASED_VACCINE  + "vpo_reminder_used", "Vaccines", cohortIndicator, "vaccination=vpoReminder", dsd);
+        constructColumn( DECEASED_VACCINE  + "vpo_reminder_admin", "Vaccines", cohortIndicator, "vaccination=vpoReminder", dsd);
+
+        constructColumn(VPI  + "g_0-11_inst", "Vaccines", cohortIndicator, "vaccination=vpi", dsd);
+        constructColumn(VPI  + "g_0-11_comm", "Vaccines", cohortIndicator, "vaccination=vpi", dsd);
+        constructColumn(VPI  + "g_0-11", "Vaccines", cohortIndicator, "vaccination=vpi", dsd);
+        constructColumn(VPI + "b_0-11_inst", "Vaccines", cohortIndicator, "vaccination=vpi", dsd);
+        constructColumn(VPI  + "b_0-11_comm", "Vaccines", cohortIndicator, "vaccination=vpi", dsd);
+        constructColumn(VPI + "b_0-11", "Vaccines", cohortIndicator, "vaccination=vpi", dsd); 
+        constructColumn(TOTAL_CASES_REF_VACCINE  + "vpi", "Vaccines", cohortIndicator, "vaccination=vpi", dsd);
+        constructColumn( DECEASED_VACCINE  + "vpi_used", "Vaccines", cohortIndicator, "vaccination=vpi", dsd);
+        constructColumn( DECEASED_VACCINE  + "vpi_admin", "Vaccines", cohortIndicator, "vaccination=vpi", dsd);
+
+        constructColumn(PENTA1  + "g_0-11_inst", "Vaccines", cohortIndicator, "vaccination=penta1", dsd);
+        constructColumn(PENTA1  + "g_0-11_comm", "Vaccines", cohortIndicator, "vaccination=penta1", dsd);
+        constructColumn(PENTA1  + "g_0-11", "Vaccines", cohortIndicator, "vaccination=penta1", dsd);
+        constructColumn(PENTA1 + "b_0-11_inst", "Vaccines", cohortIndicator, "vaccination=penta1", dsd);
+        constructColumn(PENTA1  + "b_0-11_comm", "Vaccines", cohortIndicator, "vaccination=penta1", dsd);
+        constructColumn(PENTA1 + "b_0-11", "Vaccines", cohortIndicator, "vaccination=penta1", dsd); 
+        constructColumn(TOTAL_CASES_REF_VACCINE  + "penta1", "Vaccines", cohortIndicator, "vaccination=penta1", dsd);
+        constructColumn( DECEASED_VACCINE  + "penta1_used", "Vaccines", cohortIndicator, "vaccination=penta1", dsd);
+        constructColumn( DECEASED_VACCINE  + "penta1_admin", "Vaccines", cohortIndicator, "vaccination=penta1", dsd);
+
+        constructColumn(PENTA2  + "g_0-11_inst", "Vaccines", cohortIndicator, "vaccination=penta2", dsd);
+        constructColumn(PENTA2  + "g_0-11_comm", "Vaccines", cohortIndicator, "vaccination=penta2", dsd);
+        constructColumn(PENTA2  + "g_0-11", "Vaccines", cohortIndicator, "vaccination=penta2", dsd);
+        constructColumn(PENTA2 + "b_0-11_inst", "Vaccines", cohortIndicator, "vaccination=penta2", dsd);
+        constructColumn(PENTA2  + "b_0-11_comm", "Vaccines", cohortIndicator, "vaccination=penta2", dsd);
+        constructColumn(PENTA2 + "b_0-11", "Vaccines", cohortIndicator, "vaccination=penta2", dsd); 
+        constructColumn(TOTAL_CASES_REF_VACCINE  + "penta2", "Vaccines", cohortIndicator, "vaccination=penta1", dsd);
+        constructColumn( DECEASED_VACCINE  + "penta2_used", "Vaccines", cohortIndicator, "vaccination=penta2", dsd);
+        constructColumn( DECEASED_VACCINE  + "penta2_admin", "Vaccines", cohortIndicator, "vaccination=penta2", dsd);
+
+        constructColumn(PENTA3  + "g_0-11_inst", "Vaccines", cohortIndicator, "vaccination=penta3", dsd);
+        constructColumn(PENTA3  + "g_0-11_comm", "Vaccines", cohortIndicator, "vaccination=penta3", dsd);
+        constructColumn(PENTA3  + "g_0-11", "Vaccines", cohortIndicator, "vaccination=penta3", dsd);
+        constructColumn(PENTA3 + "b_0-11_inst", "Vaccines", cohortIndicator, "vaccination=penta3", dsd);
+        constructColumn(PENTA3  + "b_0-11_comm", "Vaccines", cohortIndicator, "vaccination=penta3", dsd);
+        constructColumn(PENTA3 + "b_0-11", "Vaccines", cohortIndicator, "vaccination=penta3", dsd); 
+        constructColumn(TOTAL_CASES_REF_VACCINE  + "penta3", "Vaccines", cohortIndicator, "vaccination=penta3", dsd);
+        constructColumn( DECEASED_VACCINE  + "penta3_used", "Vaccines", cohortIndicator, "vaccination=penta3", dsd);
+        constructColumn( DECEASED_VACCINE  + "penta3_admin", "Vaccines", cohortIndicator, "vaccination=penta3", dsd);
+
+        constructColumn(ROTA1  + "g_0-11_inst", "Vaccines", cohortIndicator, "vaccination=rota1", dsd);
+        constructColumn(ROTA1  + "g_0-11_comm", "Vaccines", cohortIndicator, "vaccination=rota1", dsd);
+        constructColumn(ROTA1  + "g_0-11", "Vaccines", cohortIndicator, "vaccination=rota1", dsd);
+        constructColumn(ROTA1 + "b_0-11_inst", "Vaccines", cohortIndicator, "vaccination=rota1", dsd);
+        constructColumn(ROTA1  + "b_0-11_comm", "Vaccines", cohortIndicator, "vaccination=rota1", dsd);
+        constructColumn(ROTA1 + "b_0-11", "Vaccines", cohortIndicator, "vaccination=rota1", dsd); 
+        constructColumn(TOTAL_CASES_REF_VACCINE  + "rota1", "Vaccines", cohortIndicator, "vaccination=rota1", dsd);
+        constructColumn( DECEASED_VACCINE  + "rota1_used", "Vaccines", cohortIndicator, "vaccination=rota1", dsd);
+        constructColumn( DECEASED_VACCINE  + "rota1_admin", "Vaccines", cohortIndicator, "vaccination=rota1", dsd);
+
+        constructColumn(ROTA2  + "g_0-11_inst", "Vaccines", cohortIndicator, "vaccination=rota2", dsd);
+        constructColumn(ROTA2  + "g_0-11_comm", "Vaccines", cohortIndicator, "vaccination=rota2", dsd);
+        constructColumn(ROTA2  + "g_0-11", "Vaccines", cohortIndicator, "vaccination=rota2", dsd);
+        constructColumn(ROTA2 + "b_0-11_inst", "Vaccines", cohortIndicator, "vaccination=rota2", dsd);
+        constructColumn(ROTA2  + "b_0-11_comm", "Vaccines", cohortIndicator, "vaccination=rota2", dsd);
+        constructColumn(ROTA2 + "b_0-11", "Vaccines", cohortIndicator, "vaccination=rota2", dsd); 
+        constructColumn(TOTAL_CASES_REF_VACCINE  + "rota2", "Vaccines", cohortIndicator, "vaccination=rota2", dsd);
+        constructColumn( DECEASED_VACCINE  + "rota2_used", "Vaccines", cohortIndicator, "vaccination=rota2", dsd);
+        constructColumn( DECEASED_VACCINE  + "rota2_admin", "Vaccines", cohortIndicator, "vaccination=rota2", dsd);
+
+        constructColumn(RR1  + "g_0-11_inst", "Vaccines", cohortIndicator, "vaccination=rr1", dsd);
+        constructColumn(RR1  + "g_0-11_comm", "Vaccines", cohortIndicator, "vaccination=rr1", dsd);
+        constructColumn(RR1  + "g_0-11", "Vaccines", cohortIndicator, "vaccination=rr1", dsd);
+        constructColumn(RR1 + "b_0-11_inst", "Vaccines", cohortIndicator, "vaccination=rr1", dsd);
+        constructColumn(RR1  + "b_0-11_comm", "Vaccines", cohortIndicator, "vaccination=rr1", dsd);
+        constructColumn(RR1 + "b_0-11", "Vaccines", cohortIndicator, "vaccination=rr1", dsd); 
+        constructColumn(TOTAL_CASES_REF_VACCINE  + "rr1", "Vaccines", cohortIndicator, "vaccination=rr1", dsd);
+        constructColumn( DECEASED_VACCINE  + "rr1_used", "Vaccines", cohortIndicator, "vaccination=rr1", dsd);
+        constructColumn( DECEASED_VACCINE  + "rr1_admin", "Vaccines", cohortIndicator, "vaccination=rr1", dsd);
+
+        constructColumn(RR2  + "g_0-11_inst", "Vaccines", cohortIndicator, "vaccination=rr2", dsd);
+        constructColumn(RR2  + "g_0-11_comm", "Vaccines", cohortIndicator, "vaccination=rr2", dsd);
+        constructColumn(RR2  + "g_0-11", "Vaccines", cohortIndicator, "vaccination=rr2", dsd);
+        constructColumn(RR2 + "b_0-11_inst", "Vaccines", cohortIndicator, "vaccination=rr2", dsd);
+        constructColumn(RR2  + "b_0-11_comm", "Vaccines", cohortIndicator, "vaccination=rr2", dsd);
+        constructColumn(RR2 + "b_0-11", "Vaccines", cohortIndicator, "vaccination=rr2", dsd); 
+        constructColumn(RR2 + "b_12-23_inst", "Vaccines", cohortIndicator, "vaccination=rr2", dsd);
+        constructColumn(RR2 + "b_12-23_comm", "Vaccines", cohortIndicator, "vaccination=rr2", dsd); 
+        constructColumn(RR2 + "b_12-23", "Vaccines", cohortIndicator, "vaccination=rr2", dsd); 
+        constructColumn(RR2 + "g_12-23_inst", "Vaccines", cohortIndicator, "vaccination=rr2", dsd);
+        constructColumn(RR2 + "g_12-23_comm", "Vaccines", cohortIndicator, "vaccination=rr2", dsd); 
+        constructColumn(RR2 + "g_12-23", "Vaccines", cohortIndicator, "vaccination=rr2", dsd); 
+        constructColumn(TOTAL_CASES_REF_VACCINE  + "rr2", "Vaccines", cohortIndicator, "vaccination=rr2", dsd);
+        constructColumn( DECEASED_VACCINE  + "rr2_used", "Vaccines", cohortIndicator, "vaccination=rr2", dsd);
+        constructColumn( DECEASED_VACCINE  + "rr2_admin", "Vaccines", cohortIndicator, "vaccination=rr2", dsd);
+
+        constructColumn(PNEUMO1  + "g_0-11_inst", "Vaccines", cohortIndicator, "vaccination=pneumo1", dsd);
+        constructColumn(PNEUMO1  + "g_0-11_comm", "Vaccines", cohortIndicator, "vaccination=pneumo1", dsd);
+        constructColumn(PNEUMO1  + "g_0-11", "Vaccines", cohortIndicator, "vaccination=pneumo1", dsd);
+        constructColumn(PNEUMO1 + "b_0-11_inst", "Vaccines", cohortIndicator, "vaccination=pneumo1", dsd);
+        constructColumn(PNEUMO1  + "b_0-11_comm", "Vaccines", cohortIndicator, "vaccination=pneumo1", dsd);
+        constructColumn(PNEUMO1 + "b_0-11", "Vaccines", cohortIndicator, "vaccination=pneumo1", dsd); 
+        constructColumn(TOTAL_CASES_REF_VACCINE  + "pneumo1", "Vaccines", cohortIndicator, "vaccination=pneumo1", dsd);
+        constructColumn( DECEASED_VACCINE  + "pneumo1_used", "Vaccines", cohortIndicator, "vaccination=pneumo1", dsd);
+        constructColumn( DECEASED_VACCINE  + "pneumo1_admin", "Vaccines", cohortIndicator, "vaccination=pneumo1", dsd);
+
+        constructColumn(PNEUMO2  + "g_0-11_inst", "Vaccines", cohortIndicator, "vaccination=pneumo2", dsd);
+        constructColumn(PNEUMO2  + "g_0-11_comm", "Vaccines", cohortIndicator, "vaccination=pneumo2", dsd);
+        constructColumn(PNEUMO2  + "g_0-11", "Vaccines", cohortIndicator, "vaccination=pneumo2", dsd);
+        constructColumn(PNEUMO2 + "b_0-11_inst", "Vaccines", cohortIndicator, "vaccination=pneumo2", dsd);
+        constructColumn(PNEUMO2  + "b_0-11_comm", "Vaccines", cohortIndicator, "vaccination=pneumo2", dsd);
+        constructColumn(PNEUMO2 + "b_0-11", "Vaccines", cohortIndicator, "vaccination=pneumo2", dsd); 
+        constructColumn(TOTAL_CASES_REF_VACCINE  + "pneumo2", "Vaccines", cohortIndicator, "vaccination=pneumo2", dsd);
+        constructColumn( DECEASED_VACCINE  + "pneumo2_used", "Vaccines", cohortIndicator, "vaccination=pneumo2", dsd);
+        constructColumn( DECEASED_VACCINE  + "pneumo2_admin", "Vaccines", cohortIndicator, "vaccination=pneumo2", dsd);
+
+        constructColumn(PNEUMO3  + "g_0-11_inst", "Vaccines", cohortIndicator, "vaccination=pneumo3", dsd);
+        constructColumn(PNEUMO3  + "g_0-11_comm", "Vaccines", cohortIndicator, "vaccination=pneumo3", dsd);
+        constructColumn(PNEUMO3  + "g_0-11", "Vaccines", cohortIndicator, "vaccination=pneumo3", dsd);
+        constructColumn(PNEUMO3 + "b_0-11_inst", "Vaccines", cohortIndicator, "vaccination=pneumo3", dsd);
+        constructColumn(PNEUMO3  + "b_0-11_comm", "Vaccines", cohortIndicator, "vaccination=pneumo3", dsd);
+        constructColumn(PNEUMO3 + "b_0-11", "Vaccines", cohortIndicator, "vaccination=pneumo3", dsd); 
+        constructColumn(TOTAL_CASES_REF_VACCINE  + "pneumo3", "Vaccines", cohortIndicator, "vaccination=pneumo3", dsd);
+        constructColumn( DECEASED_VACCINE  + "pneumo3_used", "Vaccines", cohortIndicator, "vaccination=pneumo3", dsd);
+        constructColumn( DECEASED_VACCINE  + "pneumo3_admin", "Vaccines", cohortIndicator, "vaccination=pneumo3", dsd);
+
+        constructColumn(DTP  + "g_0-11_inst", "Vaccines", cohortIndicator, "vaccination=dtpReminder", dsd);
+        constructColumn(DTP  + "g_0-11_comm", "Vaccines", cohortIndicator, "vaccination=dtpReminder", dsd);
+        constructColumn(DTP  + "g_0-11", "Vaccines", cohortIndicator, "vaccination=dtpReminder", dsd);
+        constructColumn(DTP + "b_0-11_inst", "Vaccines", cohortIndicator, "vaccination=dtpReminder", dsd);
+        constructColumn(DTP  + "b_0-11_comm", "Vaccines", cohortIndicator, "vaccination=dtpReminder", dsd);
+        constructColumn(DTP + "b_0-11", "Vaccines", cohortIndicator, "vaccination=dtpReminder", dsd); 
+        constructColumn(TOTAL_CASES_REF_VACCINE  + "dtpReminder", "Vaccines", cohortIndicator, "vaccination=dtpReminder", dsd);
+        constructColumn( DECEASED_VACCINE  + "dtpReminder_used", "Vaccines", cohortIndicator, "vaccination=dtpReminder", dsd);
+        constructColumn( DECEASED_VACCINE  + "dtpReminder_admin", "Vaccines", cohortIndicator, "vaccination=dtpReminder", dsd);
+
+      }
+
       public static void addColumsForChronicDiseases(CohortIndicatorDataSetDefinition dsd, CohortIndicator cohortIndicator) {
 
         constructColumn(DIABETES  + "f_0-10_new", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=diabetes|gender=F|age=0_10", dsd);
@@ -418,11 +620,6 @@ public class HsisReportColumns {
         constructColumn(TOTAL_CASES_REF_CHRONIC  + "old_renal", "Chronic Diseases (disaggregation by age and sex)", cohortIndicator, "chronicDisease=renal", dsd);
 
       }
-
-
-
-
-
 
      public static void addColumsForEpisodesOfDiseases(CohortIndicatorDataSetDefinition dsd, CohortIndicator cohortIndicator) {
        
@@ -1487,7 +1684,4 @@ public class HsisReportColumns {
         constructColumn(TC_MAS  + "m_24-59", "Support for the child services", cohortIndicator, "childSupport=firstTimeMas|gender=M", dsd);
         constructColumn(TOTAL_SERVICES  + "mas", "Support for the child services", cohortIndicator, "childSupport=firstTimeMas", dsd);
     }
-
-
-
 }

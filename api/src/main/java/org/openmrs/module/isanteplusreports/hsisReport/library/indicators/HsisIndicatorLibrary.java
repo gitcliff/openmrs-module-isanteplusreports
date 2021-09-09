@@ -107,5 +107,37 @@ public class HsisIndicatorLibrary {
    public static CohortIndicator getChronicDiseasesIndicator(){
     return cohortIndicatorFromSqlResource("chronicDiseases.sql", "Diseases Disaggregation Per Age and Sex",getDateParameters()); 
   } 
+
+  public static CohortIndicator getGirlsUnderElevenMonthsInstIndicator(){
+    return cohortIndicatorFromSqlResource("girlsUnderElevenMonthsInst.sql", "Vaccines",getDateParameters()); 
+  } 
+
+  public static CohortIndicator getGirlsUnderElevenMonthsCommIndicator(){
+    return cohortIndicatorFromSqlResource("girlsUnderElevenMonthsComm.sql", "Vaccines",getDateParameters()); 
+  } 
+
+  public static CohortIndicator getBoysUnderElevenMonthsInstIndicator(){
+    return cohortIndicatorFromSqlResource("boysUnderElevenMonthsInst.sql", "Vaccines",getDateParameters()); 
+  } 
+
+  public static CohortIndicator getBoysUnderElevenMonthsCommIndicator(){
+    return cohortIndicatorFromSqlResource("boysUnderElevenMonthsComm.sql", "Vaccines",getDateParameters()); 
+  } 
+
+  public static CohortIndicator getGirlsBetweenTwelveToTwentyThreeMonthsInstIndicator(){
+    return cohortIndicatorFromSqlResource("girlsBetweenTwelveToTwentyThreeMonthsInstInst.sql", "Vaccines",getDateParameters()); 
+  } 
+
+  public static CohortIndicator getGirlsBetweenTwelveToTwentyThreeMonthsInstCommIndicator(){
+    return cohortIndicatorFromSqlResource("girlsBetweenTwelveToTwentyThreeMonthsComm.sql", "Vaccines",getDateParameters()); 
+  } 
+
+  public static CohortIndicator getBoysBetweenTwelveToTwentyThreeMonthsInstInstIndicator(){
+    return cohortIndicatorFromSqlResource("boysBetweenTwelveToTwentyThreeMonthsInstInst.sql", "Vaccines",getDateParameters()); 
+  } 
+
+  public static CohortIndicator getBoysBetweenTwelveToTwentyThreeMonthsInstCommIndicator(){
+    return cohortIndicatorFromSqlResource("boysBetweenTwelveToTwentyThreeMonthsInstComm.sql", "Vaccines",getDateParameters()); 
+  } 
    
 }
