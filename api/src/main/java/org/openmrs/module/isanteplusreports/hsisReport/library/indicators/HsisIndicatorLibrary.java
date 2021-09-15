@@ -139,5 +139,10 @@ public class HsisIndicatorLibrary {
   public static CohortIndicator getBoysBetweenTwelveToTwentyThreeMonthsInstCommIndicator(){
     return cohortIndicatorFromSqlResource("boysBetweenTwelveToTwentyThreeMonthsInstComm.sql", "Vaccines",getDateParameters()); 
   } 
-   
+
+  public static CohortIndicator vaccinesPregnantWomenIndicator(){
+    return cohortIndicatorFromSqlResource("vaccinesPregnantWomen.sql", "Vaccines pregnant women",getDateParameters()); 
+  } 
+
+ 
 }

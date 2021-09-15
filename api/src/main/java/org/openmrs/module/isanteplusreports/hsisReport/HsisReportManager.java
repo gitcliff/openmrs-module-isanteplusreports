@@ -67,6 +67,8 @@ public class HsisReportManager extends BaseReportManager{
 		CohortIndicatorDataSetDefinition cde = HsisReportDatasetLibrary.getDiseaseDataset();
 		CohortIndicatorDataSetDefinition cc = HsisReportDatasetLibrary.getChronicDataset();
 		CohortIndicatorDataSetDefinition vv = HsisReportDatasetLibrary.getVaccinationDataset();
+		CohortIndicatorDataSetDefinition vp = HsisReportDatasetLibrary.vaccinesPregnantWomenDataset();
+
 
 
 
@@ -83,6 +85,8 @@ public class HsisReportManager extends BaseReportManager{
 		rd.addDataSetDefinition( "disease",cde, parameterMappings);	
 		rd.addDataSetDefinition( "chronic",cc, parameterMappings);	
 		rd.addDataSetDefinition( "vaccine",vv, parameterMappings);	
+		rd.addDataSetDefinition( "vaccinePregnantWomen",vp, parameterMappings);	
+
 
 		return rd;
     }

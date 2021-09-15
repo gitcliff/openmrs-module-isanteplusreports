@@ -33,6 +33,8 @@ import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators
 import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators.HsisIndicatorLibrary.getGirlsBetweenTwelveToTwentyThreeMonthsInstIndicator;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators.HsisIndicatorLibrary.getGirlsUnderElevenMonthsCommIndicator;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators.HsisIndicatorLibrary.getGirlsUnderElevenMonthsInstIndicator;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.indicators.HsisIndicatorLibrary.vaccinesPregnantWomenIndicator;
+
 
 import java.sql.Date;
 import org.openmrs.module.isanteplusreports.hsisReport.library.columns.HsisReportColumns;
@@ -50,6 +52,9 @@ import static org.openmrs.module.isanteplusreports.hsisReport.library.dimensions
 import static org.openmrs.module.isanteplusreports.hsisReport.library.dimensions.HsisDimensionLibrary.diseaseDimension;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.dimensions.HsisDimensionLibrary.chronicDimension;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.dimensions.HsisDimensionLibrary.vaccinationDimension;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.dimensions.HsisDimensionLibrary.pregnantWomenVaccineDimension;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.dimensions.HsisDimensionLibrary.vaccineDimension;
+
 import org.openmrs.module.isanteplusreports.library.dimension.CommonDimension;
 import org.openmrs.module.isanteplusreports.reporting.utils.ReportUtils;
 import org.openmrs.module.reporting.dataset.definition.CohortIndicatorDataSetDefinition;
@@ -196,6 +201,18 @@ public class HsisReportDatasetLibrary {
     HsisReportColumns.addColumsForVaccines(dsd, getGirlsBetweenTwelveToTwentyThreeMonthsInstCommIndicator());
     HsisReportColumns.addColumsForVaccines(dsd, getBoysBetweenTwelveToTwentyThreeMonthsInstInstIndicator());
     HsisReportColumns.addColumsForVaccines(dsd, getBoysBetweenTwelveToTwentyThreeMonthsInstCommIndicator());
+    return dsd;
+  }
+
+  public static CohortIndicatorDataSetDefinition vaccinesPregnantWomenDataset() {
+    CohortIndicatorDataSetDefinition dsd = new CohortIndicatorDataSetDefinition();
+    dsd.setName("vaccinePregnantWomen");
+    dsd.addParameter(START_DATE);
+    dsd.addParameter(END_DATE);
+    dsd.addDimension("pregnantWomenVaccine", ReportUtils.map(pregnantWomenVaccineDimension()));
+    dsd.addDimension("dtVaccine", ReportUtils.map(vaccineDimension()));
+
+    HsisReportColumns.addColumsForVaccinePregnantWomen(dsd, vaccinesPregnantWomenIndicator());
     return dsd;
   }
 
