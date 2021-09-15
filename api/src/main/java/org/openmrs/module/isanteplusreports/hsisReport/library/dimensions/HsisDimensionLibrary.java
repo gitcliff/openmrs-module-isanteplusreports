@@ -73,6 +73,12 @@ import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.Hs
 import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.postnatalConsultationsBetweenSevenToFourtyTwoDaysCohort;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.homemadeVisitsCohort;
 import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.nursingWomenPbCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.dt1VaccinesCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.dt2VaccinesCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.vaccinesPregantWomenCommCohort;
+import static org.openmrs.module.isanteplusreports.hsisReport.library.cohorts.HsisReportCohortLibrary.vaccinesPregantWomenInstCohort;
+
+
 import org.openmrs.module.isanteplusreports.reporting.utils.ReportUtils;
 import org.openmrs.module.reporting.indicator.dimension.CohortDefinitionDimension;
 
@@ -298,6 +304,22 @@ public class HsisDimensionLibrary {
                 dim.addCohortDefinition("pneumo3", ReportUtils.map(HsisReportCohortLibrary.pneumoThreeCohort()));   
                 dim.addCohortDefinition("dtpReminder", ReportUtils.map(HsisReportCohortLibrary.dtpReminderCohort()));   
             return dim;				  		  
-            }	                 
+            }	
+            
+    public static CohortDefinitionDimension vaccineDimension(){
+            CohortDefinitionDimension dim = new CohortDefinitionDimension();
+              dim.setName("dtVaccine");
+              dim.addCohortDefinition("dt1", ReportUtils.map(dt1VaccinesCohort()));
+              dim.addCohortDefinition("dt2", ReportUtils.map(dt2VaccinesCohort()));
+            return dim;				  		  
+            }	     
+            
+    public static CohortDefinitionDimension pregnantWomenVaccineDimension(){
+            CohortDefinitionDimension dim = new CohortDefinitionDimension();
+              dim.setName("pregnantWomenVaccine");
+              dim.addCohortDefinition("vaccinesPregantWomenInst", ReportUtils.map(vaccinesPregantWomenInstCohort()));
+              dim.addCohortDefinition("vaccinesPregantWomenComm", ReportUtils.map(vaccinesPregantWomenCommCohort()));         
+            return dim;				  		  
+            }	             
                        
 }

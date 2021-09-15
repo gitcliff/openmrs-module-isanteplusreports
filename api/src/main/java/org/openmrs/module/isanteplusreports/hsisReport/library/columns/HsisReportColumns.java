@@ -185,7 +185,22 @@ public class HsisReportColumns {
       public static final String TOTAL_CASES_REF_VACCINE = "total_cases_vaccine_";
       public static final String DECEASED_VACCINE = "deceased_vaccine_";
 
+      //Vaccines for pregnant women
+      public static final String DT1 = "dt1_";
+      public static final String DT2 = "dt2_";
+      public static final String TOTAL_VACCINE = "total_vaccine_";
 
+
+
+      public static void addColumsForVaccinePregnantWomen(CohortIndicatorDataSetDefinition dsd, CohortIndicator cohortIndicator) {
+        constructColumn(DT1  + "inst", "Vaccines for pregnant women", cohortIndicator, "dtVaccine=dt1|pregnantWomenVaccine=vaccinesPregantWomenInst", dsd);
+        constructColumn(DT1  + "comm", "Vaccines for pregnant women", cohortIndicator, "dtVaccine=dt1|pregnantWomenVaccine=vaccinesPregantWomenComm", dsd);
+        constructColumn(TOTAL_VACCINE  + "dt1", "Vaccines for pregnant women", cohortIndicator, "dtVaccine=dt1", dsd);
+
+        constructColumn(DT2  + "inst", "Vaccines for pregnant women", cohortIndicator, "dtVaccine=dt2|pregnantWomenVaccine=vaccinesPregantWomenInst", dsd);
+        constructColumn(DT2  + "comm", "Vaccines for pregnant women", cohortIndicator, "dtVaccine=dt2|pregnantWomenVaccine=vaccinesPregantWomenComm", dsd);
+        constructColumn(TOTAL_VACCINE  + "dt2", "Vaccines for pregnant women", cohortIndicator, "dtVaccine=dt2", dsd);
+      }
 
 
 

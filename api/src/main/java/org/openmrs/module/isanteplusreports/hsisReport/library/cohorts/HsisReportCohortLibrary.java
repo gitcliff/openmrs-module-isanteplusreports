@@ -711,6 +711,26 @@ public class HsisReportCohortLibrary {
   public static CohortDefinition  dtpReminderCohort() {
     SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("dtpReminder.sql", "Vaccines, DTP Reminder");
     return cohortDefinition;
-  }  
+  } 
+  
+  public static CohortDefinition  vaccinesPregantWomenInstCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("vaccinePregnantWomenInst.sql", "Vaccines, Pregnant women");
+    return cohortDefinition;
+  } 
+
+  public static CohortDefinition  vaccinesPregantWomenCommCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("vaccinePregnantWomenComm.sql", "Vaccines, Pregnant women");
+    return cohortDefinition;
+  } 
+
+  public static CohortDefinition  dt1VaccinesCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("dt1Vaccines.sql", "Vaccines, dt1");
+    return cohortDefinition;
+  } 
+
+  public static CohortDefinition  dt2VaccinesCohort() {
+    SqlCohortDefinition cohortDefinition = cohortDefinitionFromSqlResource("dt2Vaccines.sql", "Vaccines, dt2+");
+    return cohortDefinition;
+  } 
 
 }
