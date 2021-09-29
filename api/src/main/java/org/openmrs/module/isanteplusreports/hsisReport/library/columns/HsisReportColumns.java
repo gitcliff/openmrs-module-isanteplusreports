@@ -1501,10 +1501,10 @@ public class HsisReportColumns {
     public static void addTypesOfExaminationsColumsForMalaria(CohortIndicatorDataSetDefinition dsd, CohortIndicator cohortIndicator) {
         constructColumn(MICROSCOPIC + "Positive", "Malaria microscopic positive test", cohortIndicator, "malariaExam=microscopicTestPositive", dsd);
         constructColumn(FAST + "Positive", "Malaria fast positive test", cohortIndicator, "malariaExam=fastTestPositive", dsd);
-        constructColumn(MICROSCOPIC, "Malaria microscopic test", cohortIndicator, "malariaExam=microscopicTest", dsd);
+        constructColumn(MICROSCOPIC, "Malaria microscopic test", cohortIndicator, "mmalariaExam=alariaExam=microscopicTest", dsd);
         constructColumn(FAST, "Malaria fast test", cohortIndicator, "malariaExam=fastTest", dsd);
-        constructColumn(PSMALARIA , "Positive number of people tested for Malaria", cohortIndicator, "malariaExam=fastTestPositiveMicroscopicFast", dsd);
-        constructColumn(MALARIA, "Number of people tested for Malaria", cohortIndicator, "", dsd);
+        constructColumn(PSMALARIA , "Positive number of people tested for Malaria", cohortIndicator, "mmalariaExam=malariaTestPositive", dsd);
+        constructColumn(MALARIA, "Number of people tested for Malaria", cohortIndicator, "mmalariaExam=malariaTest", dsd);
     }
 
     public static void addColumsForPregnantWomen(CohortIndicatorDataSetDefinition dsd, CohortIndicator cohortIndicator) {
